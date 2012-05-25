@@ -16,6 +16,7 @@
 /// core.sys.windows.windows for the auto-generated win32 package.
 module win32.windows;
 
+version=UNICODE;
 
 extern (Windows) nothrow:
 
@@ -39,8 +40,16 @@ extern (Windows) nothrow:
     alias WCHAR*        LPWCH,  LPWSTR,  PWCH,  PWSTR;
     alias const(WCHAR)* LPCWCH, LPCWSTR, PCWCH, PCWSTR;
 
+version (UNICODE)
+{
+    alias WCHAR*         LPTCH,  LPTSTR,  PTCH,  PTSTR;
+    alias const(WCHAR)*  LPCTCH, LPCTSTR, PCTCH, PCTSTR;
+}
+else
+{
     alias CHAR*         LPTCH,  LPTSTR,  PTCH,  PTSTR;
     alias const(CHAR)*  LPCTCH, LPCTSTR, PCTCH, PCTSTR;
+}
 
     alias uint DWORD;
     alias ulong DWORD64;
@@ -3073,8 +3082,8 @@ enum : uint
     WAIT_FAILED =           uint.max,
 }
 
-export HANDLE CreateSemaphoreA(LPSECURITY_ATTRIBUTES lpSemaphoreAttributes, LONG lInitialCount, LONG lMaximumCount, LPCTSTR lpName);
-export HANDLE OpenSemaphoreA(DWORD dwDesiredAccess, BOOL bInheritHandle, LPCTSTR lpName);
+export HANDLE CreateSemaphoreA(LPSECURITY_ATTRIBUTES lpSemaphoreAttributes, LONG lInitialCount, LONG lMaximumCount, LPCSTR lpName);
+export HANDLE OpenSemaphoreA(DWORD dwDesiredAccess, BOOL bInheritHandle, LPCSTR lpName);
 export BOOL ReleaseSemaphore(HANDLE hSemaphore, LONG lReleaseCount, LPLONG lpPreviousCount);
 
 struct COORD {
