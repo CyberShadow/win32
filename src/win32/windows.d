@@ -17,7 +17,7 @@
 module win32.windows;
 
 //version (Windows):
-extern (Windows)
+extern (Windows):
 nothrow:
 
     alias uint ULONG;
