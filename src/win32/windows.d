@@ -16,8 +16,9 @@
 /// core.sys.windows.windows for the auto-generated win32 package.
 module win32.windows;
 
-
-extern (Windows) nothrow:
+//version (Windows):
+extern (Windows):
+nothrow:
 
     alias uint ULONG;
     alias ULONG *PULONG;
@@ -142,7 +143,7 @@ else // Win32
     alias DWORD   *LPCOLORREF;
     alias WORD    ATOM;
 
-version (0)
+version (none)
 {   // Properly prototyped versions
     alias BOOL function(HWND, UINT, WPARAM, LPARAM) DLGPROC;
     alias VOID function(HWND, UINT, UINT_PTR, DWORD) TIMERPROC;
