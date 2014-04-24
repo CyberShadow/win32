@@ -3,15 +3,13 @@
  *  States and other countries.
  *
  * Copyright: Copyright Digital Mars 2000 - 2009.
- * License:   <a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+ * License: Distributed under the
+ *      $(LINK2 http://www.boost.org/LICENSE_1_0.txt, Boost Software License 1.0).
+ *    (See accompanying file LICENSE)
  * Authors:   Walter Bright, Sean Kelly, Alex Rønne Petersen
+ * Source:    $(DRUNTIMESRC core/sys/windows/_windows.d)
  */
 
-/*          Copyright Digital Mars 2000 - 2009.
- * Distributed under the Boost Software License, Version 1.0.
- *    (See accompanying file LICENSE or copy at
- *          http://www.boost.org/LICENSE_1_0.txt)
- */
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.windows for the auto-generated win32 package.
 module win32.windows;
@@ -19,6 +17,7 @@ module win32.windows;
 //version (Windows):
 extern (Windows):
 nothrow:
+@nogc:
 
     alias uint ULONG;
     alias ULONG *PULONG;
