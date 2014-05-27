@@ -2779,7 +2779,6 @@ enum : uint
 	SWP_SHOWWINDOW = 0x0040,
 }
 
-
 /*
  * Message structure
  */
