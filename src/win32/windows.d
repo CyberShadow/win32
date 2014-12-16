@@ -79,7 +79,7 @@ version (Win64)
     alias  long * PLONG_PTR;
     alias ulong * PULONG_PTR;
 }
-else // Win32
+else version (Win32)
 {
     alias  int INT_PTR;
     alias uint UINT_PTR;
@@ -135,7 +135,7 @@ else // Win32
 
     version (Win64)
         alias INT_PTR function() FARPROC;
-    else
+    else version (Win32)
         alias int function() FARPROC;
 
     alias UINT_PTR WPARAM;
@@ -1313,7 +1313,7 @@ version (Win64)
         DWORD64 LastExceptionFromRip;
     }
 }
-else // Win32
+else version (Win32)
 {
     enum
     {
