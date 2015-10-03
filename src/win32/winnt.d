@@ -45,7 +45,7 @@ alias ulong* PDWORDLONG, PULONGLONG;
 alias void*  PVOID64;
 
 // const versions
-alias const(char)*  LPCCH, PCSTR, LPCSTR;
+alias const(char)*  PCCH, LPCCH, PCSTR, LPCSTR;
 alias const(wchar)* LPCWCH, PCWCH, LPCWSTR, PCWSTR;
 
 version (Unicode) {
@@ -55,8 +55,8 @@ version (Unicode) {
 }
 
 alias TCHAR         TBYTE;
-alias TCHAR*        PTCH, PTBYTE, LPTCH, PTSTR, LPTSTR, LP, PTCHAR;
-alias const(TCHAR)* LPCTSTR;
+alias TCHAR*        PTCH , PTBYTE, LPTCH , PTSTR , LPTSTR , LP, PTCHAR;
+alias const(TCHAR)* PCTCH,         LPCTCH, PCTSTR, LPCTSTR            ;
 
 const char ANSI_NULL = '\0';
 const wchar UNICODE_NULL = '\0';
@@ -699,6 +699,7 @@ enum : USHORT {
     SUBLANG_KINYARWANDA_RWANDA                  =  1,
     SUBLANG_KONKANI_INDIA                       =  1,
     SUBLANG_KOREAN                              =  1,
+    SUBLANG_KOREAN_JOHAB                        =  2,
     SUBLANG_KYRGYZ_KYRGYZSTAN                   =  1,
     SUBLANG_LAO_LAO_PDR                         =  1,
     SUBLANG_LATVIAN_LATVIA                      =  1,
@@ -2079,6 +2080,10 @@ version (X86) {
     const CONTEXT_DEBUG_REGISTERS     = CONTEXT_i386 | 0x10;
     const CONTEXT_EXTENDED_REGISTERS  = CONTEXT_i386 | 0x20;
     const CONTEXT_FULL                = CONTEXT_CONTROL | CONTEXT_INTEGER | CONTEXT_SEGMENTS;
+    const CONTEXT_ALL                 = CONTEXT_CONTROL | CONTEXT_INTEGER | CONTEXT_SEGMENTS |
+                                        CONTEXT_FLOATING_POINT | CONTEXT_DEBUG_REGISTERS |
+                                        CONTEXT_EXTENDED_REGISTERS;
+
     const MAXIMUM_SUPPORTED_EXTENSION = 512;
 
     struct FLOATING_SAVE_AREA {
@@ -2624,6 +2629,7 @@ struct LIST_ENTRY {
     LIST_ENTRY* Blink;
 }
 alias LIST_ENTRY* PLIST_ENTRY;
+alias LIST_ENTRY _LIST_ENTRY;
 
 struct SINGLE_LIST_ENTRY {
     SINGLE_LIST_ENTRY* Next;
@@ -2651,6 +2657,7 @@ struct RTL_CRITICAL_SECTION_DEBUG {
     DWORD[2]   Spare;
 }
 alias RTL_CRITICAL_SECTION_DEBUG* PRTL_CRITICAL_SECTION_DEBUG;
+alias RTL_CRITICAL_SECTION_DEBUG _RTL_CRITICAL_SECTION_DEBUG;
 
 struct RTL_CRITICAL_SECTION {
     PRTL_CRITICAL_SECTION_DEBUG DebugInfo;
@@ -2658,9 +2665,11 @@ struct RTL_CRITICAL_SECTION {
     LONG   RecursionCount;
     HANDLE OwningThread;
     HANDLE LockSemaphore;
-    DWORD  Reserved;
+    DWORD  SpinCount;
+    alias Reserved = SpinCount;
 }
 alias RTL_CRITICAL_SECTION* PRTL_CRITICAL_SECTION;
+alias RTL_CRITICAL_SECTION _RTL_CRITICAL_SECTION;
 
 struct EVENTLOGRECORD {
     DWORD Length;

@@ -91,7 +91,11 @@ struct CHAR_INFO {
         WCHAR UnicodeChar;
         CHAR AsciiChar;
     }
-    _Char Char;
+    union {
+        _Char Char;
+        WCHAR UnicodeChar;
+        CHAR AsciiChar;
+    }
     WORD Attributes;
 }
 alias CHAR_INFO* PCHAR_INFO;
@@ -142,9 +146,14 @@ struct KEY_EVENT_RECORD {
         WCHAR UnicodeChar;
         CHAR  AsciiChar;
     }
-    _uChar uChar;
+    union {
+        WCHAR UnicodeChar;
+        CHAR  AsciiChar;
+        _uChar uChar;
+    }
     DWORD dwControlKeyState;
 }
+alias KEY_EVENT_RECORD* PKEY_EVENT_RECORD;
 
 struct MOUSE_EVENT_RECORD {
     COORD dwMousePosition;
@@ -152,10 +161,12 @@ struct MOUSE_EVENT_RECORD {
     DWORD dwControlKeyState;
     DWORD dwEventFlags;
 }
+alias MOUSE_EVENT_RECORD* PMOUSE_EVENT_RECORD;
 
 struct WINDOW_BUFFER_SIZE_RECORD {
     COORD dwSize;
 }
+alias WINDOW_BUFFER_SIZE_RECORD* PWINDOW_BUFFER_SIZE_RECORD;
 
 struct MENU_EVENT_RECORD {
     UINT dwCommandId;
@@ -165,6 +176,7 @@ alias MENU_EVENT_RECORD* PMENU_EVENT_RECORD;
 struct FOCUS_EVENT_RECORD {
     BOOL bSetFocus;
 }
+alias FOCUS_EVENT_RECORD* PFOCUS_EVENT_RECORD;
 
 struct INPUT_RECORD {
     WORD EventType;
@@ -175,7 +187,14 @@ struct INPUT_RECORD {
         MENU_EVENT_RECORD MenuEvent;
         FOCUS_EVENT_RECORD FocusEvent;
     }
-    _Event Event;
+    union {
+        KEY_EVENT_RECORD KeyEvent;
+        MOUSE_EVENT_RECORD MouseEvent;
+        WINDOW_BUFFER_SIZE_RECORD WindowBufferSizeEvent;
+        MENU_EVENT_RECORD MenuEvent;
+        FOCUS_EVENT_RECORD FocusEvent;
+        _Event Event;
+    }
 }
 alias INPUT_RECORD* PINPUT_RECORD;
 
