@@ -952,7 +952,7 @@ interface IShellView : IOleWindow {
     HRESULT ContextSensitiveHelp(BOOL);
     HRESULT TranslateAccelerator(LPMSG);
 //[No] #ifdef _FIX_ENABLEMODELESS_CONFLICT
-//[No] 	STDMETHOD(EnableModelessSV)(THIS_ BOOL) PURE;
+//[No]  STDMETHOD(EnableModelessSV)(THIS_ BOOL) PURE;
 //[Yes] #else
     HRESULT EnableModeless(BOOL);
 //[Yes] #endif
@@ -992,7 +992,7 @@ interface IShellView2 : IShellView {
     HRESULT ContextSensitiveHelp(BOOL);
     HRESULT TranslateAccelerator(LPMSG);
 //[No] #ifdef _FIX_ENABLEMODELESS_CONFLICT
-//[No] 	STDMETHOD(EnableModelessSV)(THIS_ BOOL) PURE;
+//[No]  STDMETHOD(EnableModelessSV)(THIS_ BOOL) PURE;
 //[Yes] #else
     HRESULT EnableModeless(BOOL);
 //[Yes] #endif

@@ -17,8 +17,8 @@ private import win32.lmcons, win32.windef;
 
 const size_t
     RASSAPI_MAX_PHONENUMBER_SIZE = 128,
-    RASSAPI_MAX_MEDIA_NAME	     =  16,
-    RASSAPI_MAX_PORT_NAME	     =  16,
+    RASSAPI_MAX_MEDIA_NAME       =  16,
+    RASSAPI_MAX_PORT_NAME        =  16,
     RASSAPI_MAX_DEVICE_NAME      = 128,
     RASSAPI_MAX_DEVICETYPE_NAME  =  16,
     RASSAPI_MAX_PARAM_KEY_SIZE   =  32;

@@ -16,7 +16,7 @@ version (Win32_UseLib) pragma(lib, "winhttp");
 import win32.w32api;
 import win32.winbase;
 import win32.windef;
-import win32.winsock2;	// Selective Imports BUG (: SOCKADDR_STORAGE;)
+import win32.winsock2;  // Selective Imports BUG (: SOCKADDR_STORAGE;)
 
 alias HINTERNET = void*;
 alias LPHINTERNET = HINTERNET*;
@@ -301,7 +301,7 @@ enum : DWORD {
 // Windows 8.1 SDK:
 static if (_WIN32_WINNT >= 0x602) {
     enum DWORD WINHTTP_LAST_OPTION            = WINHTTP_OPTION_WEB_SOCKET_SEND_BUFFER_SIZE;
-} else {	// Windows 7.0A SDK:
+} else {    // Windows 7.0A SDK:
     enum DWORD WINHTTP_LAST_OPTION            = WINHTTP_OPTION_SERVER_CBT;
 }
 
@@ -436,7 +436,7 @@ enum : DWORD {
 enum DWORD WINHTTP_CALLBACK_FLAG_GETPROXYFORURL_COMPLETE  = WINHTTP_CALLBACK_STATUS_GETPROXYFORURL_COMPLETE;
 
 // Windows 8+/2012+
-static if (_WIN32_WINNT >= 0x602)	{
+static if (_WIN32_WINNT >= 0x602)   {
   enum DWORD WINHTTP_CALLBACK_FLAG_ALL_COMPLETIONS        =  (WINHTTP_CALLBACK_STATUS_SENDREQUEST_COMPLETE
                                                         | WINHTTP_CALLBACK_STATUS_HEADERS_AVAILABLE
                                                         | WINHTTP_CALLBACK_STATUS_DATA_AVAILABLE
@@ -825,7 +825,7 @@ extern (Windows) {
                           LPDWORD lpdwNumberOfBytesWritten);
 
   // Version(Windows8) || Version(Windows2012):
-  static if (_WIN32_WINNT >= 0x602)	{
+  static if (_WIN32_WINNT >= 0x602) {
     DWORD WinHttpCreateProxyResolver(HINTERNET hSession, HINTERNET *phResolver);
     void WinHttpFreeProxyResult(WINHTTP_PROXY_RESULT *pProxyResult);
     DWORD WinHttpGetProxyForUrlEx(HINTERNET hResolver, PCWSTR pcwszUrl,

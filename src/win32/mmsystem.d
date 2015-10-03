@@ -11,8 +11,8 @@
 module win32.mmsystem;
 version (Win32_UseLib) pragma(lib, "winmm");
 
-/*	The #defines MAKEFOURCC, mmioFOURCC, sndAlias are used to define
- *	compile-time constants, so they are implemented as templates.
+/*  The #defines MAKEFOURCC, mmioFOURCC, sndAlias are used to define
+ *  compile-time constants, so they are implemented as templates.
  */
 
 private import win32.w32api, win32.windef, win32.winver;
@@ -2050,8 +2050,8 @@ alias MCI_ANIM_WINDOW_PARMSW* PMCI_ANIM_WINDOW_PARMSW, LPMCI_ANIM_WINDOW_PARMSW;
 struct MCI_ANIM_RECT_PARMS {
     DWORD dwCallback;
     //#ifdef MCI_USE_OFFEXT
-    //	POINT ptOffset;
-    //	POINT ptExtent;
+    //  POINT ptOffset;
+    //  POINT ptExtent;
     //#else
     RECT rc;
     //#endif
@@ -2106,8 +2106,8 @@ alias MCI_OVLY_WINDOW_PARMSW* PMCI_OVLY_WINDOW_PARMSW, LPMCI_OVLY_WINDOW_PARMSW;
 struct MCI_OVLY_RECT_PARMS {
     DWORD dwCallback;
     //#ifdef MCI_USE_OFFEXT
-    //	POINT ptOffset;
-    //	POINT ptExtent;
+    //  POINT ptOffset;
+    //  POINT ptExtent;
     //#else
     RECT rc;
     //#endif

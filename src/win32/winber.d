@@ -31,7 +31,7 @@ module win32.winber;
  import win32.basetsd;
 
 /* Opaque structure
- *	http://msdn.microsoft.com/library/en-us/ldap/ldap/berelement.asp
+ *  http://msdn.microsoft.com/library/en-us/ldap/ldap/berelement.asp
  */
 struct BerElement;
 
@@ -51,8 +51,8 @@ const ber_tag_t
     LBER_DEFAULT = -1,
     LBER_USE_DER =  1;
 
-/*	FIXME: In MinGW, these are WINBERAPI == DECLSPEC_IMPORT.  Linkage
- *	attribute?
+/*  FIXME: In MinGW, these are WINBERAPI == DECLSPEC_IMPORT.  Linkage
+ *  attribute?
  */
 extern (C) {
     BerElement* ber_init(const(BerValue)*);

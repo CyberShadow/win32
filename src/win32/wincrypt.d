@@ -14,10 +14,10 @@ module win32.wincrypt;
 private import win32.w32api, win32.winbase, win32.windef;
 
 /* FIXME:
- *	Types of some constants
- *	Types of macros
- *	Inits of various "size" and "version" members
- *	Why are some #ifdefs commented out?
+ *  Types of some constants
+ *  Types of macros
+ *  Inits of various "size" and "version" members
+ *  Why are some #ifdefs commented out?
  */
 
 const TCHAR[]
@@ -222,17 +222,17 @@ enum {
     PP_NAME = 4,
     PP_VERSION = 5,
     PP_CONTAINER = 6,
-    PP_CHANGE_PASSWORD	= 7,
-    PP_KEYSET_SEC_DESCR	= 8,
-    PP_CERTCHAIN	= 9,
-    PP_KEY_TYPE_SUBTYPE	= 10,
-    PP_PROVTYPE	= 16,
-    PP_KEYSTORAGE	= 17,
-    PP_APPLI_CERT	= 18,
-    PP_SYM_KEYSIZE	= 19,
-    PP_SESSION_KEYSIZE	= 20,
-    PP_UI_PROMPT	= 21,
-    PP_ENUMALGS_EX	= 22,
+    PP_CHANGE_PASSWORD  = 7,
+    PP_KEYSET_SEC_DESCR = 8,
+    PP_CERTCHAIN    = 9,
+    PP_KEY_TYPE_SUBTYPE = 10,
+    PP_PROVTYPE = 16,
+    PP_KEYSTORAGE   = 17,
+    PP_APPLI_CERT   = 18,
+    PP_SYM_KEYSIZE  = 19,
+    PP_SESSION_KEYSIZE  = 20,
+    PP_UI_PROMPT    = 21,
+    PP_ENUMALGS_EX  = 22,
     PP_ENUMMANDROOTS = 25,
     PP_ENUMELECTROOTS = 26,
     PP_KEYSET_TYPE = 27,

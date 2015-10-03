@@ -11,8 +11,8 @@
 /// core.sys.windows.ntldap for the auto-generated win32 package.
 module win32.ntldap;
 
-/*	TOTHINKABOUT: These constants don't have ANSI/Unicode versioned
- *	aliases.  Should we merge them anyway?
+/*  TOTHINKABOUT: These constants don't have ANSI/Unicode versioned
+ *  aliases.  Should we merge them anyway?
  */
 
 const char[]
