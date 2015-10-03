@@ -49,7 +49,7 @@ version (Win32_Winsock1) {
     public import win32.winsock;
 } else {
     public import win32.winsock2;
-    public import win32.ws2tcpip;
+    //public import win32.ws2tcpip;
 }
 
 /+
