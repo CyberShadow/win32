@@ -2684,7 +2684,7 @@ struct EVENTLOGRECORD {
 alias EVENTLOGRECORD* PEVENTLOGRECORD;
 
 struct OSVERSIONINFOA {
-	DWORD     dwOSVersionInfoSize;
+	DWORD     dwOSVersionInfoSize = OSVERSIONINFOA.sizeof;
 	DWORD     dwMajorVersion;
 	DWORD     dwMinorVersion;
 	DWORD     dwBuildNumber;
@@ -2694,7 +2694,7 @@ struct OSVERSIONINFOA {
 alias OSVERSIONINFOA* POSVERSIONINFOA, LPOSVERSIONINFOA;
 
 struct OSVERSIONINFOW {
-	DWORD      dwOSVersionInfoSize;
+	DWORD      dwOSVersionInfoSize = OSVERSIONINFOW.sizeof;
 	DWORD      dwMajorVersion;
 	DWORD      dwMinorVersion;
 	DWORD      dwBuildNumber;
