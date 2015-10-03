@@ -1,11 +1,11 @@
-/***********************************************************************\
-*                                 vfw.d                                 *
-*                                                                       *
-*                       Windows API header module                       *
-*                 written in the D programming language                 *
-*                                                                       *
-*                       Placed into public domain                       *
-\***********************************************************************/
+/**
+ * Windows API header module
+ *
+ * written in the D programming language
+ *
+ * License: Placed into public domain
+ * Source: $(DRUNTIMESRC src/core/sys/windows/_vfw.d)
+ */
 
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.vfw for the auto-generated win32 package.

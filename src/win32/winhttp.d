@@ -1,12 +1,11 @@
-/***********************************************************************\
-*                                winhttp.d                              *
-*                                                                       *
-*                       Windows API header module                       *
-*                                                                       *
-*                  Translated from Windows SDK Headers                  *
-*                                                                       *
-*                       Placed into public domain                       *
-\***********************************************************************/
+/**
+ * Windows API header module
+ *
+ * Translated from Windows SDK Headers
+ *
+ * License: Placed into public domain
+ * Source: $(DRUNTIMESRC src/core/sys/windows/_winhttp.d)
+ */
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winhttp for the auto-generated win32 package.
 module win32.winhttp;

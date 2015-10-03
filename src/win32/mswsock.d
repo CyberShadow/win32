@@ -1,13 +1,12 @@
-/***********************************************************************\
-*                               mswsock.d                               *
-*                                                                       *
-*                       Windows API header module                       *
-*                                                                       *
-*                 Translated from MinGW Windows headers                 *
-*                             by Daniel Keep                            *
-*                                                                       *
-*                       Placed into public domain                       *
-\***********************************************************************/
+/**
+ * Windows API header module
+ *
+ * Translated from MinGW Windows headers
+ *
+ * Authors: Daniel Keep
+ * License: Placed into public domain
+ * Source: $(DRUNTIMESRC src/core/sys/windows/_mswsock.d)
+ */
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.mswsock for the auto-generated win32 package.
 module win32.mswsock;

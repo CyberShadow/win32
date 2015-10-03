@@ -1,13 +1,12 @@
-/***********************************************************************\
-*                                 mapi.d                                *
-*                                                                       *
-*                       Windows API header module                       *
-*                                                                       *
-*                 Translated from MinGW Windows headers                 *
-*                           by Stewart Gordon                           *
-*                                                                       *
-*                       Placed into public domain                       *
-\***********************************************************************/
+/**
+ * Windows API header module
+ *
+ * Translated from MinGW Windows headers
+ *
+ * Authors: Stewart Gordon
+ * License: Placed into public domain
+ * Source: $(DRUNTIMESRC src/core/sys/windows/_mapi.d)
+ */
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.mapi for the auto-generated win32 package.
 module win32.mapi;

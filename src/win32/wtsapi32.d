@@ -1,12 +1,11 @@
-/***********************************************************************\
-*                               wtsapi32.d                              *
-*                                                                       *
-*                       Windows API header module                       *
-*                                                                       *
-*                     Translated from MinGW-w64 API                     *
-*                                                                       *
-*                       Placed into public domain                       *
-\***********************************************************************/
+/**
+ * Windows API header module
+ *
+ * Translated from MinGW-w64 API
+ *
+ * License: Placed into public domain
+ * Source: $(DRUNTIMESRC src/core/sys/windows/_wtsapi32.d)
+ */
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.wtsapi32 for the auto-generated win32 package.
 module win32.wtsapi32;
