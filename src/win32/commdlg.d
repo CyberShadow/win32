@@ -627,7 +627,7 @@ alias PRINTDLGW* LPPRINTDLGW;
 
 //} // _WIN32_WINNT >= 0x500
 
-extern (Windows) {
+extern (Windows) nothrow @nogc {
     BOOL ChooseColorA(LPCHOOSECOLORA);
     BOOL ChooseColorW(LPCHOOSECOLORW);
     BOOL ChooseFontA(LPCHOOSEFONTA);
