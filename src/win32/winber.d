@@ -29,7 +29,7 @@ module win32.winber;
  */
 
  import win32.basetsd;
- 
+
 /* Opaque structure
  *	http://msdn.microsoft.com/library/en-us/ldap/ldap/berelement.asp
  */

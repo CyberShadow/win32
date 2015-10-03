@@ -152,7 +152,7 @@ struct SAFEARRAYUNION {
         DWORD_SIZEDARR LongStr;
         HYPER_SIZEDARR HyperStr;
     }
-    _u u;	
+    _u u;
 }
 
 struct _wireSAFEARRAY {
