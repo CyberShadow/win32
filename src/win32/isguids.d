@@ -14,5 +14,5 @@ module win32.isguids;
 private import win32.basetyps;
 
 extern (C) extern const GUID
-	CLSID_InternetShortcut,
-	IID_IUniformResourceLocator;
+    CLSID_InternetShortcut,
+    IID_IUniformResourceLocator;

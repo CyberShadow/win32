@@ -14,9 +14,9 @@ private import win32.windef;
 private import win32.lmerr; // for NERR_BASE
 
 const TCHAR[]
-	MESSAGE_FILENAME = "NETMSG",
-	OS2MSG_FILENAME = "BASE",
-	HELP_MSG_FILENAME = "NETH";
+    MESSAGE_FILENAME = "NETMSG",
+    OS2MSG_FILENAME = "BASE",
+    HELP_MSG_FILENAME = "NETH";
 
 alias DWORD NET_API_STATUS, API_RET_TYPE;
 
@@ -79,9 +79,9 @@ const PLATFORM_ID_VMS = 700;
 
 // this is a new typedef in W2K, but it should be harmless for earlier Windows versions.
 version (Unicode) {
-	alias LPWSTR LMSTR;
-	alias LPCWSTR LMCSTR;
+    alias LPWSTR LMSTR;
+    alias LPCWSTR LMCSTR;
 } else {
-	alias LPSTR LMSTR;
-	alias LPCSTR LMCSTR;
+    alias LPSTR LMSTR;
+    alias LPCSTR LMCSTR;
 }

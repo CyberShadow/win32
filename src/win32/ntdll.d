@@ -15,9 +15,9 @@ private import win32.w32api;
 
 
 enum SHUTDOWN_ACTION {
-	ShutdownNoReboot,
-	ShutdownReboot,
-	ShutdownPowerOff
+    ShutdownNoReboot,
+    ShutdownReboot,
+    ShutdownPowerOff
 }
 
 extern (Windows) uint NtShutdownSystem(SHUTDOWN_ACTION Action);

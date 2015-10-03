@@ -11,13 +11,13 @@
 module win32.lm;
 /* removed - now supporting only Win2k up
 version (WindowsVista) {
-	version = WIN32_WINNT_ONLY;
+    version = WIN32_WINNT_ONLY;
 } else version (Windows2003) {
-	version = WIN32_WINNT_ONLY;
+    version = WIN32_WINNT_ONLY;
 } else version (WindowsXP) {
-	version = WIN32_WINNT_ONLY;
+    version = WIN32_WINNT_ONLY;
 } else version (WindowsNTonly) {
-	version = WIN32_WINNT_ONLY;
+    version = WIN32_WINNT_ONLY;
 }
 */
 public import win32.lmcons;
@@ -36,7 +36,7 @@ public import win32.lmserver;
 
 version (Windows2000) {
 } else {
-	public import win32.lmmsg;
+    public import win32.lmmsg;
 }
 
 // FIXME: Everything in these next files seems to be deprecated!
