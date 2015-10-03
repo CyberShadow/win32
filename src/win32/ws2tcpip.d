@@ -233,7 +233,7 @@ extern(Windows) {
 
 /+ TODO
 static __inline char*
-gai_strerrorA(int ecode)
+gai_strerrorA()(int ecode)
 {
 	static char[1024+1] message;
 	DWORD dwFlags = FORMAT_MESSAGE_FROM_SYSTEM
@@ -244,7 +244,7 @@ gai_strerrorA(int ecode)
 	return message;
 }
 static __inline WCHAR*
-gai_strerrorW(int ecode)
+gai_strerrorW()(int ecode)
 {
 	static WCHAR[1024+1] message;
 	DWORD dwFlags = FORMAT_MESSAGE_FROM_SYSTEM

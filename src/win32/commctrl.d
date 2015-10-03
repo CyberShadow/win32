@@ -1742,7 +1742,7 @@ enum {
 mixin DECLARE_HANDLE!("HTREEITEM");
 mixin DECLARE_HANDLE!("HIMAGELIST");
 
-version(Win64)
+version()(Win64)
 {
 const HTREEITEM
 	TVI_ROOT  = cast(HTREEITEM) cast(ULONG_PTR)-0x10000,

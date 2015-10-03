@@ -1006,7 +1006,7 @@ enum {
 }
 
 /+ TODO:
-DECLARE_INTERFACE_(IAVIStream, IUnknown)
+DECLARE_INTERFACE_()(IAVIStream, IUnknown)
 {
     STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
     STDMETHOD_(ULONG,AddRef) (THIS)  PURE;
@@ -1047,7 +1047,7 @@ alias TypeDef!(IAVIStream FAR*) PAVISTREAM;
 #undef  INTERFACE
 #define INTERFACE   IAVIStreaming
 
-DECLARE_INTERFACE_(IAVIStreaming, IUnknown)
+DECLARE_INTERFACE_()(IAVIStreaming, IUnknown)
 {
     STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
     STDMETHOD_(ULONG,AddRef) (THIS)  PURE;
@@ -1066,7 +1066,7 @@ alias TypeDef!(IAVIStreaming FAR*) PAVISTREAMING;
 #undef  INTERFACE
 #define INTERFACE   IAVIEditStream
 
-DECLARE_INTERFACE_(IAVIEditStream, IUnknown)
+DECLARE_INTERFACE_()(IAVIEditStream, IUnknown)
 {
     STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
     STDMETHOD_(ULONG,AddRef) (THIS)  PURE;
@@ -1093,7 +1093,7 @@ alias TypeDef!(IAVIEditStream FAR*) PAVIEDITSTREAM;
 #undef  INTERFACE
 #define INTERFACE   IAVIPersistFile
 
-DECLARE_INTERFACE_(IAVIPersistFile, IPersistFile)
+DECLARE_INTERFACE_()(IAVIPersistFile, IPersistFile)
 {
     STDMETHOD(Reserved1)(THIS) PURE;
 };
@@ -1104,7 +1104,7 @@ alias TypeDef!(IAVIPersistFile FAR*) PAVIPERSISTFILE;
 #define INTERFACE   IAVIFile
 #define PAVIFILE IAVIFile FAR*
 
-DECLARE_INTERFACE_(IAVIFile, IUnknown)
+DECLARE_INTERFACE_()(IAVIFile, IUnknown)
 {
     STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
     STDMETHOD_(ULONG,AddRef) (THIS)  PURE;
@@ -1141,7 +1141,7 @@ alias TypeDef!(IAVIFile FAR*) PAVIFILE;
 #define INTERFACE   IGetFrame
 #define PGETFRAME   IGetFrame FAR*
 
-DECLARE_INTERFACE_(IGetFrame, IUnknown)
+DECLARE_INTERFACE_()(IGetFrame, IUnknown)
 {
     STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
     STDMETHOD_(ULONG,AddRef) (THIS)  PURE;
