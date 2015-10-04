@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmshare for the auto-generated win32 package.
 module win32.lmshare;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "netapi");
 
 import win32.lmcons;

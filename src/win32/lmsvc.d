@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmsvc for the auto-generated win32 package.
 module win32.lmsvc;
+//version (Windows):
 
 // FIXME: Is this file deprecated? All of the functions are only for Win16.
 /**

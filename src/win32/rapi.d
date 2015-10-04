@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.rapi for the auto-generated win32 package.
 module win32.rapi;
+//version (Windows):
 
 /* Comment from MinGW
    NOTE: This strictly does not belong in the Win32 API since it's

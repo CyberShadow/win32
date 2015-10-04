@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.odbcinst for the auto-generated win32 package.
 module win32.odbcinst;
+//version (Windows):
 
 import win32.sql;
 private import win32.windef;

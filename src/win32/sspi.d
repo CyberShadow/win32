@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.sspi for the auto-generated win32 package.
 module win32.sspi;
+//version (Windows):
 
 import win32.windef;
 import win32.ntdef;

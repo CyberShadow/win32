@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.richole for the auto-generated win32 package.
 module win32.richole;
+//version (Windows):
 
 private import win32.objfwd, win32.objidl, win32.ole2, win32.unknwn,
   win32.windef;

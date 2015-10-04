@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.ntsecpkg for the auto-generated win32 package.
 module win32.ntsecpkg;
+//version (Windows):
 
 import win32.windef, win32.ntsecapi, win32.security, win32.ntdef, win32.sspi;
 import win32.winnt: GUID;

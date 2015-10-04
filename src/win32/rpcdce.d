@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.rpcdce for the auto-generated win32 package.
 module win32.rpcdce;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "Rpcrt4");
 
 // TODO: I think MinGW got this wrong. RPC_UNICODE_SUPPORTED should be

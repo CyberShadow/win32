@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.vfw for the auto-generated win32 package.
 module win32.vfw;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "vfw32");
 
 private import

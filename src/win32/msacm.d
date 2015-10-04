@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.msacm for the auto-generated win32 package.
 module win32.msacm;
+//version (Windows):
 
 private import win32.basetsd, win32.mmsystem, win32.windef;
 

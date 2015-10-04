@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmcons for the auto-generated win32 package.
 module win32.lmcons;
+//version (Windows):
 
 private import win32.windef;
 private import win32.lmerr; // for NERR_BASE

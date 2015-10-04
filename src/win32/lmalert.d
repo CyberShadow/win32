@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmalert for the auto-generated win32 package.
 module win32.lmalert;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 private import win32.lmcons, win32.windef;

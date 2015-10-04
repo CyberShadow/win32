@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.wincon for the auto-generated win32 package.
 module win32.wincon;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "kernel32");
 
 private import win32.w32api, win32.windef;

@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.commctrl for the auto-generated win32 package.
 module win32.commctrl;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "comctl32");
 
 private import win32.w32api, win32.windef, win32.winuser;

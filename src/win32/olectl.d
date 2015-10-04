@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.olectl for the auto-generated win32 package.
 module win32.olectl;
+//version (Windows):
 
 // In conversion from MinGW, the following was deleted:
 //#define FONTSIZE(n) {n##0000, 0}

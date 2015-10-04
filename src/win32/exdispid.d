@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.exdispid for the auto-generated win32 package.
 module win32.exdispid;
+//version (Windows):
 
 enum : int {
     DISPID_STATUSTEXTCHANGE = 102,

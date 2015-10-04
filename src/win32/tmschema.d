@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.tmschema for the auto-generated win32 package.
 module win32.tmschema;
+//version (Windows):
 
 /* BUTTON parts */
 enum {

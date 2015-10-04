@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.mshtml for the auto-generated win32 package.
 module win32.mshtml;
+//version (Windows):
 
 private import win32.basetyps, win32.oaidl, win32.unknwn,
   win32.windef, win32.wtypes;

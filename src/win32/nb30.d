@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.nb30 for the auto-generated win32 package.
 module win32.nb30;
+//version (Windows):
 
 private import win32.windef;
 

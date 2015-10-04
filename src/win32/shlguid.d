@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.shlguid for the auto-generated win32 package.
 module win32.shlguid;
+//version (Windows):
 
 private import win32.basetyps, win32.w32api;
 

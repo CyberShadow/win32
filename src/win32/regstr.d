@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.regstr for the auto-generated win32 package.
 module win32.regstr;
+//version (Windows):
 
 // TODO: fix possible conflict with shloj. Sort out NEC_98 issue.
 

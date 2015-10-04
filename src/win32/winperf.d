@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winperf for the auto-generated win32 package.
 module win32.winperf;
+//version (Windows):
 
 import win32.windef;
 import win32.winbase; // for SYSTEMTIME

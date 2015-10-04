@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.dlgs for the auto-generated win32 package.
 module win32.dlgs;
+//version (Windows):
 
 private import win32.windef;
 

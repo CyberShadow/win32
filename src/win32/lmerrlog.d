@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmerrlog for the auto-generated win32 package.
 module win32.lmerrlog;
+//version (Windows):
 
 // COMMENT: This appears to be only for Win16. All functions are deprecated.
 

@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.objsafe for the auto-generated win32 package.
 module win32.objsafe;
+//version (Windows):
 
 private import win32.basetyps, win32.unknwn, win32.windef;
 

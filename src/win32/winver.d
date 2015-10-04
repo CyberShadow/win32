@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winver for the auto-generated win32 package.
 module win32.winver;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "version");
 
 private import win32.windef;

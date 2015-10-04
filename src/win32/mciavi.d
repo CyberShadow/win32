@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.mciavi for the auto-generated win32 package.
 module win32.mciavi;
+//version (Windows):
 
 private import win32.mmsystem;
 

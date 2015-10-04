@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.sqltypes for the auto-generated win32 package.
 module win32.sqltypes;
+//version (Windows):
 
 /* Conversion notes:
   It's assumed that ODBC >= 0x0300.

@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.oleauto for the auto-generated win32 package.
 module win32.oleauto;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "oleaut32");
 
 import win32.oaidl;

@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.w32api for the auto-generated win32 package.
 module win32.w32api;
+//version (Windows):
 
 enum __W32API_VERSION = 3.17;
 enum __W32API_MAJOR_VERSION = 3;

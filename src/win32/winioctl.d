@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winioctl for the auto-generated win32 package.
 module win32.winioctl;
+//version (Windows):
 
 // FIXME: check types of some constants
 

@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmsname for the auto-generated win32 package.
 module win32.lmsname;
+//version (Windows):
 
 private import win32.windef;
 

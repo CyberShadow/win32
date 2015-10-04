@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.objfwd for the auto-generated win32 package.
 module win32.objfwd;
+//version (Windows):
 
 private import win32.objidl;
 

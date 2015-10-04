@@ -7,6 +7,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.core for the auto-generated win32 package.
 module win32.core;
+//version (Windows):
 
 /**
  The core Windows API functions.

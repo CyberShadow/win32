@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.oledlg for the auto-generated win32 package.
 module win32.oledlg;
+//version (Windows):
 
 import win32.commdlg, win32.dlgs, win32.ole2, win32.prsht, win32.shellapi,
   win32.windows;

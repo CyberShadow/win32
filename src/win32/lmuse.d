@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmuse for the auto-generated win32 package.
 module win32.lmuse;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 import win32.lmuseflg;

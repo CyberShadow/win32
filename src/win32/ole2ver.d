@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.ole2ver for the auto-generated win32 package.
 module win32.ole2ver;
+//version (Windows):
 
 // These are apparently not documented on the MSDN site
 const rmm = 23;

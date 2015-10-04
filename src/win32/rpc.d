@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.rpc for the auto-generated win32 package.
 module win32.rpc;
+//version (Windows):
 
 /* Moved to rpcdecp (duplicate definition).
     typedef void *I_RPC_HANDLE;

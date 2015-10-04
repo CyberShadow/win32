@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.rpcndr for the auto-generated win32 package.
 module win32.rpcndr;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "rpcrt4");
 
 /* Translation notes:

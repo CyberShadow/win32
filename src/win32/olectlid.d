@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.olectlid for the auto-generated win32 package.
 module win32.olectlid;
+//version (Windows):
 
 private import win32.basetyps;
 

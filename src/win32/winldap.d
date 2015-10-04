@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winldap for the auto-generated win32 package.
 module win32.winldap;
+//version (Windows):
 
 /* Comment from MinGW
   winldap.h - Header file for the Windows LDAP API

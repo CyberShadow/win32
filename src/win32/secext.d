@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.secext for the auto-generated win32 package.
 module win32.secext;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "secur32");
 
 private import win32.w32api, win32.windef;

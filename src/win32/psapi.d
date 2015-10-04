@@ -14,6 +14,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.psapi for the auto-generated win32 package.
 module win32.psapi;
+//version (Windows):
 
 private import win32.w32api;
 private import win32.winbase;

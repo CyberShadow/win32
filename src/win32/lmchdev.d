@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmchdev for the auto-generated win32 package.
 module win32.lmchdev;
+//version (Windows):
 
 // COMMENT: This file might be deprecated.
 

@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.oleacc for the auto-generated win32 package.
 module win32.oleacc;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "oleacc");
 
 private import win32.basetyps, win32.oaidl, win32.unknwn, win32.wtypes,

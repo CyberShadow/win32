@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.dbt for the auto-generated win32 package.
 module win32.dbt;
+//version (Windows):
 
 import win32.w32api, win32.windef;
 import win32.basetyps; // for GUID

@@ -11,6 +11,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.rpcnsi for the auto-generated win32 package.
 module win32.rpcnsi;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "rpcns4");
 
 private import win32.basetyps, win32.rpcdcep, win32.rpcnsi, win32.rpcdce,

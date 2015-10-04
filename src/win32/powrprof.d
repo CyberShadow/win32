@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.powrprof for the auto-generated win32 package.
 module win32.powrprof;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "powrprof");
 
 private import win32.windef;

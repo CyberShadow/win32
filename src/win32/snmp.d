@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.snmp for the auto-generated win32 package.
 module win32.snmp;
+//version (Windows):
 
 private import win32.windows;
 

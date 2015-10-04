@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.subauth for the auto-generated win32 package.
 module win32.subauth;
+//version (Windows):
 
 private import win32.ntdef, win32.windef;
 

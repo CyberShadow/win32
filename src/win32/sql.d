@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.sql for the auto-generated win32 package.
 module win32.sql;
+//version (Windows):
 
 public import win32.sqltypes;
 private import win32.windef;

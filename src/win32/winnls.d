@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winnls for the auto-generated win32 package.
 module win32.winnls;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "kernel32");
 
 private import win32.basetsd, win32.w32api, win32.winbase, win32.windef;

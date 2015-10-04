@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.cderr for the auto-generated win32 package.
 module win32.cderr;
+//version (Windows):
 
 enum {
     CDERR_DIALOGFAILURE    = 0xFFFF,

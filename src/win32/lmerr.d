@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmerr for the auto-generated win32 package.
 module win32.lmerr;
+//version (Windows):
 
 import win32.winerror;
 

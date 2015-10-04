@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.richedit for the auto-generated win32 package.
 module win32.richedit;
+//version (Windows):
 
 private import win32.windef, win32.winuser;
 private import win32.wingdi; // for LF_FACESIZE

@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.mswsock for the auto-generated win32 package.
 module win32.mswsock;
+//version (Windows):
 
 import win32.winbase, win32.windef;
 private import win32.basetyps, win32.w32api;

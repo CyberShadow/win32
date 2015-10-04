@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.schannel for the auto-generated win32 package.
 module win32.schannel;
+//version (Windows):
 
 import win32.wincrypt;
 private import win32.windef;

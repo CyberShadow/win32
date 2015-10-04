@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.cguid for the auto-generated win32 package.
 module win32.cguid;
+//version (Windows):
 
 private import win32.basetyps;
 

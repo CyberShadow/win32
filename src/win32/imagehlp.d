@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.imagehlp for the auto-generated win32 package.
 module win32.imagehlp;
+//version (Windows):
 
 /* Comment from MinGW
     NOTE: This strictly does not belong in the Win32 API since it's

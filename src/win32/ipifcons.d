@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.ipifcons for the auto-generated win32 package.
 module win32.ipifcons;
+//version (Windows):
 
 // FIXME: check types of constants
 

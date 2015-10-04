@@ -12,9 +12,6 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.dbghelp_types for the auto-generated win32 package.
 module win32.dbghelp_types;
-
-import win32.windows;
-
 //version (Windows):
 
 import win32.windows;

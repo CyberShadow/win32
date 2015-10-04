@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.shldisp for the auto-generated win32 package.
 module win32.shldisp;
+//version (Windows):
 
 private import win32.unknwn, win32.windef, win32.wtypes;
 

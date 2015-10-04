@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.idispids for the auto-generated win32 package.
 module win32.idispids;
+//version (Windows):
 
 enum : int {
     DISPID_AMBIENT_OFFLINEIFNOTCONNECTED = -5501,

@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.iprtrmib for the auto-generated win32 package.
 module win32.iprtrmib;
+//version (Windows):
 
 import win32.ipifcons;
 private import win32.windef;

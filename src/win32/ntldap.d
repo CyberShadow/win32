@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.ntldap for the auto-generated win32 package.
 module win32.ntldap;
+//version (Windows):
 
 /*  TOTHINKABOUT: These constants don't have ANSI/Unicode versioned
  *  aliases.  Should we merge them anyway?

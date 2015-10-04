@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.security for the auto-generated win32 package.
 module win32.security;
+//version (Windows):
 
 enum :SECURITY_STATUS{
     SEC_E_OK = 0,

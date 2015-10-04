@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winber for the auto-generated win32 package.
 module win32.winber;
+//version (Windows):
 
 /* Comment from MinGW
   winber.h - Header file for the Windows LDAP Basic Encoding Rules API

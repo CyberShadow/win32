@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winhttp for the auto-generated win32 package.
 module win32.winhttp;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "winhttp");
 // FIXME: Grouping of constants. Windows SDK doesn't make this entirely clear
 // FIXME: Verify WINHTTP_STATUS_CALLBACK function declaration works correctly

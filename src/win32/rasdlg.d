@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.rasdlg for the auto-generated win32 package.
 module win32.rasdlg;
+//version (Windows):
 
 import win32.ras;
 private import win32.lmcons, win32.windef;

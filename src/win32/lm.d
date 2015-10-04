@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lm for the auto-generated win32 package.
 module win32.lm;
+//version (Windows):
 /* removed - now supporting only Win2k up
 version (WindowsVista) {
     version = WIN32_WINNT_ONLY;

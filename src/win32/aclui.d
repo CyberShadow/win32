@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.aclui for the auto-generated win32 package.
 module win32.aclui;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "aclui");
 
 private import win32.w32api;

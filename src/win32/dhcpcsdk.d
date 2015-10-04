@@ -10,6 +10,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.dhcpcsdk for the auto-generated win32 package.
 module win32.dhcpcsdk;
+//version (Windows):
 
 private import win32.w32api, win32.windef;
 

@@ -9,6 +9,7 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.objbase for the auto-generated win32 package.
 module win32.objbase;
+//version (Windows):
 version (Win32_UseLib) pragma(lib, "ole32");
 
 import win32.cguid, win32.objidl, win32.unknwn, win32.wtypes;
