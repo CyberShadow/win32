@@ -14,13 +14,16 @@ module win32.basetyps;
 private import win32.windef, win32.basetsd;
 
 align(1) struct GUID {  // size is 16
+    align(1):
     DWORD   Data1;
     WORD    Data2;
     WORD    Data3;
     BYTE[8] Data4;
 }
-alias GUID UUID, IID, CLSID, FMTID, uuid_t;
+alias GUID UUID, /*IID, CLSID, */FMTID, uuid_t;
+alias IID = const(GUID);
+alias CLSID = const(GUID);
+
 alias GUID* LPGUID, LPCLSID, LPIID;
 alias const(GUID)* LPCGUID, REFGUID, REFIID, REFCLSID, REFFMTID;
-
 alias uint error_status_t, PROPID;

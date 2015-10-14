@@ -16,7 +16,7 @@ module win32.dbghelp_types;
 
 import win32.windows;
 
-alias CHAR TCHAR;
+public import win32.winnt : TCHAR;
 
 /*
 enum ADDRESS_MODE : DWORD
