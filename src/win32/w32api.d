@@ -12,6 +12,8 @@
 module win32.w32api;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 enum __W32API_VERSION = 3.17;
 enum __W32API_MAJOR_VERSION = 3;
 enum __W32API_MINOR_VERSION = 17;

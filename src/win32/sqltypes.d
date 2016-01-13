@@ -11,6 +11,8 @@
 module win32.sqltypes;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 /* Conversion notes:
   It's assumed that ODBC >= 0x0300.
 */

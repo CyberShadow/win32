@@ -12,6 +12,8 @@
 module win32.nddeapi;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.windef;
 
 // FIXME: check types and grouping of constants

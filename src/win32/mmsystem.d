@@ -10,6 +10,8 @@
 /// core.sys.windows.mmsystem for the auto-generated win32 package.
 module win32.mmsystem;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "winmm");
 
 /*  The #defines MAKEFOURCC, mmioFOURCC, sndAlias are used to define

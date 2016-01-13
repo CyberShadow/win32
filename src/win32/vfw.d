@@ -11,6 +11,8 @@
 /// core.sys.windows.vfw for the auto-generated win32 package.
 module win32.vfw;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "vfw32");
 
 private import

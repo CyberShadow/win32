@@ -11,6 +11,8 @@
 /// core.sys.windows.winnetwk for the auto-generated win32 package.
 module win32.winnetwk;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "mpr");
 
 private import win32.winbase, win32.winerror, win32.winnt;

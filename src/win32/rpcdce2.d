@@ -11,6 +11,8 @@
 module win32.rpcdce2;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 import win32.rpcdce;
 private import win32.basetyps;
 

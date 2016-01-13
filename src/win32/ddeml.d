@@ -11,6 +11,8 @@
 /// core.sys.windows.ddeml for the auto-generated win32 package.
 module win32.ddeml;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "user32");
 
 private import win32.basetsd, win32.windef, win32.winnt;

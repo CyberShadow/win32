@@ -10,6 +10,8 @@
 /// core.sys.windows.ras for the auto-generated win32 package.
 module win32.ras;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "rasapi32");
 
 private import win32.basetyps, win32.lmcons, win32.w32api, win32.windef;

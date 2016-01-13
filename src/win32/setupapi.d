@@ -11,6 +11,8 @@
 /// core.sys.windows.setupapi for the auto-generated win32 package.
 module win32.setupapi;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "setupapi");
 
 private import win32.basetyps, win32.commctrl, win32.prsht, win32.w32api,

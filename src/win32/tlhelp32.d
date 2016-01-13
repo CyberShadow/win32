@@ -11,6 +11,8 @@
 module win32.tlhelp32;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.windef;
 
 enum : uint {

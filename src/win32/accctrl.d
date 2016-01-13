@@ -12,6 +12,8 @@
 module win32.accctrl;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.basetyps, win32.w32api, win32.winbase, win32.windef;
 
 // FIXME: check types and grouping of constants

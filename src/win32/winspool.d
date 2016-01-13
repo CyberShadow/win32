@@ -10,6 +10,8 @@
 /// core.sys.windows.winspool for the auto-generated win32 package.
 module win32.winspool;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "winspool");
 
 private import win32.w32api, win32.windef, win32.wingdi;

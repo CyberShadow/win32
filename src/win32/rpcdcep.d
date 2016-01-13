@@ -11,6 +11,8 @@
 module win32.rpcdcep;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.basetyps;
 private import win32.w32api;
 private import win32.windef;

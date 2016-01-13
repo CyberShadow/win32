@@ -12,6 +12,8 @@
 module win32.cpl;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.windef, win32.winuser;
 
 enum : uint {

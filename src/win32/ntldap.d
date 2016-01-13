@@ -12,6 +12,8 @@
 module win32.ntldap;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 /*  TOTHINKABOUT: These constants don't have ANSI/Unicode versioned
  *  aliases.  Should we merge them anyway?
  */

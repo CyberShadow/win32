@@ -11,6 +11,8 @@
 module win32.sqlucode;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.sqlext;
 
 const SQL_WCHAR        = -8;

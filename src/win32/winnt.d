@@ -11,6 +11,8 @@
 module win32.winnt;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 public import win32.basetsd, win32.windef, win32.winerror;
 private import win32.w32api;
 

@@ -11,6 +11,8 @@
 module win32.odbcinst;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 import win32.sql;
 private import win32.windef;
 

@@ -11,6 +11,8 @@
 /// core.sys.windows.wininet for the auto-generated win32 package.
 module win32.wininet;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "wininet");
 
 // FIXME: check types and grouping of constants

@@ -14,6 +14,8 @@
 module win32.dbghelp_types;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 import win32.windows;
 
 public import win32.winnt : TCHAR;

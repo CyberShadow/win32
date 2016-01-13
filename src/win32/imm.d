@@ -10,6 +10,8 @@
 /// core.sys.windows.imm for the auto-generated win32 package.
 module win32.imm;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "imm32");
 
 import win32.windef, win32.wingdi;

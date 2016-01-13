@@ -12,6 +12,8 @@
 module win32.sspi;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 import win32.windef;
 import win32.ntdef;
 import win32.w32api;

@@ -11,6 +11,8 @@
 /// core.sys.windows.aclapi for the auto-generated win32 package.
 module win32.aclapi;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "advapi32");
 
 import win32.windows, win32.accctrl;

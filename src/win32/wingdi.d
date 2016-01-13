@@ -10,6 +10,8 @@
 /// core.sys.windows.wingdi for the auto-generated win32 package.
 module win32.wingdi;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "gdi32");
 
 // FIXME: clean up Windows version support

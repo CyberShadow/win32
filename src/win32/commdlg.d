@@ -10,6 +10,8 @@
 /// core.sys.windows.commdlg for the auto-generated win32 package.
 module win32.commdlg;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "comdlg32");
 
 private import win32.w32api;

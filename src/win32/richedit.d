@@ -11,6 +11,8 @@
 module win32.richedit;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.windef, win32.winuser;
 private import win32.wingdi; // for LF_FACESIZE
 
