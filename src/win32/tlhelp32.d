@@ -141,7 +141,7 @@ version()(Unicode) {
 }
 
 
-extern(Windows) {
+extern(Windows) nothrow @nogc {
     BOOL Heap32First(LPHEAPENTRY32,DWORD,DWORD);
     BOOL Heap32ListFirst(HANDLE,LPHEAPLIST32);
     BOOL Heap32ListNext(HANDLE,LPHEAPLIST32);
@@ -162,7 +162,7 @@ version()(Unicode) {
     alias Process32FirstW Process32First;
     alias Process32NextW Process32Next;
 } else {
-    extern(Windows) {
+    extern(Windows) nothrow @nogc {
         BOOL Module32First(HANDLE,LPMODULEENTRY32);
         BOOL Module32Next(HANDLE,LPMODULEENTRY32);
         BOOL Process32First(HANDLE,LPPROCESSENTRY32);
