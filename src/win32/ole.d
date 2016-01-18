@@ -11,6 +11,7 @@
 /// core.sys.windows.ole for the auto-generated win32 package.
 module win32.ole;
 //version (Windows):
+version (Win32_UseLib) pragma(lib, "ole32");
 
 private import win32.windef, win32.wingdi, win32.uuid;
 

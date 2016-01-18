@@ -11,6 +11,7 @@
 /// core.sys.windows.wincrypt for the auto-generated win32 package.
 module win32.wincrypt;
 //version (Windows):
+version (Win32_UseLib) pragma(lib, "advapi32");
 
 version (ANSI) {} else version = Unicode;
 
