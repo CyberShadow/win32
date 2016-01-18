@@ -14,7 +14,7 @@ module win32.nb30;
 
 private import win32.windef;
 
-const size_t
+enum size_t
     NCBNAMSZ =  16,
     MAX_LANA = 254;
 
@@ -39,7 +39,7 @@ enum : UCHAR {
     SESSION_ABORTED // = 6
 }
 
-const char[4]
+enum char[4]
     ALL_TRANSPORTS = "M\0\0\0",
     MS_NBF         = "MNBF";
 
@@ -72,7 +72,7 @@ enum : UCHAR {
     NCBTRACE    // = 0x79
 }
 
-const UCHAR ASYNCH = 0x80;
+enum UCHAR ASYNCH = 0x80;
 
 enum : UCHAR {
     NRC_GOODRET     = 0x00,

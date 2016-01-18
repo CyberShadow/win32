@@ -249,7 +249,7 @@ HWND GetConsoleWindow();
 static if (_WIN32_WINNT >= 0x501) {
 BOOL AttachConsole(DWORD);
 BOOL SetConsoleDisplayMode(HANDLE, DWORD, PCOORD);
-const DWORD ATTACH_PARENT_PROCESS = cast(DWORD)-1;
+enum DWORD ATTACH_PARENT_PROCESS = cast(DWORD)-1;
 }
 
 BOOL SetConsoleMode(HANDLE, DWORD);

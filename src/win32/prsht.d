@@ -17,7 +17,7 @@ version (Win32_UseLib) pragma(lib, "comctl32");
 
 private import win32.w32api, win32.windef, win32.winuser;
 
-const MAXPROPPAGES = 100;
+enum MAXPROPPAGES = 100;
 
 enum {
     PSP_DEFAULT      = 0x00000000,

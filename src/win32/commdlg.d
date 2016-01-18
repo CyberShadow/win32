@@ -212,7 +212,7 @@ enum : DWORD {
         PD_RESULT_APPLY
     }
 
-    const DWORD START_PAGE_GENERAL = 0xFFFFFFFF;
+enum DWORD START_PAGE_GENERAL = 0xFFFFFFFF;
 //}
 
 enum {
@@ -253,7 +253,7 @@ enum : int {
     CD_LBSELADD
 }
 
-const WORD DN_DEFAULTPRN = 1;
+enum WORD DN_DEFAULTPRN = 1;
 
 /+
 // Both MinGW and the windows docs indicate that there are macros for the send messages
@@ -470,7 +470,7 @@ struct OPENFILENAMEW {
 }
 alias OPENFILENAMEW* LPOPENFILENAMEW;
 
-const size_t OPENFILENAME_SIZE_VERSION_400 = 76;
+enum size_t OPENFILENAME_SIZE_VERSION_400 = 76;
 
 struct OFNOTIFYA {
     NMHDR           hdr;

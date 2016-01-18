@@ -134,7 +134,7 @@ struct SQL_INTERVAL_STRUCT {
     _intval intval;
 }
 
-const SQL_MAX_NUMERIC_LEN = 16;
+enum SQL_MAX_NUMERIC_LEN = 16;
 
 struct SQL_NUMERIC_STRUCT {
     SQLCHAR precision;
