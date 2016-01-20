@@ -10,6 +10,8 @@
 /// core.sys.windows.commctrl for the auto-generated win32 package.
 module win32.commctrl;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "comctl32");
 
 private import win32.w32api, win32.windef, win32.winuser;
@@ -18,7 +20,7 @@ private import win32.objfwd;  // for LPSTREAM
 
 import win32.prsht;
 
-const COMCTL32_VERSION = 6;
+enum COMCTL32_VERSION = 6;
 
 const TCHAR[]
     DRAGLISTMSGSTRING  = "commctrl_DragListMsg",
@@ -104,7 +106,7 @@ enum {
     CBENF_DROPDOWN // = 4
 }
 
-const CBEMAXSTRLEN = 260;
+enum CBEMAXSTRLEN = 260;
 
 enum {
     DL_BEGINDRAG  = 1157,
@@ -149,9 +151,9 @@ enum {
     PGS_DRAGNDROP  = 0x00000004
 }
 
-const CMB_MASKED = 2;
+enum CMB_MASKED = 2;
 
-const MINSYSCOMMAND = SC_SIZE;
+enum MINSYSCOMMAND = SC_SIZE;
 
 enum {
     SBT_OWNERDRAW  = 0x1000,
@@ -593,7 +595,7 @@ static if (_WIN32_IE >= 0x400) {
     }
 }
 
-const HINST_COMMCTRL = cast(HINSTANCE) (-1);
+enum HINST_COMMCTRL = cast(HINSTANCE) (-1);
 
 enum {
     IDB_STD_SMALL_COLOR,
@@ -783,7 +785,7 @@ static if (_WIN32_WINNT >= 0x600) {
     }
 }
 
-const TBBF_LARGE = 1;
+enum TBBF_LARGE = 1;
 
 enum {
     TBN_GETBUTTONINFOA = TBN_FIRST -0,
@@ -969,8 +971,8 @@ enum {
     TTN_POP          = TTN_FIRST-2
 }
 
-const UD_MAXVAL = 0x7fff;
-const UD_MINVAL = -UD_MAXVAL;
+enum UD_MAXVAL = 0x7fff;
+enum UD_MINVAL = -UD_MAXVAL;
 
 enum {
     UDN_DELTAPOS    = UDN_FIRST-1,
@@ -1451,10 +1453,10 @@ enum {
     LVIS_STATEIMAGEMASK = 0xF000
 }
 
-const LPWSTR LPSTR_TEXTCALLBACKW = cast(LPWSTR) -1;
-const LPSTR  LPSTR_TEXTCALLBACKA = cast(LPSTR) -1;
+enum LPWSTR LPSTR_TEXTCALLBACKW = cast(LPWSTR) -1;
+enum LPSTR  LPSTR_TEXTCALLBACKA = cast(LPSTR) -1;
 
-const I_IMAGECALLBACK = -1;
+enum I_IMAGECALLBACK = -1;
 
 static if(_WIN32_IE >= 0x400) {
     enum {
@@ -1745,13 +1747,13 @@ mixin DECLARE_HANDLE!("HIMAGELIST");
 
 version()(Win64)
 {
-const HTREEITEM
+enum HTREEITEM
     TVI_ROOT  = cast(HTREEITEM) cast(ULONG_PTR)-0x10000,
     TVI_FIRST = cast(HTREEITEM) cast(ULONG_PTR)-0xffff,
     TVI_LAST  = cast(HTREEITEM) cast(ULONG_PTR)-0xfffe,
     TVI_SORT  = cast(HTREEITEM) cast(ULONG_PTR)-0xfffd;
 } else {
-const HTREEITEM
+enum HTREEITEM
     TVI_ROOT  = cast(HTREEITEM) 0xFFFF0000,
     TVI_FIRST = cast(HTREEITEM) 0xFFFF0001,
     TVI_LAST  = cast(HTREEITEM) 0xFFFF0002,
@@ -2619,7 +2621,7 @@ static if(_WIN32_WINNT >= 0x600) {
         BCN_DROPDOWN = BCN_FIRST + 0x0002,
     }
 
-    const HIMAGELIST BCCL_NOGLYPH = cast(HIMAGELIST)-1;
+enum HIMAGELIST BCCL_NOGLYPH = cast(HIMAGELIST)-1;
 
     struct BUTTON_SPLITINFO
     {
@@ -2730,8 +2732,8 @@ static if (_WIN32_WINNT >= 0x501) {
         LM_GETIDEALSIZE = LM_GETIDEALHEIGHT,
     }
 
-    const size_t MAX_LINKID_TEXT  =   48;
-    const size_t L_MAX_URL_LENGTH = 2084;
+enum size_t MAX_LINKID_TEXT  =   48;
+enum size_t L_MAX_URL_LENGTH = 2084;
 }
 
 
@@ -3458,7 +3460,7 @@ static if (_WIN32_WINNT >= 0x501) {
         void*     lpReserved;
     }
 
-    const size_t
+enum size_t
         TTTOOLINFOA_V1_SIZE = TOOLINFOA.lParam.offsetof,
         TTTOOLINFOW_V1_SIZE = TOOLINFOW.lParam.offsetof,
         TTTOOLINFOA_V2_SIZE = TOOLINFOA.lpReserved.offsetof,
@@ -3488,7 +3490,7 @@ static if (_WIN32_WINNT >= 0x501) {
         LPARAM    lParam;
     }
 
-    const size_t
+enum size_t
         TTTOOLINFOA_V1_SIZE = TOOLINFOA.lParam.offsetof,
         TTTOOLINFOW_V1_SIZE = TOOLINFOW.lParam.offsetof,
         TTTOOLINFOA_V2_SIZE = TOOLINFOA.sizeof,
@@ -3514,7 +3516,7 @@ static if (_WIN32_WINNT >= 0x501) {
         LPWSTR    lpszText;
     }
 
-    const size_t
+enum size_t
         TTTOOLINFOA_V1_SIZE = TOOLINFOA.sizeof,
         TTTOOLINFOW_V1_SIZE = TOOLINFOW.sizeof;
 }
@@ -6270,13 +6272,13 @@ static if (_WIN32_WINNT >= 0x501) {
     }
     alias EDITBALLOONTIP* PEDITBALLOONTIP;
 
-    const EM_SETCUEBANNER = ECM_FIRST + 1;
-    const EM_GETCUEBANNER = ECM_FIRST + 2;
-    const EM_SHOWBALLOONTIP = ECM_FIRST + 3;
-    const EM_HIDEBALLOONTIP = ECM_FIRST + 4;
+enum EM_SETCUEBANNER = ECM_FIRST + 1;
+enum EM_GETCUEBANNER = ECM_FIRST + 2;
+enum EM_SHOWBALLOONTIP = ECM_FIRST + 3;
+enum EM_HIDEBALLOONTIP = ECM_FIRST + 4;
 }
 
 static if (_WIN32_WINNT >= 0x600) {
-    const EM_SETHILITE = ECM_FIRST + 5;
-    const EM_GETHILITE = ECM_FIRST + 6;
+enum EM_SETHILITE = ECM_FIRST + 5;
+enum EM_GETHILITE = ECM_FIRST + 6;
 }

@@ -10,6 +10,8 @@
 /// core.sys.windows.wincon for the auto-generated win32 package.
 module win32.wincon;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "kernel32");
 
 private import win32.w32api, win32.windef;
@@ -247,7 +249,7 @@ HWND GetConsoleWindow();
 static if (_WIN32_WINNT >= 0x501) {
 BOOL AttachConsole(DWORD);
 BOOL SetConsoleDisplayMode(HANDLE, DWORD, PCOORD);
-const DWORD ATTACH_PARENT_PROCESS = cast(DWORD)-1;
+enum DWORD ATTACH_PARENT_PROCESS = cast(DWORD)-1;
 }
 
 BOOL SetConsoleMode(HANDLE, DWORD);

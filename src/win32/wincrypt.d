@@ -11,6 +11,9 @@
 /// core.sys.windows.wincrypt for the auto-generated win32 package.
 module win32.wincrypt;
 //version (Windows):
+version (Win32_UseLib) pragma(lib, "advapi32");
+
+version (ANSI) {} else version = Unicode;
 
 private import win32.w32api, win32.winbase, win32.windef;
 
@@ -36,10 +39,10 @@ const TCHAR[]
     MS_SCARD_PROV = "Microsoft Base Smart Card Crypto Provider";
 
 static if (_WIN32_WINNT > 0x501) {
-    const TCHAR[] MS_ENH_RSA_AES_PROV
+const TCHAR[] MS_ENH_RSA_AES_PROV
       = "Microsoft Enhanced RSA and AES Cryptographic Provider";
 } else static if (_WIN32_WINNT == 0x501) {
-    const TCHAR[] MS_ENH_RSA_AES_PROV
+const TCHAR[] MS_ENH_RSA_AES_PROV
       = "Microsoft Enhanced RSA and AES Cryptographic Provider (Prototype)";
 }
 
@@ -833,12 +836,12 @@ extern (Windows) {
     HCERTSTORE CertOpenSystemStoreW(HCRYPTPROV, LPCWSTR);
     HCERTSTORE CertOpenStore(LPCSTR, DWORD, HCRYPTPROV, DWORD, const(void)*);
     PCCERT_CONTEXT CertFindCertificateInStore(HCERTSTORE, DWORD, DWORD, DWORD,
-      const(void)*, PCCERT_CONTEXT);
+const(void)*, PCCERT_CONTEXT);
     BOOL CertFreeCertificateContext(PCCERT_CONTEXT);
     PCCERT_CONTEXT CertGetIssuerCertificateFromStore(HCERTSTORE,
       PCCERT_CONTEXT, PCCERT_CONTEXT, DWORD*);
     PCCERT_CHAIN_CONTEXT CertFindChainInStore(HCERTSTORE, DWORD, DWORD, DWORD,
-      const(void)*, PCCERT_CHAIN_CONTEXT);
+const(void)*, PCCERT_CHAIN_CONTEXT);
 
     BOOL CryptAcquireContextA(HCRYPTPROV*, LPCSTR, LPCSTR, DWORD, DWORD);
     BOOL CryptAcquireContextW(HCRYPTPROV*, LPCWSTR, LPCWSTR, DWORD, DWORD);

@@ -12,6 +12,8 @@
 module win32.ntldap;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 /*  TOTHINKABOUT: These constants don't have ANSI/Unicode versioned
  *  aliases.  Should we merge them anyway?
  */
@@ -56,5 +58,5 @@ const wchar[]
     LDAP_SERVER_PERMISSIVE_MODIFY_OID_W    = "1.2.840.113556.1.4.1413",
     LDAP_SERVER_CROSSDOM_MOVE_TARGET_OID_W = "1.2.840.113556.1.4.521";
 
-const SERVER_SEARCH_FLAG_DOMAIN_SCOPE = 1;
-const SERVER_SEARCH_FLAG_PHANTOM_ROOT = 2;
+enum SERVER_SEARCH_FLAG_DOMAIN_SCOPE = 1;
+enum SERVER_SEARCH_FLAG_PHANTOM_ROOT = 2;

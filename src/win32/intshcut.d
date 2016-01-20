@@ -12,6 +12,8 @@
 module win32.intshcut;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.unknwn, win32.windef;
 
 enum : SCODE {

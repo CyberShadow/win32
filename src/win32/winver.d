@@ -11,6 +11,8 @@
 /// core.sys.windows.winver for the auto-generated win32 package.
 module win32.winver;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "version");
 
 private import win32.windef;

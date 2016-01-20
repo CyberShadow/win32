@@ -11,6 +11,7 @@
 /// core.sys.windows.ole for the auto-generated win32 package.
 module win32.ole;
 //version (Windows):
+version (Win32_UseLib) pragma(lib, "ole32");
 
 private import win32.windef, win32.wingdi, win32.uuid;
 
@@ -25,10 +26,10 @@ enum {
     OT_STATIC
 }
 
-const OLEVERB_PRIMARY = 0;
-const OF_SET          = 1;
-const OF_GET          = 2;
-const OF_HANDLER      = 4;
+enum OLEVERB_PRIMARY = 0;
+enum OF_SET          = 1;
+enum OF_GET          = 2;
+enum OF_HANDLER      = 4;
 
 struct OLETARGETDEVICE {
     USHORT otdDeviceNameOffset;

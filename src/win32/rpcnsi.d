@@ -12,6 +12,8 @@
 /// core.sys.windows.rpcnsi for the auto-generated win32 package.
 module win32.rpcnsi;
 //version (Windows):
+
+version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "rpcns4");
 
 private import win32.basetyps, win32.rpcdcep, win32.rpcnsi, win32.rpcdce,
@@ -20,14 +22,14 @@ private import win32.windef;  // for HANDLE
 
 mixin DECLARE_HANDLE!("RPC_NS_HANDLE");
 
-const RPC_C_NS_SYNTAX_DEFAULT=0;
-const RPC_C_NS_SYNTAX_DCE=3;
-const RPC_C_PROFILE_DEFAULT_ELT=0;
-const RPC_C_PROFILE_ALL_ELT=1;
-const RPC_C_PROFILE_MATCH_BY_IF=2;
-const RPC_C_PROFILE_MATCH_BY_MBR=3;
-const RPC_C_PROFILE_MATCH_BY_BOTH=4;
-const RPC_C_NS_DEFAULT_EXP_AGE=-1;
+enum RPC_C_NS_SYNTAX_DEFAULT=0;
+enum RPC_C_NS_SYNTAX_DCE=3;
+enum RPC_C_PROFILE_DEFAULT_ELT=0;
+enum RPC_C_PROFILE_ALL_ELT=1;
+enum RPC_C_PROFILE_MATCH_BY_IF=2;
+enum RPC_C_PROFILE_MATCH_BY_MBR=3;
+enum RPC_C_PROFILE_MATCH_BY_BOTH=4;
+enum RPC_C_NS_DEFAULT_EXP_AGE=-1;
 
 extern (Windows) {
     RPC_STATUS RpcNsBindingExportA(uint, ubyte*, RPC_IF_HANDLE,
@@ -53,8 +55,8 @@ extern (Windows) {
     RPC_STATUS RpcNsProfileEltInqNextA(RPC_NS_HANDLE, RPC_IF_ID*, ubyte**,
       uint*, ubyte**);
     RPC_STATUS RpcNsProfileEltInqDone(RPC_NS_HANDLE*);
-    RPC_STATUS RpcNsEntryObjectInqNext(in RPC_NS_HANDLE, out UUID*);
-    RPC_STATUS RpcNsEntryObjectInqDone(ref RPC_NS_HANDLE*);
+    RPC_STATUS RpcNsEntryObjectInqNext(RPC_NS_HANDLE, UUID*);
+    RPC_STATUS RpcNsEntryObjectInqDone(RPC_NS_HANDLE*);
     RPC_STATUS RpcNsEntryExpandNameA(uint, ubyte*, ubyte**);
     RPC_STATUS RpcNsMgmtBindingUnexportA(uint, ubyte*, RPC_IF_ID*, uint,
       UUID_VECTOR*);

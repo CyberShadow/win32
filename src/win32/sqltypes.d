@@ -11,6 +11,8 @@
 module win32.sqltypes;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 /* Conversion notes:
   It's assumed that ODBC >= 0x0300.
 */
@@ -132,7 +134,7 @@ struct SQL_INTERVAL_STRUCT {
     _intval intval;
 }
 
-const SQL_MAX_NUMERIC_LEN = 16;
+enum SQL_MAX_NUMERIC_LEN = 16;
 
 struct SQL_NUMERIC_STRUCT {
     SQLCHAR precision;

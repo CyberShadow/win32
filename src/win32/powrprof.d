@@ -18,14 +18,14 @@ private import win32.ntdef;
 
 // FIXME: look up Windows version support
 
-const ULONG
+enum ULONG
     EnableSysTrayBatteryMeter =  1,
     EnableMultiBatteryDisplay =  2,
     EnablePasswordLogon       =  4,
     EnableWakeOnRing          =  8,
     EnableVideoDimDisplay     = 16;
 
-const UINT NEWSCHEME = -1;
+enum UINT NEWSCHEME = -1;
 
 struct GLOBAL_MACHINE_POWER_POLICY {
     ULONG              Revision;

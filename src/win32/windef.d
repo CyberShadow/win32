@@ -15,7 +15,7 @@ module win32.windef;
 public import win32.winnt;
 private import win32.w32api;
 
-const size_t MAX_PATH = 260;
+enum size_t MAX_PATH = 260;
 
 pure nothrow @nogc {
     ushort MAKEWORD()(ubyte a, ubyte b) {
@@ -55,7 +55,12 @@ pure nothrow @nogc {
     }
 }
 
-enum void* NULL = null;
+enum NULL = null;
+static assert (is(typeof({
+    void test()(int* p) {}
+    test(NULL);
+})));
+
 alias ubyte        BYTE;
 alias ubyte*       PBYTE, LPBYTE;
 alias ushort       USHORT, WORD, ATOM;
