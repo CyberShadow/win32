@@ -14,7 +14,7 @@ version (Win32_UseLib) pragma(lib, "netapi32");
 
 private import win32.lmcons, win32.windef;
 
-const ULONG
+enum ULONG
     STATSOPT_CLR   = 1,
     STATS_NO_VALUE = -1,
     STATS_OVERFLOW = -2;

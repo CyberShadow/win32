@@ -141,7 +141,7 @@ enum EXTCONN {
 }
 
 struct MULTI_QI {
-    const(IID)* pIID;
+const(IID)* pIID;
     IUnknown    pItf;
     HRESULT     hr;
 }
@@ -476,7 +476,7 @@ struct SOLE_AUTHENTICATION_SERVICE {
     HRESULT hr;
 }
 
-const OLECHAR* COLE_DEFAULT_PRINCIPAL = cast ( OLECHAR* )(-1);
+enum OLECHAR* COLE_DEFAULT_PRINCIPAL = cast ( OLECHAR* )(-1);
 
 enum EOLE_AUTHENTICATION_CAPABILITIES {
     EOAC_NONE              = 0,
@@ -502,7 +502,7 @@ struct SOLE_AUTHENTICATION_INFO {
     void* pAuthInfo;
 }
 
-const void* COLE_DEFAULT_AUTHINFO = cast( void* )(-1 );
+enum void* COLE_DEFAULT_AUTHINFO = cast( void* )(-1 );
 
 struct SOLE_AUTHENTICATION_LIST {
     DWORD cAuthInfo;

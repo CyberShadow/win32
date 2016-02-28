@@ -16,6 +16,8 @@
 module win32.psapi;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.w32api;
 private import win32.winbase;
 private import win32.windef;

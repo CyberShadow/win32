@@ -12,6 +12,8 @@
 module win32.nspapi;
 //version (Windows):
 
+version (ANSI) {} else version = Unicode;
+
 private import win32.basetyps, win32.windef;
 
 // FIXME: check types of constants

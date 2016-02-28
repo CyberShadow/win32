@@ -20,7 +20,7 @@ private import win32.basetyps, win32.objidl, win32.unknwn, win32.windef,
 private import win32.objfwd; // for LPMONIKER
 private import win32.wingdi; // for LPLOGPALETTE
 
-const MK_ALT = 32;
+enum MK_ALT = 32;
 
 enum BINDSPEED {
     BINDSPEED_INDEFINITE = 1,

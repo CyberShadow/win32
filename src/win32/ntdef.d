@@ -14,7 +14,7 @@ module win32.ntdef;
 
 private import win32.basetsd, win32.subauth, win32.windef, win32.winnt;
 
-const uint
+enum uint
     OBJ_INHERIT          = 0x0002,
     OBJ_PERMANENT        = 0x0010,
     OBJ_EXCLUSIVE        = 0x0020,

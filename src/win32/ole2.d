@@ -17,9 +17,9 @@ public import win32.basetyps, win32.objbase, win32.oleauto, win32.olectlid,
 private import win32.objfwd, win32.objidl, win32.windef, win32.wtypes;
 private import win32.winuser; // for LPMSG
 
-const E_DRAW = VIEW_E_DRAW;
+enum E_DRAW = VIEW_E_DRAW;
 
-const DATA_E_FORMATETC = DV_E_FORMATETC;
+enum DATA_E_FORMATETC = DV_E_FORMATETC;
 
 enum {
     OLEIVERB_PRIMARY = 0,
@@ -31,10 +31,10 @@ enum {
     OLEIVERB_DISCARDUNDOSTATE = -6
 }
 
-const EMBDHLP_INPROC_HANDLER = 0x0000L;
-const EMBDHLP_INPROC_SERVER  = 0x0001L;
-const EMBDHLP_CREATENOW      = 0x00000000L;
-const EMBDHLP_DELAYCREATE    = 0x00010000L;
+enum EMBDHLP_INPROC_HANDLER = 0x0000L;
+enum EMBDHLP_INPROC_SERVER  = 0x0001L;
+enum EMBDHLP_CREATENOW      = 0x00000000L;
+enum EMBDHLP_DELAYCREATE    = 0x00010000L;
 
 align(8):
 struct OLESTREAM {
