@@ -409,7 +409,7 @@ struct ITEMIDLIST {
 alias ITEMIDLIST*        LPITEMIDLIST;
 alias const(ITEMIDLIST)* LPCITEMIDLIST;
 
-alias int function(HWND, UINT, LPARAM, LPARAM) BFFCALLBACK;
+extern (Windows) alias int function(HWND, UINT, LPARAM, LPARAM) BFFCALLBACK;
 
 struct BROWSEINFOA {
     HWND          hwndOwner;
