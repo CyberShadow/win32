@@ -810,14 +810,16 @@ alias RASENTRYNAME* LPRASENTRYNAME;
 //}
 
 /* Callback prototypes */
-deprecated {
-    alias BOOL function (HWND, LPSTR, DWORD, LPDWORD) ORASADFUNC;
-}
+extern (Windows) { /* WINAPI */
+    deprecated {
+        alias BOOL function (HWND, LPSTR, DWORD, LPDWORD) ORASADFUNC;
+    }
 
-alias void function (UINT, RASCONNSTATE, DWORD) RASDIALFUNC;
-alias void function(HRASCONN, UINT, RASCONNSTATE, DWORD, DWORD) RASDIALFUNC1;
-alias DWORD function (ULONG_PTR, DWORD, HRASCONN, UINT,
-RASCONNSTATE, DWORD, DWORD) RASDIALFUNC2;
+    alias void function (UINT, RASCONNSTATE, DWORD) RASDIALFUNC;
+    alias void function(HRASCONN, UINT, RASCONNSTATE, DWORD, DWORD) RASDIALFUNC1;
+    alias DWORD function (ULONG_PTR, DWORD, HRASCONN, UINT,
+    RASCONNSTATE, DWORD, DWORD) RASDIALFUNC2;
+}
 
 /* External functions */
 DWORD RasDialA(LPRASDIALEXTENSIONS, LPCSTR, LPRASDIALPARAMSA, DWORD, LPVOID, LPHRASCONN);
@@ -858,8 +860,10 @@ DWORD RasValidateEntryNameA(LPCSTR, LPCSTR);
 DWORD RasValidateEntryNameW(LPCWSTR, LPCWSTR);
 
 //static if(_WIN32_WINNT >= 0x401) {
+extern (Windows) { /* WINAPI */
     alias BOOL function(LPSTR, LPSTR, LPRASADPARAMS, LPDWORD) RASADFUNCA;
     alias BOOL function(LPWSTR, LPWSTR, LPRASADPARAMS, LPDWORD) RASADFUNCW;
+}
 
     DWORD RasGetSubEntryHandleA(HRASCONN, DWORD, LPHRASCONN);
     DWORD RasGetSubEntryHandleW(HRASCONN, DWORD, LPHRASCONN);
@@ -890,10 +894,12 @@ DWORD RasValidateEntryNameW(LPCWSTR, LPCWSTR);
 //}
 
 static if (_WIN32_WINNT >= 0x500) {
+extern (Windows) { /* WINAPI */
     alias DWORD function(HRASCONN) RasCustomHangUpFn;
     alias DWORD function(LPCTSTR, LPCTSTR, DWORD) RasCustomDeleteEntryNotifyFn;
     alias DWORD function(HINSTANCE, LPRASDIALEXTENSIONS, LPCTSTR, LPRASDIALPARAMS, DWORD, LPVOID,
                          LPHRASCONN, DWORD) RasCustomDialFn;
+}
 
     DWORD RasInvokeEapUI(HRASCONN, DWORD, LPRASDIALEXTENSIONS, HWND);
     DWORD RasGetLinkStatistics(HRASCONN, DWORD, RAS_STATS*);
