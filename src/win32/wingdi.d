@@ -2772,7 +2772,7 @@ struct EXTLOGPEN {
     UINT elpWidth;
     UINT elpBrushStyle;
     COLORREF elpColor;
-    LONG elpHatch;
+    ULONG_PTR elpHatch;
     DWORD elpNumEntries;
     DWORD[1] elpStyleEntry;
 }

@@ -2269,7 +2269,7 @@ struct EXCEPTION_RECORD {
     EXCEPTION_RECORD* ExceptionRecord;
     PVOID ExceptionAddress;
     DWORD NumberParameters;
-    DWORD[EXCEPTION_MAXIMUM_PARAMETERS] ExceptionInformation;
+    ULONG_PTR[EXCEPTION_MAXIMUM_PARAMETERS] ExceptionInformation;
 }
 alias EXCEPTION_RECORD* PEXCEPTION_RECORD, LPEXCEPTION_RECORD;
 
@@ -2598,7 +2598,7 @@ struct MEMORY_BASIC_INFORMATION {
     PVOID BaseAddress;
     PVOID AllocationBase;
     DWORD AllocationProtect;
-    DWORD RegionSize;
+    SIZE_T RegionSize;
     DWORD State;
     DWORD Protect;
     DWORD Type;
