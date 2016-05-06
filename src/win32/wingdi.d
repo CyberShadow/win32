@@ -2778,6 +2778,17 @@ struct EXTLOGPEN {
 }
 alias EXTLOGPEN* PEXTLOGPEN, NPEXTLOGPEN, LPEXTLOGPEN;
 
+struct EXTLOGPEN32 {
+    UINT elpPenStyle;
+    UINT elpWidth;
+    UINT elpBrushStyle;
+    COLORREF elpColor;
+    ULONG elpHatch;
+    DWORD elpNumEntries;
+    DWORD[1] elpStyleEntry;
+}
+alias EXTLOGPEN32* PEXTLOGPEN32, NPEXTLOGPEN32, LPEXTLOGPEN32;
+
 struct EMREXTCREATEPEN {
     EMR emr;
     DWORD ihPen;
@@ -2785,7 +2796,7 @@ struct EMREXTCREATEPEN {
     DWORD cbBmi;
     DWORD offBits;
     DWORD cbBits;
-    EXTLOGPEN elp;
+    EXTLOGPEN32 elp;
 }
 alias EMREXTCREATEPEN* PEMREXTCREATEPEN;
 
