@@ -3018,7 +3018,7 @@ struct IMAGE_SYMBOL {
             DWORD Long;
         }
         _Name Name;
-        PBYTE[2]  LongName;
+        DWORD[2]  LongName; // PBYTE[2]
     }
     _N    N;
     DWORD Value;
