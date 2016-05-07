@@ -33,9 +33,6 @@ version (ANSI) {} else version = Unicode;
 
 import win32.schannel, win32.winber;
 private import win32.wincrypt, win32.windef;
-version()(Tango){
-    private import tango.stdc.stdio;
-}
 
 align(4):
 
