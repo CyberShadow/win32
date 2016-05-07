@@ -51,14 +51,7 @@ enum {
     SERVICE_FLAG_HARD  = 2
 }
 
-/*  MinGW makes the next section conditional on winsock.h or winsock2.h
- *  being included.  But that doesn't translate well into D.
- */
-version (Win32_Winsock1) {
-    import win32.winsock;
-} else {
-    import win32.winsock2;
-}
+import win32.winsock2;
 
 struct SOCKET_ADDRESS {
     LPSOCKADDR lpSockaddr;
