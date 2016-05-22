@@ -1054,6 +1054,7 @@ alias MMTIME* PMMTIME, LPMMTIME;
 alias TypeDef!(HANDLE) HDRVR;
 
 struct DRVCONFIGINFO {
+align(1):
     DWORD dwDCISize;
     LPCWSTR lpszDCISectionName;
     LPCWSTR lpszDCIAliasName;
@@ -1061,6 +1062,7 @@ struct DRVCONFIGINFO {
 alias DRVCONFIGINFO * PDRVCONFIGINFO, LPDRVCONFIGINFO;
 
 struct DRVCONFIGINFOEX {
+align(1):
     DWORD dwDCISize;
     LPCWSTR lpszDCISectionName;
     LPCWSTR lpszDCIAliasName;
@@ -1235,6 +1237,7 @@ struct MIDIINCAPSW {
 alias MIDIINCAPSW* PMIDIINCAPSW, LPMIDIINCAPSW;
 
 struct MIDIHDR {
+align(1):
     LPSTR lpData;
     DWORD dwBufferLength;
     DWORD dwBytesRecorded;
@@ -1321,6 +1324,7 @@ struct MIXERCAPSW {
 alias MIXERCAPSW* PMIXERCAPSW, LPMIXERCAPSW;
 
 struct MIXERLINEA {
+align(1):
     DWORD cbStruct;
     DWORD dwDestination;
     DWORD dwSource;
@@ -1346,6 +1350,7 @@ struct MIXERLINEA {
 alias MIXERLINEA* PMIXERLINEA, LPMIXERLINEA;
 
 struct MIXERLINEW {
+align(1):
     DWORD cbStruct;
     DWORD dwDestination;
     DWORD dwSource;
@@ -1430,6 +1435,7 @@ struct MIXERCONTROLW {
 alias MIXERCONTROLW* PMIXERCONTROLW, LPMIXERCONTROLW;
 
 struct MIXERLINECONTROLSA {
+align(1):
     DWORD cbStruct;
     DWORD dwLineID;
     union {
@@ -1443,6 +1449,7 @@ struct MIXERLINECONTROLSA {
 alias MIXERLINECONTROLSA* PMIXERLINECONTROLSA, LPMIXERLINECONTROLSA;
 
 struct MIXERLINECONTROLSW {
+align(1):
     DWORD cbStruct;
     DWORD dwLineID;
     union {
@@ -1456,6 +1463,7 @@ struct MIXERLINECONTROLSW {
 alias MIXERLINECONTROLSW* PMIXERLINECONTROLSW, LPMIXERLINECONTROLSW;
 
 struct MIXERCONTROLDETAILS {
+align(1):
     DWORD cbStruct;
     DWORD dwControlID;
     DWORD cChannels;
@@ -1594,6 +1602,7 @@ alias TypeDef!(HANDLE) HMMIO;
 alias LRESULT function (LPSTR, UINT, LPARAM, LPARAM) LPMMIOPROC;
 
 struct MMIOINFO {
+align(1):
     DWORD dwFlags;
     FOURCC fccIOProc;
     LPMMIOPROC pIOProc;
@@ -1630,6 +1639,7 @@ struct MCI_GENERIC_PARMS {
 alias MCI_GENERIC_PARMS* PMCI_GENERIC_PARMS, LPMCI_GENERIC_PARMS;
 
 struct MCI_OPEN_PARMSA {
+align(1):
     DWORD_PTR dwCallback;
     MCIDEVICEID wDeviceID;
     LPCSTR lpstrDeviceType;
@@ -1639,6 +1649,7 @@ struct MCI_OPEN_PARMSA {
 alias MCI_OPEN_PARMSA* PMCI_OPEN_PARMSA, LPMCI_OPEN_PARMSA;
 
 struct MCI_OPEN_PARMSW {
+align(1):
     DWORD_PTR dwCallback;
     MCIDEVICEID wDeviceID;
     LPCWSTR lpstrDeviceType;
@@ -1715,6 +1726,7 @@ struct MCI_SET_PARMS {
 alias MCI_SET_PARMS* PMCI_SET_PARMS, LPMCI_SET_PARMS;
 
 struct MCI_BREAK_PARMS {
+align(1):
     DWORD_PTR dwCallback;
     int nVirtKey;
     HWND hwndBreak;
@@ -1779,6 +1791,7 @@ struct MCI_VD_ESCAPE_PARMSW {
 alias MCI_VD_ESCAPE_PARMSW* PMCI_VD_ESCAPE_PARMSW, LPMCI_VD_ESCAPE_PARMSW;
 
 struct MCI_WAVE_OPEN_PARMSA {
+align(1):
     DWORD_PTR dwCallback;
     MCIDEVICEID wDeviceID;
     LPCSTR lpstrDeviceType;
@@ -1789,6 +1802,7 @@ struct MCI_WAVE_OPEN_PARMSA {
 alias MCI_WAVE_OPEN_PARMSA* PMCI_WAVE_OPEN_PARMSA, LPMCI_WAVE_OPEN_PARMSA;
 
 struct MCI_WAVE_OPEN_PARMSW {
+align(1):
     DWORD_PTR dwCallback;
     MCIDEVICEID wDeviceID;
     LPCWSTR lpstrDeviceType;
@@ -2004,6 +2018,7 @@ struct MCI_SEQ_SET_PARMS {
 alias MCI_SEQ_SET_PARMS* PMCI_SEQ_SET_PARMS, LPMCI_SEQ_SET_PARMS;
 
 struct MCI_ANIM_OPEN_PARMSA {
+align(1):
     DWORD_PTR dwCallback;
     MCIDEVICEID wDeviceID;
     LPCSTR lpstrDeviceType;
@@ -2015,6 +2030,7 @@ struct MCI_ANIM_OPEN_PARMSA {
 alias MCI_ANIM_OPEN_PARMSA* PMCI_ANIM_OPEN_PARMSA, LPMCI_ANIM_OPEN_PARMSA;
 
 struct MCI_ANIM_OPEN_PARMSW {
+align(1):
     DWORD_PTR dwCallback;
     MCIDEVICEID wDeviceID;
     LPCWSTR lpstrDeviceType;
@@ -2040,6 +2056,7 @@ struct MCI_ANIM_STEP_PARMS {
 alias MCI_ANIM_STEP_PARMS* PMCI_ANIM_STEP_PARMS, LPMCI_ANIM_STEP_PARMS;
 
 struct MCI_ANIM_WINDOW_PARMSA {
+align(1):
     DWORD_PTR dwCallback;
     HWND hWnd;
     UINT nCmdShow;
@@ -2048,6 +2065,7 @@ struct MCI_ANIM_WINDOW_PARMSA {
 alias MCI_ANIM_WINDOW_PARMSA* PMCI_ANIM_WINDOW_PARMSA, LPMCI_ANIM_WINDOW_PARMSA;
 
 struct MCI_ANIM_WINDOW_PARMSW {
+align(1):
     DWORD_PTR dwCallback;
     HWND hWnd;
     UINT nCmdShow;
@@ -2074,6 +2092,7 @@ struct MCI_ANIM_UPDATE_PARMS {
 alias MCI_ANIM_UPDATE_PARMS* PMCI_ANIM_UPDATE_PARMS, LPMCI_ANIM_UPDATE_PARMS;
 
 struct MCI_OVLY_OPEN_PARMSA {
+align(1):
     DWORD_PTR dwCallback;
     MCIDEVICEID wDeviceID;
     LPCSTR lpstrDeviceType;
@@ -2085,6 +2104,7 @@ struct MCI_OVLY_OPEN_PARMSA {
 alias MCI_OVLY_OPEN_PARMSA* PMCI_OVLY_OPEN_PARMSA, LPMCI_OVLY_OPEN_PARMSA;
 
 struct MCI_OVLY_OPEN_PARMSW {
+align(1):
     DWORD_PTR dwCallback;
     MCIDEVICEID wDeviceID;
     LPCWSTR lpstrDeviceType;
@@ -2096,6 +2116,7 @@ struct MCI_OVLY_OPEN_PARMSW {
 alias MCI_OVLY_OPEN_PARMSW* PMCI_OVLY_OPEN_PARMSW, LPMCI_OVLY_OPEN_PARMSW;
 
 struct MCI_OVLY_WINDOW_PARMSA {
+align(1):
     DWORD_PTR dwCallback;
     HWND hWnd;
     UINT nCmdShow;
@@ -2104,6 +2125,7 @@ struct MCI_OVLY_WINDOW_PARMSA {
 alias MCI_OVLY_WINDOW_PARMSA* PMCI_OVLY_WINDOW_PARMSA, LPMCI_OVLY_WINDOW_PARMSA;
 
 struct MCI_OVLY_WINDOW_PARMSW {
+align(1):
     DWORD_PTR dwCallback;
     HWND hWnd;
     UINT nCmdShow;
