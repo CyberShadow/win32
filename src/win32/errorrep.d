@@ -18,7 +18,7 @@ private import win32.w32api, win32.windef;
 
 static assert (_WIN32_WINNT >= 0x501,
     "win32.errorrep is available only if version WindowsXP, Windows2003 "
-    "or WindowsVista is set");
+    ~ "or WindowsVista is set");
 
 enum EFaultRepRetVal {
     frrvOk,

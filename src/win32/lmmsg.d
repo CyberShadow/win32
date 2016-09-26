@@ -16,7 +16,7 @@ private import win32.lmcons, win32.windef, win32.w32api;
 
 static assert (_WIN32_WINNT >= 0x501,
     "win32.lmmsg is available only if version WindowsXP, Windows2003 "
-    "or WindowsVista is set");
+    ~ "or WindowsVista is set");
 
 enum MSGNAME_NOT_FORWARDED  = 0;
 enum MSGNAME_FORWARDED_TO   = 4;
