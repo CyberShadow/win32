@@ -15,7 +15,7 @@ private import win32.objfwd, win32.objidl, win32.ole2, win32.unknwn,
   win32.windef;
 private import win32.richedit; // for CHARRANGE
 
-align(4):
+//align(4):
 
 enum ULONG
     REO_GETOBJ_NO_INTERFACES = 0,

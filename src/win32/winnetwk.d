@@ -290,7 +290,7 @@ struct NETINFOSTRUCT {
     DWORD dwProviderVersion;
     DWORD dwStatus;
     DWORD dwCharacteristics;
-    DWORD dwHandle;
+    ULONG_PTR dwHandle;
     WORD  wNetType;
     DWORD dwPrinters;
     DWORD dwDrives;

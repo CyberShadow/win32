@@ -38,19 +38,23 @@ enum : uint {
 
 extern (Windows) alias LONG function(HWND, UINT, LONG, LONG) APPLET_PROC;
 
+align(1)
 struct CPLINFO {
+align(1):
     int  idIcon;
     int  idName;
     int  idInfo;
-    LONG lData;
+    LONG_PTR  lData;
 }
 alias CPLINFO* LPCPLINFO;
 
+align(1)
 struct NEWCPLINFOA {
+align(1):
     DWORD     dwSize = NEWCPLINFOA.sizeof;
     DWORD     dwFlags;
     DWORD     dwHelpContext;
-    LONG      lData;
+    LONG_PTR  lData;
     HICON     hIcon;
     CHAR[32]  szName;
     CHAR[64]  szInfo;
@@ -58,11 +62,13 @@ struct NEWCPLINFOA {
 }
 alias NEWCPLINFOA* LPNEWCPLINFOA;
 
+align(1)
 struct NEWCPLINFOW {
+align(1):
     DWORD      dwSize = NEWCPLINFOW.sizeof;
     DWORD      dwFlags;
     DWORD      dwHelpContext;
-    LONG       lData;
+    LONG_PTR   lData;
     HICON      hIcon;
     WCHAR[32]  szName;
     WCHAR[64]  szInfo;
