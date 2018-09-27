@@ -4500,7 +4500,7 @@ version (Win64) {
 
 // -----
 // Aliases for Unicode or Ansi
-version()(Unicode) {
+version (Unicode) {
     alias EDITWORDBREAKPROCW EDITWORDBREAKPROC;
     alias PROPENUMPROCW PROPENUMPROC;
     alias PROPENUMPROCEXW PROPENUMPROCEX;
