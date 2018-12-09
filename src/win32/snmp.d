@@ -12,7 +12,9 @@
 module win32.snmp;
 //version (Windows):
 
-private import win32.windows;
+private import win32.basetsd /+: HANDLE+/;
+private import win32.windef /+: BOOL, BYTE, DWORD, INT, LONG, UINT, ULONG+/;
+private import win32.winnt /+: LPSTR, LPVOID, ULARGE_INTEGER, VOID+/;
 
 // These are not documented on MSDN
 enum {

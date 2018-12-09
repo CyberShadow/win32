@@ -16,7 +16,8 @@ module win32.dbghelp_types;
 
 version (ANSI) {} else version = Unicode;
 
-import win32.windows;
+import win32.windef;
+import win32.imagehlp /+: ADDRESS_MODE+/;
 
 public import win32.winnt : TCHAR;
 
