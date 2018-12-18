@@ -13,8 +13,7 @@ module win32.oledlg;
 
 version (ANSI) {} else version = Unicode;
 
-import win32.commdlg, win32.dlgs, win32.ole2, win32.prsht, win32.shellapi,
-  win32.windows;
+import win32.commdlg, win32.dlgs, win32.ole2, win32.prsht, win32.shellapi;
 private import win32.winbase, win32.objidl, win32.objfwd, win32.winnt;
 
 // FIXME: remove inherited methods from interface definitions
