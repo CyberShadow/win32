@@ -873,7 +873,7 @@ extern (Windows) { /* WINAPI */
     DWORD RasValidateEntryNameA(LPCSTR, LPCSTR);
     DWORD RasValidateEntryNameW(LPCWSTR, LPCWSTR);
 
-//static if(_WIN32_WINNT >= 0x401) {
+//static if (_WIN32_WINNT >= 0x401) {
     alias BOOL function(LPSTR, LPSTR, LPRASADPARAMS, LPDWORD) RASADFUNCA;
     alias BOOL function(LPWSTR, LPWSTR, LPRASADPARAMS, LPDWORD) RASADFUNCW;
 
@@ -933,7 +933,7 @@ static if (_WIN32_WINNT >= 0x500) {
 
 
 /* UNICODE defines for functions */
-version()(Unicode) {
+version (Unicode) {
     alias RasDialW RasDial;
     alias RasEnumConnectionsW RasEnumConnections;
     alias RasEnumEntriesW RasEnumEntries;

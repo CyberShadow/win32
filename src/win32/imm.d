@@ -363,7 +363,7 @@ alias int function (LPCSTR, DWORD, LPCSTR, LPVOID)  REGISTERWORDENUMPROCA;
 alias int function (LPCWSTR, DWORD, LPCWSTR, LPVOID) REGISTERWORDENUMPROCW;
 }
 
-version()(Unicode) {
+version (Unicode) {
     alias REGISTERWORDENUMPROCW REGISTERWORDENUMPROC;
     alias REGISTERWORDW REGISTERWORD;
     alias IMEMENUITEMINFOW IMEMENUITEMINFO;
@@ -445,7 +445,7 @@ BOOL ImmDisableIME(DWORD);
 DWORD ImmGetImeMenuItemsA(HIMC, DWORD, DWORD, LPIMEMENUITEMINFOA, LPIMEMENUITEMINFOA, DWORD);
 DWORD ImmGetImeMenuItemsW(HIMC, DWORD, DWORD, LPIMEMENUITEMINFOW, LPIMEMENUITEMINFOW, DWORD);
 
-version()(Unicode) {
+version (Unicode) {
     alias ImmEnumRegisterWordW ImmEnumRegisterWord;
     alias ImmGetRegisterWordStyleW ImmGetRegisterWordStyle;
     alias ImmUnregisterWordW ImmUnregisterWord;

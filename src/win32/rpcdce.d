@@ -15,7 +15,7 @@ version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "Rpcrt4");
 
 // TODO: I think MinGW got this wrong. RPC_UNICODE_SUPPORTED should be
-// replaced aliases for version(Unicode)
+// replaced aliases for version (Unicode)
 
 public import win32.rpcdcep;
 private import win32.basetyps, win32.w32api, win32.windef;

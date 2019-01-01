@@ -148,7 +148,7 @@ extern (Windows) {
     int    I_RpcServerUnregisterEndpointW(ushort*, ushort*);
 }
 
-version()(Unicode) {
+version (Unicode) {
     alias I_RpcServerUnregisterEndpointW I_RpcServerUnregisterEndpoint;
 } else {
     alias I_RpcServerUnregisterEndpointA I_RpcServerUnregisterEndpoint;
