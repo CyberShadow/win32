@@ -33,7 +33,7 @@ alias IsEqualGUID IsEqualCATID;
 struct CATEGORYINFO {
     CATID        catid;
     LCID         lcid;
-    OLECHAR[128] szDescription;
+    OLECHAR[128] szDescription = 0;
 }
 alias CATEGORYINFO* LPCATEGORYINFO;
 

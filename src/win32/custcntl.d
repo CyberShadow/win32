@@ -27,7 +27,7 @@ enum size_t
 struct CCSTYLEA {
     DWORD           flStyle;
     DWORD           flExtStyle;
-    CHAR[CCHCCTEXT] szText;
+    CHAR[CCHCCTEXT] szText = 0;
     LANGID          lgid;
     WORD            wReserved1;
 }
@@ -36,7 +36,7 @@ alias CCSTYLEA* LPCCSTYLEA;
 struct CCSTYLEW {
     DWORD            flStyle;
     DWORD            flExtStyle;
-    WCHAR[CCHCCTEXT] szText;
+    WCHAR[CCHCCTEXT] szText = 0;
     LANGID           lgid;
     WORD             wReserved1;
 }
@@ -57,15 +57,15 @@ struct CCSTYLEFLAGW {
 alias CCSTYLEFLAGW* LPCCSTYLEFLAGW;
 
 struct CCINFOA {
-    CHAR[CCHCCCLASS]  szClass;
+    CHAR[CCHCCCLASS]  szClass = 0;
     DWORD             flOptions;
-    CHAR[CCHCCDESC]   szDesc;
+    CHAR[CCHCCDESC]   szDesc = 0;
     UINT              cxDefault;
     UINT              cyDefault;
     DWORD             flStyleDefault;
     DWORD             flExtStyleDefault;
     DWORD             flCtrlTypeMask;
-    CHAR[CCHCCTEXT]   szTextDefault;
+    CHAR[CCHCCTEXT]   szTextDefault = 0;
     INT               cStyleFlags;
     LPCCSTYLEFLAGA    aStyleFlags;
     LPFNCCSTYLEA      lpfnStyle;
@@ -76,15 +76,15 @@ struct CCINFOA {
 alias CCINFOA* LPCCINFOA;
 
 struct CCINFOW {
-    WCHAR[CCHCCCLASS] szClass;
+    WCHAR[CCHCCCLASS] szClass = 0;
     DWORD             flOptions;
-    WCHAR[CCHCCDESC]  szDesc;
+    WCHAR[CCHCCDESC]  szDesc = 0;
     UINT              cxDefault;
     UINT              cyDefault;
     DWORD             flStyleDefault;
     DWORD             flExtStyleDefault;
     DWORD             flCtrlTypeMask;
-    WCHAR[CCHCCTEXT]  szTextDefault;
+    WCHAR[CCHCCTEXT]  szTextDefault = 0;
     INT               cStyleFlags;
     LPCCSTYLEFLAGW    aStyleFlags;
     LPFNCCSTYLEW      lpfnStyle;

@@ -126,15 +126,15 @@ struct IMAGEHLP_MODULEA64
     DWORD      CheckSum;
     DWORD      NumSyms;
     SYM_TYPE   SymType;
-    CHAR[32]   ModuleName;
-    CHAR[256]  ImageName;
-    CHAR[256]  LoadedImageName;
+    CHAR[32]   ModuleName = 0;
+    CHAR[256]  ImageName = 0;
+    CHAR[256]  LoadedImageName = 0;
     // new elements: 07-Jun-2002
     version (none)
     {
-        CHAR[256]  LoadedPdbName;
+        CHAR[256]  LoadedPdbName = 0;
         DWORD      CVSig;
-        CHAR[MAX_PATH*3] CVData;
+        CHAR[MAX_PATH*3] CVData = 0;
         DWORD      PdbSig;
         GUID       PdbSig70;
         DWORD      PdbAge;
@@ -160,15 +160,15 @@ struct IMAGEHLP_MODULEW64
     DWORD      CheckSum;
     DWORD      NumSyms;
     SYM_TYPE   SymType;
-    WCHAR[32]  ModuleName;
-    WCHAR[256] ImageName;
-    WCHAR[256] LoadedImageName;
+    WCHAR[32]  ModuleName = 0;
+    WCHAR[256] ImageName = 0;
+    WCHAR[256] LoadedImageName = 0;
     // new elements: 07-Jun-2002
     version (none)
     {
-        WCHAR[256] LoadedPdbName;
+        WCHAR[256] LoadedPdbName = 0;
         DWORD      CVSig;
-        WCHAR[MAX_PATH*3] CVData;
+        WCHAR[MAX_PATH*3] CVData = 0;
         DWORD      PdbSig;
         GUID       PdbSig70;
         DWORD      PdbAge;
@@ -193,7 +193,7 @@ struct IMAGEHLP_SYMBOLA64
     DWORD    Size;
     DWORD    Flags;
     DWORD    MaxNameLength;
-    CHAR[1] Name;
+    CHAR[1] Name = 0;
 }
 struct IMAGEHLP_SYMBOLW64
 {
@@ -202,7 +202,7 @@ struct IMAGEHLP_SYMBOLW64
     DWORD    Size;
     DWORD    Flags;
     DWORD    MaxNameLength;
-    WCHAR[1] Name;
+    WCHAR[1] Name = 0;
 }
 
 
