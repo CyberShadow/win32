@@ -9,6 +9,8 @@
 module win32.winsock2;
 //version (Windows):
 
+version (Win32_UseLib) pragma(lib, "ws2_32");
+
 extern(Windows):
 nothrow:
 
@@ -372,15 +374,15 @@ void FD_CLR(SOCKET fd, fd_set* set) pure @nogc
     SOCKET* start = set.fd_array.ptr;
     SOCKET* stop = start + c;
 
-    for()(; start != stop; start++)
+    for (; start != stop; start++)
     {
-        if(*start == fd)
+        if (*start == fd)
             goto found;
     }
     return; //not found
 
     found:
-    for()(++start; start != stop; start++)
+    for (++start; start != stop; start++)
     {
         *(start - 1) = *start;
     }
@@ -395,9 +397,9 @@ int FD_ISSET(SOCKET fd, const(fd_set)* set) pure @nogc
 const(SOCKET)* start = set.fd_array.ptr;
 const(SOCKET)* stop = start + set.fd_count;
 
-    for()(; start != stop; start++)
+    for (; start != stop; start++)
     {
-        if(*start == fd)
+        if (*start == fd)
             return true;
     }
     return false;
@@ -484,54 +486,11 @@ struct in_addr6
 
 @safe pure @nogc
 {
-
-version()(BigEndian)
-{
-    ushort htons()(ushort x)
-    {
-        return x;
-    }
-
-
-    uint htonl()(uint x)
-    {
-        return x;
-    }
+    ushort htons(ushort x);
+    uint htonl(uint x);
+    ushort ntohs(ushort x);
+    uint ntohl(uint x);
 }
-else version(LittleEndian)
-{
-    private import core.bitop;
-
-
-    ushort htons()(ushort x)
-    {
-        return cast(ushort)((x >> 8) | (x << 8));
-    }
-
-
-    uint htonl()(uint x)
-    {
-        return bswap(x);
-    }
-}
-else
-{
-    static assert(0);
-}
-
-
-ushort ntohs()(ushort x)
-{
-    return htons(x);
-}
-
-
-uint ntohl()(uint x)
-{
-    return htonl(x);
-}
-
-} // @safe pure @nogc
 
 
 enum: int
@@ -683,13 +642,14 @@ struct sockaddr
 alias sockaddr SOCKADDR;
 alias SOCKADDR* PSOCKADDR, LPSOCKADDR;
 
-struct SOCKADDR_STORAGE
+struct sockaddr_storage
 {
     short     ss_family;
     char[6]   __ss_pad1;
     long      __ss_align;
     char[112] __ss_pad2;
 }
+alias sockaddr_storage SOCKADDR_STORAGE;
 alias SOCKADDR_STORAGE* PSOCKADDR_STORAGE;
 
 struct sockaddr_in
