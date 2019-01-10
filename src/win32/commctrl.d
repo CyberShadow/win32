@@ -2187,7 +2187,7 @@ static if (_WIN32_IE >= 0x400) {
 }
 
 enum {
-    DTM_FIRST         = 0x10000,
+    DTM_FIRST         = 0x1000,
     DTM_GETSYSTEMTIME = 0x1001,
     DTM_SETSYSTEMTIME = 0x1002,
     DTM_GETRANGE      = 0x1003,
