@@ -109,7 +109,7 @@ enum {
 
 struct CHAR_INFO {
     union _Char {
-        WCHAR UnicodeChar;
+        WCHAR UnicodeChar = 0;
         CHAR AsciiChar;
     }
     union {
@@ -164,11 +164,11 @@ struct KEY_EVENT_RECORD {
     WORD  wVirtualKeyCode;
     WORD  wVirtualScanCode;
     union _uChar {
-        WCHAR UnicodeChar;
+        WCHAR UnicodeChar = 0;
         CHAR  AsciiChar;
     }
     union {
-        WCHAR UnicodeChar;
+        WCHAR UnicodeChar = 0;
         CHAR  AsciiChar;
         _uChar uChar;
     }

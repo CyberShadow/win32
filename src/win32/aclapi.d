@@ -15,7 +15,7 @@ module win32.aclapi;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "advapi32");
 
-import win32.windows, win32.accctrl;
+import win32.accctrl, win32.basetyps, win32.w32api, win32.winnt;
 
 extern (Windows) {
     VOID BuildExplicitAccessWithNameA(PEXPLICIT_ACCESS_A, LPSTR, DWORD,
