@@ -559,9 +559,9 @@ struct CPINFOEXA {
     UINT                  MaxCharSize;
     BYTE[MAX_DEFAULTCHAR] DefaultChar;
     BYTE[MAX_LEADBYTES]   LeadByte;
-    WCHAR                 UnicodeDefaultChar;
+    WCHAR                 UnicodeDefaultChar = 0;
     UINT                  CodePage;
-    CHAR[MAX_PATH]        CodePageName;
+    CHAR[MAX_PATH]        CodePageName = 0;
 }
 alias CPINFOEXA* LPCPINFOEXA;
 
@@ -569,9 +569,9 @@ struct CPINFOEXW {
     UINT                  MaxCharSize;
     BYTE[MAX_DEFAULTCHAR] DefaultChar;
     BYTE[MAX_LEADBYTES]   LeadByte;
-    WCHAR                 UnicodeDefaultChar;
+    WCHAR                 UnicodeDefaultChar = 0;
     UINT                  CodePage;
-    WCHAR[MAX_PATH]       CodePageName;
+    WCHAR[MAX_PATH]       CodePageName = 0;
 }
 alias CPINFOEXW* LPCPINFOEXW;
 

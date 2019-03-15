@@ -320,7 +320,7 @@ struct CHARFORMATA {
     COLORREF crTextColor;
     BYTE bCharSet;
     BYTE bPitchAndFamily;
-    char[LF_FACESIZE] szFaceName;
+    char[LF_FACESIZE] szFaceName = 0;
 }
 struct CHARFORMATW {
     UINT cbSize = this.sizeof;
@@ -331,7 +331,7 @@ struct CHARFORMATW {
     COLORREF crTextColor;
     BYTE bCharSet;
     BYTE bPitchAndFamily;
-    WCHAR[LF_FACESIZE] szFaceName;
+    WCHAR[LF_FACESIZE] szFaceName = 0;
 }
 
 struct CHARFORMAT2A {
@@ -343,7 +343,7 @@ struct CHARFORMAT2A {
     COLORREF crTextColor;
     BYTE bCharSet;
     BYTE bPitchAndFamily;
-    char[LF_FACESIZE] szFaceName;
+    char[LF_FACESIZE] szFaceName = 0;
     WORD wWeight;
     SHORT sSpacing;
     COLORREF crBackColor;
@@ -365,7 +365,7 @@ struct CHARFORMAT2W {
     COLORREF crTextColor;
     BYTE bCharSet;
     BYTE bPitchAndFamily;
-    WCHAR[LF_FACESIZE] szFaceName;
+    WCHAR[LF_FACESIZE] szFaceName = 0;
     WORD wWeight;
     SHORT sSpacing;
     COLORREF crBackColor;

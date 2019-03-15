@@ -251,7 +251,7 @@ enum MKREDUCE {
 struct RemSNB {
     uint ulCntStr;
     uint ulCntChar;
-    OLECHAR[1] rgString;
+    OLECHAR[1] rgString = 0;
 }
 
 enum ADVF {
@@ -393,7 +393,7 @@ struct PROPVARIANT {
     WORD wReserved2;
     WORD wReserved3;
     union {
-        CHAR cVal;
+        CHAR cVal = 0;
         UCHAR bVal;
         short iVal;
         USHORT uiVal;

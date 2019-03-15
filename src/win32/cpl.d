@@ -56,9 +56,9 @@ align(1):
     DWORD     dwHelpContext;
     LONG_PTR  lData;
     HICON     hIcon;
-    CHAR[32]  szName;
-    CHAR[64]  szInfo;
-    CHAR[128] szHelpFile;
+    CHAR[32]  szName = 0;
+    CHAR[64]  szInfo = 0;
+    CHAR[128] szHelpFile = 0;
 }
 alias NEWCPLINFOA* LPNEWCPLINFOA;
 
@@ -70,9 +70,9 @@ align(1):
     DWORD      dwHelpContext;
     LONG_PTR   lData;
     HICON      hIcon;
-    WCHAR[32]  szName;
-    WCHAR[64]  szInfo;
-    WCHAR[128] szHelpFile;
+    WCHAR[32]  szName = 0;
+    WCHAR[64]  szInfo = 0;
+    WCHAR[128] szHelpFile = 0;
 }
 alias NEWCPLINFOW* LPNEWCPLINFOW;
 
