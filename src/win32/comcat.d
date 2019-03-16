@@ -12,7 +12,7 @@
 module win32.comcat;
 //version (Windows):
 
-import win32.windows, win32.ole2;
+import win32.ole2;
 private import win32.basetyps, win32.cguid, win32.objbase, win32.unknwn,
   win32.windef, win32.wtypes;
 
@@ -33,7 +33,7 @@ alias IsEqualGUID IsEqualCATID;
 struct CATEGORYINFO {
     CATID        catid;
     LCID         lcid;
-    OLECHAR[128] szDescription;
+    OLECHAR[128] szDescription = 0;
 }
 alias CATEGORYINFO* LPCATEGORYINFO;
 

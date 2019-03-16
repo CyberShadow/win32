@@ -13,8 +13,7 @@ module win32.oledlg;
 
 version (ANSI) {} else version = Unicode;
 
-import win32.commdlg, win32.dlgs, win32.ole2, win32.prsht, win32.shellapi,
-  win32.windows;
+import win32.commdlg, win32.dlgs, win32.ole2, win32.prsht, win32.shellapi;
 private import win32.winbase, win32.objidl, win32.objfwd, win32.winnt;
 
 // FIXME: remove inherited methods from interface definitions
@@ -548,7 +547,7 @@ struct OLEUICHANGEICONW {
     HRSRC hResource;
     HGLOBAL hMetaPict;
     CLSID clsid;
-    WCHAR[MAX_PATH] szIconExe;
+    WCHAR[MAX_PATH] szIconExe = 0;
     int cchIconExe;
 }
 alias OLEUICHANGEICONW* POLEUICHANGEICONW, LPOLEUICHANGEICONW;
@@ -565,7 +564,7 @@ struct OLEUICHANGEICONA {
     HRSRC hResource;
     HGLOBAL hMetaPict;
     CLSID clsid;
-    CHAR[MAX_PATH] szIconExe;
+    CHAR[MAX_PATH] szIconExe = 0;
     int cchIconExe;
 }
 alias OLEUICHANGEICONA* POLEUICHANGEICONA, LPOLEUICHANGEICONA;

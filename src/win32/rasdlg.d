@@ -46,7 +46,7 @@ align(4):
     DWORD     dwFlags;
     LONG      xDlg;
     LONG      yDlg;
-    CHAR[RAS_MaxEntryName + 1] szEntry;
+    CHAR[RAS_MaxEntryName + 1] szEntry = 0;
     DWORD     dwError;
     ULONG_PTR reserved;
     ULONG_PTR reserved2;
@@ -60,7 +60,7 @@ align(4):
     DWORD     dwFlags;
     LONG      xDlg;
     LONG      yDlg;
-    WCHAR[RAS_MaxEntryName + 1] szEntry;
+    WCHAR[RAS_MaxEntryName + 1] szEntry = 0;
     DWORD     dwError;
     ULONG_PTR reserved;
     ULONG_PTR reserved2;
@@ -122,9 +122,9 @@ struct RASNOUSERA
     DWORD           dwSize = RASNOUSERA.sizeof;
     DWORD           dwFlags;
     DWORD           dwTimeoutMs;
-    CHAR[UNLEN + 1] szUserName;
-    CHAR[PWLEN + 1] szPassword;
-    CHAR[DNLEN + 1] szDomain;
+    CHAR[UNLEN + 1] szUserName = 0;
+    CHAR[PWLEN + 1] szPassword = 0;
+    CHAR[DNLEN + 1] szDomain = 0;
 }
 alias RASNOUSERA* LPRASNOUSERA;
 
@@ -132,9 +132,9 @@ struct RASNOUSERW {
     DWORD            dwSize = RASNOUSERW.sizeof;
     DWORD            dwFlags;
     DWORD            dwTimeoutMs;
-    WCHAR[UNLEN + 1] szUserName;
-    WCHAR[PWLEN + 1] szPassword;
-    WCHAR[DNLEN + 1] szDomain;
+    WCHAR[UNLEN + 1] szUserName = 0;
+    WCHAR[PWLEN + 1] szPassword = 0;
+    WCHAR[DNLEN + 1] szDomain = 0;
 }
 alias RASNOUSERW* LPRASNOUSERW;
 
