@@ -26,7 +26,7 @@ enum __W32API_MINOR_VERSION = 17;
  *  removed in order to simplify the bindings.
  */
  version (Windows10) {
-    enum uint _WIN32_WINNT = 0x604;
+    enum uint _WIN32_WINNT = 0xA00;
 } else version (Windows8_1) {    // also Windows2012R2
     enum uint _WIN32_WINNT = 0x603;
 } else version (Windows8) {      // also Windows2012
@@ -47,7 +47,9 @@ enum __W32API_MINOR_VERSION = 17;
     enum uint _WIN32_WINNT = 0x501;
 }
 
-version (IE10) {
+version (IE11) {
+    enum uint _WIN32_IE = 0xA00;
+} else version (IE10) {
     enum uint _WIN32_IE = 0xA00;
 } else version (IE9) {
     enum uint _WIN32_IE = 0x900;
@@ -63,6 +65,8 @@ version (IE10) {
     enum uint _WIN32_IE = 0x600;
 } else version (IE56) {
     enum uint _WIN32_IE = 0x560;
+} else version (IE55) {
+    enum uint _WIN32_IE = 0x550;
 } else version (IE501) {
     enum uint _WIN32_IE = 0x501;
 } else version (IE5) {
