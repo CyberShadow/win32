@@ -85,7 +85,7 @@ args=(
 ) ; "${args[@]}"
 
 # Add win32-filter branch
-git -C "$result_dir" fetch "$result_remote" +refs/heads/win32-filter:refs/heads/win32-filter
+git -C "$result_dir" fetch -n "$result_remote" +refs/heads/win32-filter:refs/heads/win32-filter
 
 # Push
 if [[ ! -v OFFLINE ]]
