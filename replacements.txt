@@ -1,0 +1,5 @@
+regex:\bcore\.sys\.windows\b==>win32
+regex:(\n|^)(module win32\.([^;]+);)==>\1/// Automatically imported and edited from the druntime module\n/// core.sys.windows.\3 for the auto-generated win32 package.\n\2
+regex:\n(version \(Windows\):)\n==>\n//\1\n
+regex:\n(pragma\(lib,)==>\nversion (Win32_UseLib) \1
+regex:(\n *(?:package |extern\(D\) )*(?!package |static |version |debug |extern |template )[a-zA-Z][^\n(){}]+)(\([^(){}]*\)[ \n]*{)==>\1()\2

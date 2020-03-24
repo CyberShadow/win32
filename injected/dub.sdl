@@ -1,0 +1,6 @@
+name "win32"
+description "Cross-platform Win32 declarations"
+authors "Vladimir Panteleev (filter/package); Druntime core.sys.windows authors and contributors (source code)"
+homepage "https://github.com/CyberShadow/win32"
+license "Boost Software License version 1.0, unless otherwise specified within each file"
+targetType "sourceLibrary"

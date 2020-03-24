@@ -1,0 +1,87 @@
+#!/bin/bash
+set -eEuo pipefail
+
+cd "$(dirname "$0")"
+
+# Settings and variables
+work_dir=../work
+druntime_dir=$work_dir/druntime.git
+druntime_remote=https://github.com/dlang/druntime.git
+tmp_dir=$work_dir/tmp
+result_dir=$work_dir/win32
+result_remote=git@github.com:CyberShadow/win32.git
+filter_dir=$PWD
+
+# Set up druntime
+if [[ ! -d "$druntime_dir" ]]
+then
+	git init --bare "$druntime_dir"
+	git -C "$druntime_dir" remote add origin "$druntime_remote"
+	# Instead of --mirror, specify the refs explicitly,
+	# so that we don't fetch the GitHub refs/pull/... refs
+	# (which we can't push back to GitHub after rewriting).
+	git -C "$druntime_dir" config --add remote.origin.fetch '+refs/heads/*:refs/heads/*'
+	git -C "$druntime_dir" config --add remote.origin.fetch '+refs/tags/*:refs/tags/*'
+fi
+git -C "$druntime_dir" fetch origin
+
+# Set up temporary and output repositories
+for dir in "$tmp_dir"/{1,2,3} "$result_dir"
+do
+	rm -rf "$dir" # Make sure there are no stale refs
+	git init --bare "$dir" # git-filter-repo wants a clean repo to write to
+done
+
+# Filter + move directory
+args=(
+	git-filter-repo
+	--replace-refs delete-no-add
+	--source "$druntime_dir"
+	--target "$tmp_dir"/1
+	--subdirectory-filter src/core/sys/windows
+	--to-subdirectory-filter src/win32
+) ; "${args[@]}"
+
+# Delete non-API files
+args=(
+	git-filter-repo
+	--replace-refs delete-no-add
+	--source "$tmp_dir"/1
+	--target "$tmp_dir"/2
+	--invert-paths
+	--path src/win32/com.d
+	--path src/win32/dll.d
+	--path src/win32/stacktrace.d
+	--path src/win32/threadaux.d
+) ; "${args[@]}"
+
+# Apply replacements to source code
+args=(
+	git-filter-repo
+	--replace-refs delete-no-add
+	--source "$tmp_dir"/2
+	--target "$tmp_dir"/3
+	--replace-text replacements.txt
+) ; "${args[@]}"
+
+# Add files to root directory
+sha1_readme=$(git -C "$result_dir" hash-object -w "$filter_dir"/injected/README.md)
+sha1_dubsdl=$(git -C "$result_dir" hash-object -w "$filter_dir"/injected/dub.sdl)
+args=(
+	git-filter-repo
+	--force
+	--replace-refs delete-no-add
+	--source "$tmp_dir"/3
+	--target "$result_dir"
+	--commit-callback "
+        if not commit.parents:
+            commit.file_changes.append(FileChange(b'M', b'README.md', b'$sha1_readme', b'100644'))
+            commit.file_changes.append(FileChange(b'M', b'dub.sdl'  , b'$sha1_dubsdl', b'100644'))
+    "
+) ; "${args[@]}"
+
+# Add win32-filter branch
+git -C "$result_dir" fetch "$result_remote" +refs/heads/win32-filter:refs/heads/win32-filter
+
+# Push
+git -C "$result_dir" push --mirror "$result_remote"
