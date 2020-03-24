@@ -23,7 +23,10 @@ then
 	git -C "$druntime_dir" config --add remote.origin.fetch '+refs/heads/*:refs/heads/*'
 	git -C "$druntime_dir" config --add remote.origin.fetch '+refs/tags/*:refs/tags/*'
 fi
-git -C "$druntime_dir" fetch origin
+if [[ ! -v OFFLINE ]]
+then
+	git -C "$druntime_dir" fetch origin
+fi
 
 # Set up temporary and output repositories
 for dir in "$tmp_dir"/{1,2,3} "$result_dir"
@@ -85,4 +88,9 @@ args=(
 git -C "$result_dir" fetch "$result_remote" +refs/heads/win32-filter:refs/heads/win32-filter
 
 # Push
-git -C "$result_dir" push --mirror "$result_remote"
+if [[ ! -v OFFLINE ]]
+then
+	git -C "$result_dir" push --mirror "$result_remote"
+else
+	rm -rf "$result_dir".dir && git clone "$result_dir" "$result_dir".dir
+fi
