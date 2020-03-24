@@ -56,6 +56,7 @@ args=(
 	--path src/win32/dll.d
 	--path src/win32/stacktrace.d
 	--path src/win32/threadaux.d
+	--path src/win32/dbghelp.d
 ) ; "${args[@]}"
 
 # Apply replacements to source code, and rename tags
