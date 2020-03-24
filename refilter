@@ -55,10 +55,11 @@ args=(
 	--path src/win32/threadaux.d
 ) ; "${args[@]}"
 
-# Apply replacements to source code
+# Apply replacements to source code, and rename tags
 args=(
 	git-filter-repo
 	--replace-refs delete-no-add
+	--tag-rename v2.0:v2.
 	--source "$tmp_dir"/2
 	--target "$tmp_dir"/3
 	--replace-text replacements.txt

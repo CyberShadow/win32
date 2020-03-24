@@ -22,6 +22,7 @@ This repository is mostly a mirror of [the Druntime git repository][3], with the
 
  - All files in `src/core/sys/windows` have been moved to `src/win32`.
  - All commits not touching `src/core/sys/windows` are removed.
+ - Tags are renamed to correspond to Semantic Versioning conventions, as required by Dub.
  - Module and import declarations are updated to refer to the `win32` package instead of `core.sys.windows`.
  - Files which contain Druntime implementation details (and not Windows API declarations) are removed.
  - The artificial platform restriction (`version (Windows):` at the top of each file) is disabled.
@@ -39,7 +40,7 @@ The following remain unchanged from the original repository:
  - The full history (affecting the `core.sys.windows` package) is preserved, up to the initial commit in 2008.
  - Except for the changes listed above, the source code is otherwise unchanged.
  - All branches are preserved, and track the corresponding Druntime branch.
- - All tags are preserved, and correspond to the matching D tag / release.
+ - All tags are preserved (other than SemVer renaming), and correspond to the matching D tag / release.
 
 A script periodically rewrites this repository to include the latest changes from the Druntime repository.
 
