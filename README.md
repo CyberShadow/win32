@@ -58,7 +58,7 @@ If, for whatever reason, your Druntime contribution was rejected,
 please [open an issue in this repository][7].
 
 
- [1]: https://github.com/dlang/druntime/pull/2616#issuecomment-496307985.
+ [1]: https://github.com/dlang/druntime/pull/2616#issuecomment-496307985
  [2]: https://github.com/dlang/druntime/pull/2616#issuecomment-503802283
  [3]: https://github.com/dlang/druntime
  [4]: https://github.com/dlang/druntime/pull/2616#issuecomment-496319973
