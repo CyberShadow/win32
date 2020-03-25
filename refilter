@@ -20,7 +20,7 @@ then
 	# Instead of --mirror, specify the refs explicitly,
 	# so that we don't fetch the GitHub refs/pull/... refs
 	# (which we can't push back to GitHub after rewriting).
-	git -C "$druntime_dir" config --add remote.origin.fetch '+refs/heads/*:refs/heads/*'
+	git -C "$druntime_dir" config       remote.origin.fetch '+refs/heads/*:refs/heads/*'
 	git -C "$druntime_dir" config --add remote.origin.fetch '+refs/tags/*:refs/tags/*'
 fi
 if [[ ! -v OFFLINE ]]
