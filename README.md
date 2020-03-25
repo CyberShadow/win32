@@ -1,4 +1,4 @@
-Cross-platform Win32 declarations
+Cross-platform Win32 declarations [![Build status](https://ci.appveyor.com/api/projects/status/fhrm3pm8cql0d4cx/branch/master?svg=true)](https://ci.appveyor.com/project/CyberShadow/win32/branch/master)
 =================================
 
 The Windows API bindings contained in Druntime (under the `core.sys.windows` package)
