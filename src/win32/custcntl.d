@@ -11,6 +11,7 @@
 /// core.sys.windows.custcntl for the auto-generated win32 package.
 module win32.custcntl;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 

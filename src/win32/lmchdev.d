@@ -10,6 +10,7 @@
 /// core.sys.windows.lmchdev for the auto-generated win32 package.
 module win32.lmchdev;
 //version (Windows):
+@system:
 
 // COMMENT: This file might be deprecated.
 

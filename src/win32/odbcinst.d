@@ -10,6 +10,7 @@
 /// core.sys.windows.odbcinst for the auto-generated win32 package.
 module win32.odbcinst;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 

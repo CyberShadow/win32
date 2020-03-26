@@ -10,6 +10,7 @@
 /// core.sys.windows.winuser for the auto-generated win32 package.
 module win32.winuser;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "user32");

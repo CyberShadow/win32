@@ -10,6 +10,7 @@
 /// core.sys.windows.shlguid for the auto-generated win32 package.
 module win32.shlguid;
 //version (Windows):
+@system:
 
 private import win32.basetyps, win32.w32api;
 

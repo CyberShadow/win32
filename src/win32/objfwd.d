@@ -10,6 +10,7 @@
 /// core.sys.windows.objfwd for the auto-generated win32 package.
 module win32.objfwd;
 //version (Windows):
+@system:
 
 private import win32.objidl;
 

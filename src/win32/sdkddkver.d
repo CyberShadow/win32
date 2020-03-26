@@ -11,6 +11,7 @@
 module win32.sdkddkver;
 
 //version (Windows):
+@system:
 
 enum _WIN32_WINNT_NT4                    = 0x0400;
 enum _WIN32_WINNT_WIN2K                  = 0x0500;

@@ -10,6 +10,7 @@
 /// core.sys.windows.sqlucode for the auto-generated win32 package.
 module win32.sqlucode;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 

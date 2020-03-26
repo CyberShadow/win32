@@ -10,6 +10,7 @@
 /// core.sys.windows.regstr for the auto-generated win32 package.
 module win32.regstr;
 //version (Windows):
+@system:
 
 // TODO: fix possible conflict with shloj. Sort out NEC_98 issue.
 

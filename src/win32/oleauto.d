@@ -10,6 +10,7 @@
 /// core.sys.windows.oleauto for the auto-generated win32 package.
 module win32.oleauto;
 //version (Windows):
+@system:
 version (Win32_UseLib) pragma(lib, "oleaut32");
 
 import win32.oaidl;

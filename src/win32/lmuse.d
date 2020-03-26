@@ -10,6 +10,7 @@
 /// core.sys.windows.lmuse for the auto-generated win32 package.
 module win32.lmuse;
 //version (Windows):
+@system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 import win32.lmuseflg;

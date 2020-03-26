@@ -10,6 +10,7 @@
 /// core.sys.windows.winerror for the auto-generated win32 package.
 module win32.winerror;
 //version (Windows):
+@system:
 
 /* Comments from the Mingw header:
  * WAIT_TIMEOUT is also defined in winbase.h

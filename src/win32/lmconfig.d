@@ -10,6 +10,7 @@
 /// core.sys.windows.lmconfig for the auto-generated win32 package.
 module win32.lmconfig;
 //version (Windows):
+@system:
 
 // All functions in this file are deprecated!
 

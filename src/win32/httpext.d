@@ -10,6 +10,7 @@
 /// core.sys.windows.httpext for the auto-generated win32 package.
 module win32.httpext;
 //version (Windows):
+@system:
 
 /* Comment from MinGW
        httpext.h - Header for ISAPI extensions.

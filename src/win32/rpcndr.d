@@ -10,6 +10,7 @@
 /// core.sys.windows.rpcndr for the auto-generated win32 package.
 module win32.rpcndr;
 //version (Windows):
+@system:
 version (Win32_UseLib) pragma(lib, "rpcrt4");
 
 /* Translation notes:

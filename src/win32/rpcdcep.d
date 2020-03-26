@@ -10,6 +10,7 @@
 /// core.sys.windows.rpcdcep for the auto-generated win32 package.
 module win32.rpcdcep;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 

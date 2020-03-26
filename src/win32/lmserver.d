@@ -10,6 +10,7 @@
 /// core.sys.windows.lmserver for the auto-generated win32 package.
 module win32.lmserver;
 //version (Windows):
+@system:
 
 import win32.winsvc;
 private import win32.lmcons, win32.windef;

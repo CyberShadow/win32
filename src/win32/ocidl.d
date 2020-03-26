@@ -12,6 +12,7 @@
 /// core.sys.windows.ocidl for the auto-generated win32 package.
 module win32.ocidl;
 //version (Windows):
+@system:
 
 private import win32.ole2, win32.oleidl, win32.oaidl, win32.objfwd,
   win32.windef, win32.wtypes;

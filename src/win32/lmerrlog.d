@@ -10,6 +10,7 @@
 /// core.sys.windows.lmerrlog for the auto-generated win32 package.
 module win32.lmerrlog;
 //version (Windows):
+@system:
 
 // COMMENT: This appears to be only for Win16. All functions are deprecated.
 

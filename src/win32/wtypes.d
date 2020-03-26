@@ -10,6 +10,7 @@
 /// core.sys.windows.wtypes for the auto-generated win32 package.
 module win32.wtypes;
 //version (Windows):
+@system:
 
 import win32.rpc, win32.rpcndr;
 private import win32.windef;

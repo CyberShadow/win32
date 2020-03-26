@@ -10,6 +10,7 @@
 /// core.sys.windows.wtsapi32 for the auto-generated win32 package.
 module win32.wtsapi32;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "wtsapi32");

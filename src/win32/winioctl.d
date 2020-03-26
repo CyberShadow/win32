@@ -11,6 +11,7 @@
 /// core.sys.windows.winioctl for the auto-generated win32 package.
 module win32.winioctl;
 //version (Windows):
+@system:
 
 // FIXME: check types of some constants
 

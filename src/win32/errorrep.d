@@ -11,6 +11,7 @@
 /// core.sys.windows.errorrep for the auto-generated win32 package.
 module win32.errorrep;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 

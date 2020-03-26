@@ -11,6 +11,7 @@
 /// core.sys.windows.security for the auto-generated win32 package.
 module win32.security;
 //version (Windows):
+@system:
 
 enum : SECURITY_STATUS
 {

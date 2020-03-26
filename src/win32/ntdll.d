@@ -11,6 +11,7 @@
 /// core.sys.windows.ntdll for the auto-generated win32 package.
 module win32.ntdll;
 //version (Windows):
+@system:
 
 private import win32.w32api;
 

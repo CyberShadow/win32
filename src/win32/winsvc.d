@@ -11,6 +11,7 @@
 /// core.sys.windows.winsvc for the auto-generated win32 package.
 module win32.winsvc;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "advapi32");

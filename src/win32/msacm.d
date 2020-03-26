@@ -11,6 +11,7 @@
 /// core.sys.windows.msacm for the auto-generated win32 package.
 module win32.msacm;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
