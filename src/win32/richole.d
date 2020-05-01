@@ -86,7 +86,7 @@ interface IRichEditOle : IUnknown {
     HRESULT ContextSensitiveHelp(BOOL);
     HRESULT GetClipboardData(CHARRANGE*, DWORD, LPDATAOBJECT*);
     HRESULT ImportDataObject(LPDATAOBJECT, CLIPFORMAT, HGLOBAL);
-};
+}
 alias IRichEditOle LPRICHEDITOLE;
 
 interface IRichEditOleCallback : IUnknown {
@@ -100,5 +100,5 @@ interface IRichEditOleCallback : IUnknown {
     HRESULT GetClipboardData(CHARRANGE*, DWORD, LPDATAOBJECT*);
     HRESULT GetDragDropEffect(BOOL, DWORD, PDWORD);
     HRESULT GetContextMenu(WORD, LPOLEOBJECT, CHARRANGE*, HMENU*);
-};
+}
 alias IRichEditOleCallback LPRICHEDITOLECALLBACK;

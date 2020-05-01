@@ -190,7 +190,7 @@ enum VARENUM {
     VT_ILLEGAL       = 0xffff,
     VT_ILLEGALMASKED = 0xfff,
     VT_TYPEMASK      = 0xfff
-};
+}
 
 struct BYTE_SIZEDARR {
     uint clSize;

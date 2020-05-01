@@ -1042,7 +1042,7 @@ struct MMTIME {
             BYTE fps;
             BYTE dummy;
             BYTE[2] pad;
-        };
+        }
         _smpte smpte;
         struct _midi {
             DWORD songptrpos;
