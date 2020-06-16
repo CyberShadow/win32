@@ -3901,7 +3901,7 @@ static if (_WIN32_WINNT >= 0x600) {
     {
         int iItem;
         int iGroup;
-    };
+    }
     alias LVITEMINDEX* PLVITEMINDEX;
 
     struct LVFOOTERINFO
