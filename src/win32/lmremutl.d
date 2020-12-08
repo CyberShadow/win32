@@ -15,7 +15,7 @@ version (Win32_UseLib) pragma(lib, "netapi32");
 
 // D Conversion Note: DESC_CHAR is defined as TCHAR.
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 enum SUPPORTS_REMOTE_ADMIN_PROTOCOL =  2;
 enum SUPPORTS_RPC                   =  4;

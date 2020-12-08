@@ -16,7 +16,7 @@ module win32.shellapi;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "shell32");
 
-private import win32.w32api, win32.windef, win32.basetyps;
+import win32.w32api, win32.windef, win32.basetyps;
 
 enum : UINT {
     ABE_LEFT,

@@ -15,7 +15,7 @@ version (Win32_UseLib) pragma(lib, "kernel32");
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef;
+import win32.windef;
 
 enum : uint {
     HF32_DEFAULT = 1,

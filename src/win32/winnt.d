@@ -15,7 +15,7 @@ module win32.winnt;
 version (ANSI) {} else version = Unicode;
 
 public import win32.basetsd, win32.windef, win32.winerror;
-private import win32.w32api;
+import win32.w32api;
 
 /* Translation Notes:
 The following macros are unneeded for D:

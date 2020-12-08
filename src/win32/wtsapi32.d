@@ -14,7 +14,7 @@ module win32.wtsapi32;
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "wtsapi32");
-private import win32.w32api;
+import win32.w32api;
 import win32.windef;
 
 enum {

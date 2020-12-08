@@ -19,7 +19,7 @@ import win32.sdkddkver;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "version");
 
-private import win32.windef;
+import win32.windef;
 
 // FIXME: type weirdness
 enum {

@@ -12,7 +12,7 @@ module win32.subauth;
 //version (Windows):
 @system:
 
-private import win32.ntdef, win32.windef;
+import win32.ntdef, win32.windef;
 
 /+
 alias LONG NTSTATUS;

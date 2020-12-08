@@ -12,7 +12,7 @@ module win32.lmsname;
 //version (Windows):
 @system:
 
-private import win32.windef;
+import win32.windef;
 
 const TCHAR[]
     SERVICE_WORKSTATION      = "LanmanWorkstation",

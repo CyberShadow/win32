@@ -13,7 +13,7 @@ module win32.dhcpcsdk;
 //version (Windows):
 @system:
 
-private import win32.w32api, win32.windef;
+import win32.w32api, win32.windef;
 
 /*static assert (_WIN32_WINNT >= 0x500,
 "win32.dhcpcsdk is available only if version Windows2000, WindowsXP, Windows2003

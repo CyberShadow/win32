@@ -16,7 +16,7 @@ module win32.rasdlg;
 version (ANSI) {} else version = Unicode;
 
 import win32.ras;
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 enum {
     RASPBDEVENT_AddEntry = 1,

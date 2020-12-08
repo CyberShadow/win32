@@ -13,7 +13,7 @@ module win32.mapi;
 //version (Windows):
 @system:
 
-private import win32.windef;
+import win32.windef;
 
 // FIXME: check types and grouping of constants
 

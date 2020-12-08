@@ -14,8 +14,8 @@ module win32.powrprof;
 @system:
 version (Win32_UseLib) pragma(lib, "powrprof");
 
-private import win32.windef;
-private import win32.ntdef;
+import win32.windef;
+import win32.ntdef;
 
 // FIXME: look up Windows version support
 

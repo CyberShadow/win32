@@ -14,7 +14,7 @@ module win32.lmwksta;
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 import win32.lmuseflg;
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 version (Win32_UseLib) pragma(lib, "Netapi32");
 

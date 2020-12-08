@@ -21,7 +21,7 @@ version (ANSI) {} else version = Unicode;
     as well provide it here.
 */
 
-private import win32.winbase, win32.windef;
+import win32.winbase, win32.windef;
 
 // FIXME: check types of constants
 

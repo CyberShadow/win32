@@ -12,7 +12,7 @@ module win32.mshtml;
 //version (Windows):
 @system:
 
-private import win32.basetyps, win32.oaidl, win32.unknwn,
+import win32.basetyps, win32.oaidl, win32.unknwn,
   win32.windef, win32.wtypes;
 
 // These are used in this file, but not defined in MinGW.

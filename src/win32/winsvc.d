@@ -16,7 +16,7 @@ module win32.winsvc;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "advapi32");
 
-private import win32.w32api, win32.windef;
+import win32.w32api, win32.windef;
 
 // FIXME: check Windows version support
 

@@ -13,7 +13,7 @@ module win32.pbt;
 //version (Windows):
 @system:
 
-private import win32.windef;
+import win32.windef;
 
 enum : WPARAM {
     PBT_APMQUERYSUSPEND,

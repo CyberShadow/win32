@@ -13,7 +13,7 @@ module win32.ntdef;
 //version (Windows):
 @system:
 
-private import win32.basetsd, win32.subauth, win32.windef, win32.winnt;
+import win32.basetsd, win32.subauth, win32.windef, win32.winnt;
 
 enum uint
     OBJ_INHERIT          = 0x0002,

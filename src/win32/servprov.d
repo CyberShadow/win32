@@ -12,7 +12,7 @@ module win32.servprov;
 //version (Windows):
 @system:
 
-private import win32.basetyps, win32.unknwn, win32.windef, win32.wtypes;
+import win32.basetyps, win32.unknwn, win32.windef, win32.wtypes;
 
 interface IServiceProvider : IUnknown {
     HRESULT QueryService(REFGUID, REFIID, void**);

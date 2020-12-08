@@ -14,7 +14,7 @@ module win32.windef;
 @system:
 
 public import win32.winnt;
-private import win32.w32api;
+import win32.w32api;
 
 enum size_t MAX_PATH = 260;
 

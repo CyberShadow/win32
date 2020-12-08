@@ -20,10 +20,10 @@ version (Win32_UseLib) pragma(lib, "shell32");
 // SHGetFolderPath in shfolder.dll on W9x, NT4, also in shell32.dll on W2K
 
 import win32.commctrl, win32.ole2, win32.shlguid, win32.shellapi;
-private import win32.prsht, win32.unknwn, win32.w32api, win32.winbase,
+import win32.prsht, win32.unknwn, win32.w32api, win32.winbase,
   win32.winnt, win32.winuser, win32.wtypes, win32.objfwd, win32.objidl;
-private import win32.winnetwk; // for NETRESOURCE
-private import win32.oaidl : VARIANT;
+import win32.winnetwk; // for NETRESOURCE
+import win32.oaidl : VARIANT;
 
 
 // FIXME: clean up Windows version support

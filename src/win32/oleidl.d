@@ -16,10 +16,10 @@ module win32.oleidl;
 // what is it doing in here?
 //alias IEnumOleUndoUnits LPENUMOLEUNDOUNITS;
 
-private import win32.basetyps, win32.objidl, win32.unknwn, win32.windef,
+import win32.basetyps, win32.objidl, win32.unknwn, win32.windef,
   win32.winuser, win32.wtypes;
-private import win32.objfwd; // for LPMONIKER
-private import win32.wingdi; // for LPLOGPALETTE
+import win32.objfwd; // for LPMONIKER
+import win32.wingdi; // for LPLOGPALETTE
 
 enum MK_ALT = 32;
 

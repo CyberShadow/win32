@@ -13,7 +13,7 @@ module win32.lmserver;
 @system:
 
 import win32.winsvc;
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 struct SERVER_INFO_100 {
     DWORD  sv100_platform_id;

@@ -14,7 +14,7 @@ module win32.lmchdev;
 
 // COMMENT: This file might be deprecated.
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 enum CHARDEVQ_NO_REQUESTS  = -1;
 enum CHARDEV_CLOSE         = 0;

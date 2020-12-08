@@ -12,7 +12,7 @@ module win32.lmbrowsr;
 //version (Windows):
 @system:
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 enum BROWSER_ROLE_PDC = 1;
 enum BROWSER_ROLE_BDC = 2;

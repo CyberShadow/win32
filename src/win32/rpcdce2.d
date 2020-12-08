@@ -15,7 +15,7 @@ module win32.rpcdce2;
 version (ANSI) {} else version = Unicode;
 
 import win32.rpcdce;
-private import win32.basetyps;
+import win32.basetyps;
 
 // FIXME: deal with RPC_UNICODE_SUPPORTED
 // FIXME: check types of constants

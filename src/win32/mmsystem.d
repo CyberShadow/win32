@@ -19,7 +19,7 @@ version (Win32_UseLib) pragma(lib, "winmm");
  *  compile-time constants, so they are implemented as templates.
  */
 
-private import win32.w32api, win32.windef, win32.winver;
+import win32.w32api, win32.windef, win32.winver;
 
 align(1):
 

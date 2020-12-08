@@ -22,9 +22,9 @@ module win32.httpext;
        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
-private import win32.basetsd /+: DECLARE_HANDLE, HANDLE+/;
-private import win32.windef /+: BOOL, CHAR, DWORD, LPBYTE, LPDWORD+/;
-private import win32.winnt /+: LPCSTR, LPSTR, LPVOID, PVOID, VOID+/;
+import win32.basetsd /+: DECLARE_HANDLE, HANDLE+/;
+import win32.windef /+: BOOL, CHAR, DWORD, LPBYTE, LPDWORD+/;
+import win32.winnt /+: LPCSTR, LPSTR, LPVOID, PVOID, VOID+/;
 
 enum {
     HSE_VERSION_MAJOR               = 2,

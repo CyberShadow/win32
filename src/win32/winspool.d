@@ -15,8 +15,8 @@ module win32.winspool;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "winspool");
 
-private import win32.w32api, win32.windef, win32.wingdi;
-private import win32.winbase; // for SYSTEMTIME
+import win32.w32api, win32.windef, win32.wingdi;
+import win32.winbase; // for SYSTEMTIME
 
 // FIXME: clean up Windows version support
 

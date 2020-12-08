@@ -14,7 +14,7 @@ module win32.lmshare;
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 import win32.lmcons;
-private import win32.w32api, win32.windef;
+import win32.w32api, win32.windef;
 
 
 enum SHARE_NETNAME_PARMNUM      = 1;

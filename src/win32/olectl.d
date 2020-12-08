@@ -16,11 +16,11 @@ module win32.olectl;
 //#define FONTSIZE(n) {n##0000, 0}
 
 import win32.ocidl, win32.olectlid;
-private import win32.basetyps, win32.oaidl, win32.oleauto, win32.unknwn,
+import win32.basetyps, win32.oaidl, win32.oleauto, win32.unknwn,
   win32.windef, win32.wingdi, win32.winuser, win32.wtypes;
-private import win32.ntdef;     // for NTSTATUS
-private import win32.objfwd;    // for LPSTREAM
-private import win32.winerror;  // for SCODE
+import win32.ntdef;     // for NTSTATUS
+import win32.objfwd;    // for LPSTREAM
+import win32.winerror;  // for SCODE
 
 
 private {

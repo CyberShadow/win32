@@ -13,7 +13,7 @@ module win32.ipexport;
 //version (Windows):
 @system:
 
-private import win32.windef;
+import win32.windef;
 
 enum size_t MAX_ADAPTER_NAME = 128;
 

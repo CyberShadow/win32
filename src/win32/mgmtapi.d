@@ -14,7 +14,7 @@ module win32.mgmtapi;
 @system:
 
 import win32.snmp;
-private import win32.windef;
+import win32.windef;
 
 enum {
     SNMP_MGMTAPI_TIMEOUT = 40,

@@ -12,7 +12,7 @@ module win32.shldisp;
 //version (Windows):
 @system:
 
-private import win32.unknwn, win32.windef, win32.wtypes;
+import win32.unknwn, win32.windef, win32.wtypes;
 
 // options for IAutoComplete2
 enum DWORD ACO_AUTOSUGGEST = 0x01;

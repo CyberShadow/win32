@@ -18,8 +18,8 @@ version (ANSI) {} else version = Unicode;
   It's assumed that ODBC >= 0x0300.
 */
 
-private import win32.windef;
-private import win32.basetyps; // for GUID
+import win32.windef;
+import win32.basetyps; // for GUID
 
 alias byte SCHAR, SQLSCHAR;
 alias int SDWORD, SLONG, SQLINTEGER;

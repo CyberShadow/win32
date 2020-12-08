@@ -16,9 +16,9 @@ module win32.setupapi;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "setupapi");
 
-private import win32.basetyps, win32.commctrl, win32.prsht, win32.w32api,
+import win32.basetyps, win32.commctrl, win32.prsht, win32.w32api,
   win32.winreg, win32.windef;
-private import win32.winbase; // for SYSTEMTIME
+import win32.winbase; // for SYSTEMTIME
 
 /*static if (_WIN32_WINNT < _WIN32_WINDOWS) {
 enum UINT _SETUPAPI_VER = _WIN32_WINNT; // SetupAPI version follows Windows NT version

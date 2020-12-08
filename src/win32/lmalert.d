@@ -13,7 +13,7 @@ module win32.lmalert;
 @system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 const TCHAR[]
     ALERTER_MAILSLOT     = `\\.\MAILSLOT\Alerter`,

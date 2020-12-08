@@ -14,7 +14,7 @@ module win32.objbase;
 version (Win32_UseLib) pragma(lib, "ole32");
 
 import win32.cguid, win32.objidl, win32.unknwn, win32.wtypes;
-private import win32.basetyps, win32.objfwd, win32.rpcdce, win32.winbase,
+import win32.basetyps, win32.objfwd, win32.rpcdce, win32.winbase,
   win32.windef;
 
 // DAC: Not needed for D?

@@ -14,7 +14,7 @@ module win32.regstr;
 
 // TODO: fix possible conflict with shloj. Sort out NEC_98 issue.
 
-private import win32.windef;
+import win32.windef;
 
 enum REGSTR_MAX_VALUE_LENGTH = 256;
 

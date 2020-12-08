@@ -14,9 +14,9 @@ module win32.rpcdcep;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.basetyps;
-private import win32.w32api;
-private import win32.windef;
+import win32.basetyps;
+import win32.w32api;
+import win32.windef;
 
 mixin DECLARE_HANDLE!("I_RPC_HANDLE");
 alias long RPC_STATUS;

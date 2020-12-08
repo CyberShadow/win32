@@ -14,7 +14,7 @@ module win32.schannel;
 @system:
 
 import win32.wincrypt;
-private import win32.windef;
+import win32.windef;
 
 enum DWORD SCHANNEL_CRED_VERSION = 4;
 enum SCHANNEL_SHUTDOWN           = 1;

@@ -14,8 +14,8 @@ module win32.richedit;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef, win32.winuser;
-private import win32.wingdi; // for LF_FACESIZE
+import win32.windef, win32.winuser;
+import win32.wingdi; // for LF_FACESIZE
 
 align(4):
 

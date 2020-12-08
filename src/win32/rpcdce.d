@@ -19,7 +19,7 @@ version (Win32_UseLib) pragma(lib, "Rpcrt4");
 // replaced aliases for version (Unicode)
 
 public import win32.rpcdcep;
-private import win32.basetyps, win32.w32api, win32.windef;
+import win32.basetyps, win32.w32api, win32.windef;
 
 // FIXME: clean up Windows version support
 
