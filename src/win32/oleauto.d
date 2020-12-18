@@ -14,8 +14,8 @@ module win32.oleauto;
 version (Win32_UseLib) pragma(lib, "oleaut32");
 
 import win32.oaidl;
-private import win32.basetyps, win32.unknwn, win32.windef, win32.wtypes;
-private import win32.winbase; // for SYSTEMTIME
+import win32.basetyps, win32.unknwn, win32.windef, win32.wtypes;
+import win32.winbase; // for SYSTEMTIME
 
 align(8):
 enum STDOLE_MAJORVERNUM = 1;

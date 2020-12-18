@@ -13,7 +13,7 @@ module win32.lmaudit;
 //version (Windows):
 @system:
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 enum LOGFLAGS_FORWARD  = 0;
 enum LOGFLAGS_BACKWARD = 1;

@@ -15,7 +15,7 @@ module win32.ras;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "rasapi32");
 
-private import win32.basetyps, win32.lmcons, win32.w32api, win32.windef;
+import win32.basetyps, win32.lmcons, win32.w32api, win32.windef;
 
 align(4):
 

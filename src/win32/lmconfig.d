@@ -14,7 +14,7 @@ module win32.lmconfig;
 
 // All functions in this file are deprecated!
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 deprecated {
     struct CONFIG_INFO_0 {

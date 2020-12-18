@@ -13,7 +13,7 @@ module win32.lmstats;
 @system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 enum ULONG
     STATSOPT_CLR   = 1,

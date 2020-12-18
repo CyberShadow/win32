@@ -33,7 +33,7 @@ version (ANSI) {} else version = Unicode;
 */
 
 import win32.schannel, win32.winber;
-private import win32.wincrypt, win32.windef;
+import win32.wincrypt, win32.windef;
 
 //align(4):
 

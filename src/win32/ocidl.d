@@ -14,11 +14,11 @@ module win32.ocidl;
 //version (Windows):
 @system:
 
-private import win32.ole2, win32.oleidl, win32.oaidl, win32.objfwd,
+import win32.ole2, win32.oleidl, win32.oaidl, win32.objfwd,
   win32.windef, win32.wtypes;
-private import win32.objidl;  // for CLIPFORMAT
-private import win32.wingdi;  // for TEXTMETRICW
-private import win32.winuser; // for LPMSG
+import win32.objidl;  // for CLIPFORMAT
+import win32.wingdi;  // for TEXTMETRICW
+import win32.winuser; // for LPMSG
 
 interface IBindHost : IUnknown {}
 
@@ -28,8 +28,8 @@ interface IServiceProvider : IUnknown{
 
 /*
 // TODO:
-//private import win32.servprov; // for IServiceProvider
-// private import win32.urlmon; // for IBindHost. This is not included in MinGW.
+//import win32.servprov; // for IServiceProvider
+// import win32.urlmon; // for IBindHost. This is not included in MinGW.
 
 // win32.urlmon should contain:
 interface IBindHost : IUnknown

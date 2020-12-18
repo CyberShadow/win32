@@ -12,7 +12,7 @@ module win32.oaidl;
 //version (Windows):
 @system:
 
-private import win32.basetyps, win32.unknwn, win32.windef, win32.wtypes;
+import win32.basetyps, win32.unknwn, win32.windef, win32.wtypes;
 
 enum DISPID_UNKNOWN = -1;
 enum DISPID_VALUE = 0;

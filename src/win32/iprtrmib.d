@@ -14,7 +14,7 @@ module win32.iprtrmib;
 @system:
 
 import win32.ipifcons;
-private import win32.windef;
+import win32.windef;
 
 // FIXME: check types of constants
 

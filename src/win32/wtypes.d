@@ -13,8 +13,8 @@ module win32.wtypes;
 @system:
 
 import win32.rpc, win32.rpcndr;
-private import win32.windef;
-private import win32.uuid; // for GUID_NULL
+import win32.windef;
+import win32.uuid; // for GUID_NULL
 
 alias GUID_NULL IID_NULL, CLSID_NULL;
 

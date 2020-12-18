@@ -13,7 +13,7 @@ module win32.sql;
 @system:
 
 public import win32.sqltypes;
-private import win32.windef;
+import win32.windef;
 
 enum ODBCVER = 0x0351;
 

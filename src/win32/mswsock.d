@@ -14,7 +14,7 @@ module win32.mswsock;
 @system:
 
 import win32.winbase, win32.windef;
-private import win32.basetyps, win32.w32api;
+import win32.basetyps, win32.w32api;
 
 import win32.winsock2;
 

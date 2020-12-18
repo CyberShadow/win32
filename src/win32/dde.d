@@ -14,7 +14,7 @@ module win32.dde;
 @system:
 version (Win32_UseLib) pragma(lib, "user32");
 
-private import win32.windef;
+import win32.windef;
 
 enum : uint {
     WM_DDE_FIRST     = 0x03E0,

@@ -17,7 +17,7 @@ version (Win32_UseLib) pragma(lib, "gdi32");
 
 // FIXME: clean up Windows version support
 
-private import win32.w32api, win32.windef, win32.winver;
+import win32.w32api, win32.windef, win32.winver;
 
 // BITMAPINFOHEADER.biCompression
 enum : DWORD {

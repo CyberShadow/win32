@@ -15,7 +15,7 @@ module win32.msacm;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.basetsd, win32.mmsystem, win32.windef;
+import win32.basetsd, win32.mmsystem, win32.windef;
 
 mixin DECLARE_HANDLE!("HACMDRIVERID");
 mixin DECLARE_HANDLE!("HACMDRIVER");

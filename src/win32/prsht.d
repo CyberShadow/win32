@@ -16,7 +16,7 @@ module win32.prsht;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "comctl32");
 
-private import win32.w32api, win32.windef, win32.winuser;
+import win32.w32api, win32.windef, win32.winuser;
 
 enum MAXPROPPAGES = 100;
 

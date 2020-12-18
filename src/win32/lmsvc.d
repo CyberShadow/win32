@@ -19,7 +19,7 @@ module win32.lmsvc;
 */
 // TODO: 5 macros
 
-private import win32.lmcons, win32.lmsname, win32.windef;
+import win32.lmcons, win32.lmsname, win32.windef;
 
 const TCHAR[] SERVICE_DOS_ENCRYPTION = "ENCRYPT";
 

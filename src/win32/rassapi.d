@@ -13,7 +13,7 @@ module win32.rassapi;
 //version (Windows):
 @system:
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 // FIXME: check types of constants
 

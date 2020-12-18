@@ -14,8 +14,8 @@ module win32.lmcons;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef;
-private import win32.lmerr; // for NERR_BASE
+import win32.windef;
+import win32.lmerr; // for NERR_BASE
 
 const TCHAR[]
     MESSAGE_FILENAME = "NETMSG",

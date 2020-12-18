@@ -14,7 +14,7 @@ module win32.sqlucode;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.sqlext;
+import win32.sqlext;
 
 enum SQL_WCHAR        = -8;
 enum SQL_WVARCHAR     = -9;

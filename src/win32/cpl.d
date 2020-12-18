@@ -15,7 +15,7 @@ module win32.cpl;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef, win32.winuser;
+import win32.windef, win32.winuser;
 
 enum : uint {
     WM_CPL_LAUNCH = WM_USER + 1000,

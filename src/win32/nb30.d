@@ -13,7 +13,7 @@ module win32.nb30;
 //version (Windows):
 @system:
 
-private import win32.windef;
+import win32.windef;
 
 enum size_t
     NCBNAMSZ =  16,

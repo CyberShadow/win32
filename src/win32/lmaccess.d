@@ -19,7 +19,7 @@ version (Win32_UseLib) pragma(lib, "netapi32");
     the Platform SDK docs, so they have been dropped from this file.
 */
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 const wchar[]
     GROUP_SPECIALGRP_USERS  = "USERS",

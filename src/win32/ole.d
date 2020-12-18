@@ -14,7 +14,7 @@ module win32.ole;
 @system:
 version (Win32_UseLib) pragma(lib, "ole32");
 
-private import win32.windef, win32.wingdi, win32.uuid;
+import win32.windef, win32.wingdi, win32.uuid;
 
 alias LPCSTR OLE_LPCSTR;
 

@@ -15,7 +15,7 @@ module win32.winioctl;
 
 // FIXME: check types of some constants
 
-private import win32.basetyps, win32.windef;
+import win32.basetyps, win32.windef;
 
 enum size_t
     HIST_NO_OF_BUCKETS = 24,

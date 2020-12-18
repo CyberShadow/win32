@@ -19,9 +19,9 @@ module win32.psapi;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.w32api;
-private import win32.winbase;
-private import win32.windef;
+import win32.w32api;
+import win32.winbase;
+import win32.windef;
 
 struct MODULEINFO {
     LPVOID lpBaseOfDll;

@@ -15,7 +15,7 @@ module win32.custcntl;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef;
+import win32.windef;
 
 // FIXME: check type
 enum CCF_NOTEXT = 1;

@@ -12,7 +12,7 @@ module win32.objfwd;
 //version (Windows):
 @system:
 
-private import win32.objidl;
+import win32.objidl;
 
 /+
 // Forward declararions are not necessary in D.

@@ -15,7 +15,7 @@ module win32.intshcut;
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.unknwn, win32.windef;
+import win32.unknwn, win32.windef;
 
 enum : SCODE {
     E_FLAGS                     = 0x80041000,

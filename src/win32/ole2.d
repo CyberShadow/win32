@@ -15,8 +15,8 @@ version (Win32_UseLib) pragma(lib, "ole32");
 
 public import win32.basetyps, win32.objbase, win32.oleauto, win32.olectlid,
   win32.oleidl, win32.unknwn, win32.winerror, win32.uuid;
-private import win32.objfwd, win32.objidl, win32.windef, win32.wtypes;
-private import win32.winuser; // for LPMSG
+import win32.objfwd, win32.objidl, win32.windef, win32.wtypes;
+import win32.winuser; // for LPMSG
 
 enum E_DRAW = VIEW_E_DRAW;
 

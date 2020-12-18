@@ -25,8 +25,8 @@ version (Win32_UseLib) pragma(lib, "user32");
 //#define GetWindowTask(hWnd) ((HANDLE)GetWindowThreadProcessId(hWnd, NULL))
 //#define DefHookProc(c, p, lp, h) CallNextHookEx((HHOOK)*h, c, p, lp)
 
-private import win32.w32api, win32.winbase, win32.wingdi;
-private import win32.windef; // for HMONITOR
+import win32.w32api, win32.winbase, win32.wingdi;
+import win32.windef; // for HMONITOR
 
 // FIXME: clean up Windows version support
 

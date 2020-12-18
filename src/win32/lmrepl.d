@@ -13,7 +13,7 @@ module win32.lmrepl;
 @system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 enum REPL_ROLE_EXPORT=1;
 enum REPL_ROLE_IMPORT=2;

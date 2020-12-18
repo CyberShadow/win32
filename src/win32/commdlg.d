@@ -15,7 +15,7 @@ module win32.commdlg;
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "comdlg32");
 
-private import win32.w32api;
+import win32.w32api;
 import win32.windef, win32.winuser;
 import win32.wingdi; // for LPLOGFONTA
 
