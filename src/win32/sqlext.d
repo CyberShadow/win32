@@ -10,6 +10,7 @@
 /// core.sys.windows.sqlext for the auto-generated win32 package.
 module win32.sqlext;
 //version (Windows):
+@system:
 
 /* Conversion notes:
    The MinGW file was a horrible mess. All of the #defines were sorted alphabetically,
@@ -19,7 +20,7 @@ module win32.sqlext;
 */
 
 public import win32.sql;
-private import win32.windef;
+import win32.windef;
 
 enum SQL_SPEC_MAJOR = 3;
 enum SQL_SPEC_MINOR = 51;

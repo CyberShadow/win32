@@ -10,10 +10,11 @@
 /// core.sys.windows.lmconfig for the auto-generated win32 package.
 module win32.lmconfig;
 //version (Windows):
+@system:
 
 // All functions in this file are deprecated!
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 deprecated {
     struct CONFIG_INFO_0 {

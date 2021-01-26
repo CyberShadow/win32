@@ -10,6 +10,7 @@
 /// core.sys.windows.winuser for the auto-generated win32 package.
 module win32.winuser;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "user32");
@@ -24,8 +25,8 @@ version (Win32_UseLib) pragma(lib, "user32");
 //#define GetWindowTask(hWnd) ((HANDLE)GetWindowThreadProcessId(hWnd, NULL))
 //#define DefHookProc(c, p, lp, h) CallNextHookEx((HHOOK)*h, c, p, lp)
 
-private import win32.w32api, win32.winbase, win32.wingdi;
-private import win32.windef; // for HMONITOR
+import win32.w32api, win32.winbase, win32.wingdi;
+import win32.windef; // for HMONITOR
 
 // FIXME: clean up Windows version support
 
@@ -3547,7 +3548,7 @@ void POINTSTOPOINT()(out POINT p, LONG ps) {
     p.y = HIWORD(ps);
 }
 
-POINTS POINTTOPOINTS()(in POINT p) {
+POINTS POINTTOPOINTS()(const POINT p) {
     return MAKELONG(p.x, p.y);
 }
 

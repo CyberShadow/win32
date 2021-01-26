@@ -12,13 +12,14 @@
 /// core.sys.windows.rpcnsi for the auto-generated win32 package.
 module win32.rpcnsi;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "rpcns4");
 
-private import win32.basetyps, win32.rpcdcep, win32.rpcnsi, win32.rpcdce,
+import win32.basetyps, win32.rpcdcep, win32.rpcnsi, win32.rpcdce,
   win32.w32api;
-private import win32.windef;  // for HANDLE
+import win32.windef;  // for HANDLE
 
 mixin DECLARE_HANDLE!("RPC_NS_HANDLE");
 

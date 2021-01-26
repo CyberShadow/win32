@@ -11,8 +11,9 @@
 /// core.sys.windows.objsafe for the auto-generated win32 package.
 module win32.objsafe;
 //version (Windows):
+@system:
 
-private import win32.basetyps, win32.unknwn, win32.windef;
+import win32.basetyps, win32.unknwn, win32.windef;
 
 enum {
     INTERFACESAFE_FOR_UNTRUSTED_CALLER = 1,

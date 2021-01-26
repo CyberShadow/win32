@@ -10,6 +10,7 @@
 /// core.sys.windows.rpc for the auto-generated win32 package.
 module win32.rpc;
 //version (Windows):
+@system:
 
 /* Moved to rpcdecp (duplicate definition).
     typedef void *I_RPC_HANDLE;

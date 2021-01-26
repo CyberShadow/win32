@@ -10,6 +10,7 @@
 /// core.sys.windows.lmsvc for the auto-generated win32 package.
 module win32.lmsvc;
 //version (Windows):
+@system:
 
 // FIXME: Is this file deprecated? All of the functions are only for Win16.
 /**
@@ -18,7 +19,7 @@ module win32.lmsvc;
 */
 // TODO: 5 macros
 
-private import win32.lmcons, win32.lmsname, win32.windef;
+import win32.lmcons, win32.lmsname, win32.windef;
 
 const TCHAR[] SERVICE_DOS_ENCRYPTION = "ENCRYPT";
 

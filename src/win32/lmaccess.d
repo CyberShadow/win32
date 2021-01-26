@@ -10,6 +10,7 @@
 /// core.sys.windows.lmaccess for the auto-generated win32 package.
 module win32.lmaccess;
 //version (Windows):
+@system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 /**
@@ -18,7 +19,7 @@ version (Win32_UseLib) pragma(lib, "netapi32");
     the Platform SDK docs, so they have been dropped from this file.
 */
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 const wchar[]
     GROUP_SPECIALGRP_USERS  = "USERS",

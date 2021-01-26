@@ -11,10 +11,11 @@
 /// core.sys.windows.intshcut for the auto-generated win32 package.
 module win32.intshcut;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.unknwn, win32.windef;
+import win32.unknwn, win32.windef;
 
 enum : SCODE {
     E_FLAGS                     = 0x80041000,

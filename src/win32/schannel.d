@@ -11,9 +11,10 @@
 /// core.sys.windows.schannel for the auto-generated win32 package.
 module win32.schannel;
 //version (Windows):
+@system:
 
 import win32.wincrypt;
-private import win32.windef;
+import win32.windef;
 
 enum DWORD SCHANNEL_CRED_VERSION = 4;
 enum SCHANNEL_SHUTDOWN           = 1;

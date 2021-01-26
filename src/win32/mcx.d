@@ -11,8 +11,9 @@
 /// core.sys.windows.mcx for the auto-generated win32 package.
 module win32.mcx;
 //version (Windows):
+@system:
 
-private import win32.windef;
+import win32.windef;
 
 enum DWORD
     DIALOPTION_BILLING  =  64,

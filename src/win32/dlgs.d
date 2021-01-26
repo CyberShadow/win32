@@ -11,8 +11,9 @@
 /// core.sys.windows.dlgs for the auto-generated win32 package.
 module win32.dlgs;
 //version (Windows):
+@system:
 
-private import win32.windef;
+import win32.windef;
 
 enum : ushort {
     FILEOPENORD      = 1536,

@@ -11,11 +11,12 @@
 /// core.sys.windows.prsht for the auto-generated win32 package.
 module win32.prsht;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "comctl32");
 
-private import win32.w32api, win32.windef, win32.winuser;
+import win32.w32api, win32.windef, win32.winuser;
 
 enum MAXPROPPAGES = 100;
 

@@ -10,6 +10,7 @@
 /// core.sys.windows.rpcdce for the auto-generated win32 package.
 module win32.rpcdce;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "Rpcrt4");
@@ -18,7 +19,7 @@ version (Win32_UseLib) pragma(lib, "Rpcrt4");
 // replaced aliases for version (Unicode)
 
 public import win32.rpcdcep;
-private import win32.basetyps, win32.w32api, win32.windef;
+import win32.basetyps, win32.w32api, win32.windef;
 
 // FIXME: clean up Windows version support
 

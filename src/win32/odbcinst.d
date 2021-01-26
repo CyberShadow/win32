@@ -10,11 +10,12 @@
 /// core.sys.windows.odbcinst for the auto-generated win32 package.
 module win32.odbcinst;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
 import win32.sql;
-private import win32.windef;
+import win32.windef;
 
 /*  FIXME: The Unicode/Ansi functions situation is a mess. How do the xxxA
  *  versions of these functions fit into the scheme?

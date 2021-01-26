@@ -10,11 +10,12 @@
 /// core.sys.windows.lmcons for the auto-generated win32 package.
 module win32.lmcons;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef;
-private import win32.lmerr; // for NERR_BASE
+import win32.windef;
+import win32.lmerr; // for NERR_BASE
 
 const TCHAR[]
     MESSAGE_FILENAME = "NETMSG",

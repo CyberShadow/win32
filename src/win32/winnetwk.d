@@ -11,11 +11,12 @@
 /// core.sys.windows.winnetwk for the auto-generated win32 package.
 module win32.winnetwk;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "mpr");
 
-private import win32.winbase, win32.winerror, win32.winnt;
+import win32.winbase, win32.winerror, win32.winnt;
 
 enum : DWORD {
     WNNC_NET_MSNET       = 0x00010000,

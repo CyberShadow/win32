@@ -10,6 +10,7 @@
 /// core.sys.windows.mmsystem for the auto-generated win32 package.
 module win32.mmsystem;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "winmm");
@@ -18,7 +19,7 @@ version (Win32_UseLib) pragma(lib, "winmm");
  *  compile-time constants, so they are implemented as templates.
  */
 
-private import win32.w32api, win32.windef, win32.winver;
+import win32.w32api, win32.windef, win32.winver;
 
 align(1):
 
@@ -1041,7 +1042,7 @@ struct MMTIME {
             BYTE fps;
             BYTE dummy;
             BYTE[2] pad;
-        };
+        }
         _smpte smpte;
         struct _midi {
             DWORD songptrpos;

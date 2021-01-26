@@ -10,6 +10,7 @@
 /// core.sys.windows.shlwapi for the auto-generated win32 package.
 module win32.shlwapi;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "shlwapi");
@@ -29,7 +30,7 @@ wnsprintf functions are not included.
 */
 
 import win32.objbase, win32.shlobj;
-private import win32.basetyps, win32.objidl, win32.unknwn, win32.windef,
+import win32.basetyps, win32.objidl, win32.unknwn, win32.windef,
   win32.winbase, win32.winreg;
 
 enum DLLVER_PLATFORM_WINDOWS = 0x00000001;

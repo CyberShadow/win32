@@ -11,10 +11,11 @@
 /// core.sys.windows.winioctl for the auto-generated win32 package.
 module win32.winioctl;
 //version (Windows):
+@system:
 
 // FIXME: check types of some constants
 
-private import win32.basetyps, win32.windef;
+import win32.basetyps, win32.windef;
 
 enum size_t
     HIST_NO_OF_BUCKETS = 24,

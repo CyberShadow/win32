@@ -10,10 +10,11 @@
 /// core.sys.windows.lmchdev for the auto-generated win32 package.
 module win32.lmchdev;
 //version (Windows):
+@system:
 
 // COMMENT: This file might be deprecated.
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 enum CHARDEVQ_NO_REQUESTS  = -1;
 enum CHARDEV_CLOSE         = 0;

@@ -10,8 +10,9 @@
 /// core.sys.windows.basetyps for the auto-generated win32 package.
 module win32.basetyps;
 //version (Windows):
+@system:
 
-private import win32.windef, win32.basetsd;
+import win32.windef, win32.basetsd;
 
 align(1) struct GUID {  // size is 16
     align(1):

@@ -10,11 +10,12 @@
 /// core.sys.windows.lzexpand for the auto-generated win32 package.
 module win32.lzexpand;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "lz32");
 
-private import win32.winbase, win32.windef;
+import win32.winbase, win32.windef;
 
 enum : LONG {
     LZERROR_BADINHANDLE  = -1,

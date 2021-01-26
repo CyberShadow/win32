@@ -10,13 +10,14 @@
 /// core.sys.windows.commctrl for the auto-generated win32 package.
 module win32.commctrl;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "comctl32");
 
-private import win32.w32api, win32.windef, win32.winuser;
-private import win32.winbase; // for SYSTEMTIME
-private import win32.objfwd;  // for LPSTREAM
+import win32.w32api, win32.windef, win32.winuser;
+import win32.winbase; // for SYSTEMTIME
+import win32.objfwd;  // for LPSTREAM
 
 import win32.prsht;
 
@@ -3900,7 +3901,7 @@ static if (_WIN32_WINNT >= 0x600) {
     {
         int iItem;
         int iGroup;
-    };
+    }
     alias LVITEMINDEX* PLVITEMINDEX;
 
     struct LVFOOTERINFO

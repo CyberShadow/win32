@@ -10,11 +10,12 @@
 /// core.sys.windows.tlhelp32 for the auto-generated win32 package.
 module win32.tlhelp32;
 //version (Windows):
+@system:
 version (Win32_UseLib) pragma(lib, "kernel32");
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef;
+import win32.windef;
 
 enum : uint {
     HF32_DEFAULT = 1,

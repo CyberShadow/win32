@@ -11,10 +11,11 @@
 /// core.sys.windows.nddeapi for the auto-generated win32 package.
 module win32.nddeapi;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef;
+import win32.windef;
 
 // FIXME: check types and grouping of constants
 
