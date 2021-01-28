@@ -11,9 +11,10 @@
 /// core.sys.windows.comcat for the auto-generated win32 package.
 module win32.comcat;
 //version (Windows):
+@system:
 
 import win32.ole2;
-private import win32.basetyps, win32.cguid, win32.objbase, win32.unknwn,
+import win32.basetyps, win32.cguid, win32.objbase, win32.unknwn,
   win32.windef, win32.wtypes;
 
 alias IEnumGUID LPENUMGUID;

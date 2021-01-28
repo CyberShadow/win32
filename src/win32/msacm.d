@@ -11,10 +11,11 @@
 /// core.sys.windows.msacm for the auto-generated win32 package.
 module win32.msacm;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.basetsd, win32.mmsystem, win32.windef;
+import win32.basetsd, win32.mmsystem, win32.windef;
 
 mixin DECLARE_HANDLE!("HACMDRIVERID");
 mixin DECLARE_HANDLE!("HACMDRIVER");

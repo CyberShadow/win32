@@ -11,6 +11,7 @@
 /// core.sys.windows.cplext for the auto-generated win32 package.
 module win32.cplext;
 //version (Windows):
+@system:
 
 enum : uint {
     CPLPAGE_MOUSE_BUTTONS      = 1,

@@ -11,9 +11,10 @@
 /// core.sys.windows.mgmtapi for the auto-generated win32 package.
 module win32.mgmtapi;
 //version (Windows):
+@system:
 
 import win32.snmp;
-private import win32.windef;
+import win32.windef;
 
 enum {
     SNMP_MGMTAPI_TIMEOUT = 40,

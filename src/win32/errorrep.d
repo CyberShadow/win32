@@ -11,10 +11,11 @@
 /// core.sys.windows.errorrep for the auto-generated win32 package.
 module win32.errorrep;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.w32api, win32.windef;
+import win32.w32api, win32.windef;
 
 static assert (_WIN32_WINNT >= 0x501,
     "win32.errorrep is available only if version WindowsXP, Windows2003 "

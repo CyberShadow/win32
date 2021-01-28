@@ -11,11 +11,12 @@
 /// core.sys.windows.secext for the auto-generated win32 package.
 module win32.secext;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "secur32");
 
-private import win32.w32api, win32.windef;
+import win32.w32api, win32.windef;
 
 static assert (_WIN32_WINNT >= 0x501,
   "SecExt is only available on WindowsXP and later");

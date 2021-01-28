@@ -12,7 +12,7 @@
 module win32.isguids;
 //version (Windows):
 
-private import win32.basetyps;
+import win32.basetyps;
 
 extern (C) extern const GUID
     CLSID_InternetShortcut,

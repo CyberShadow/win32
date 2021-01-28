@@ -10,13 +10,14 @@
 /// core.sys.windows.imm for the auto-generated win32 package.
 module win32.imm;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "imm32");
 
 import win32.windef, win32.wingdi;
 import win32.winuser; // for the MFS_xxx enums.
-private import win32.w32api;
+import win32.w32api;
 
 enum WM_CONVERTREQUESTEX     = 0x108;
 enum WM_IME_STARTCOMPOSITION = 0x10D;

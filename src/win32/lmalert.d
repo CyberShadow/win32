@@ -10,9 +10,10 @@
 /// core.sys.windows.lmalert for the auto-generated win32 package.
 module win32.lmalert;
 //version (Windows):
+@system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
-private import win32.lmcons, win32.windef;
+import win32.lmcons, win32.windef;
 
 const TCHAR[]
     ALERTER_MAILSLOT     = `\\.\MAILSLOT\Alerter`,

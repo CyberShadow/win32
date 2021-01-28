@@ -11,10 +11,11 @@
 /// core.sys.windows.cpl for the auto-generated win32 package.
 module win32.cpl;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef, win32.winuser;
+import win32.windef, win32.winuser;
 
 enum : uint {
     WM_CPL_LAUNCH = WM_USER + 1000,

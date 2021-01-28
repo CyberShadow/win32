@@ -10,6 +10,7 @@
 /// core.sys.windows.shlobj for the auto-generated win32 package.
 module win32.shlobj;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "shell32");
@@ -19,10 +20,10 @@ version (Win32_UseLib) pragma(lib, "shell32");
 // SHGetFolderPath in shfolder.dll on W9x, NT4, also in shell32.dll on W2K
 
 import win32.commctrl, win32.ole2, win32.shlguid, win32.shellapi;
-private import win32.prsht, win32.unknwn, win32.w32api, win32.winbase,
+import win32.prsht, win32.unknwn, win32.w32api, win32.winbase,
   win32.winnt, win32.winuser, win32.wtypes, win32.objfwd, win32.objidl;
-private import win32.winnetwk; // for NETRESOURCE
-private import win32.oaidl : VARIANT;
+import win32.winnetwk; // for NETRESOURCE
+import win32.oaidl : VARIANT;
 
 
 // FIXME: clean up Windows version support
@@ -693,7 +694,7 @@ alias IContextMenu LPCONTEXTMENU;
 
 interface IContextMenu2 : IContextMenu {
     HRESULT HandleMenuMsg(UINT, WPARAM, LPARAM);
-};
+}
 alias IContextMenu2 LPCONTEXTMENU2;
 
 static if (_WIN32_IE >= 0x500) {
@@ -772,7 +773,7 @@ alias IShellPropSheetExt LPSHELLPROPSHEETEXT;
 interface IExtractIconA : IUnknown {
     HRESULT GetIconLocation(UINT, LPSTR, UINT, int*, PUINT);
     HRESULT Extract(LPCSTR, UINT, HICON*, HICON*, UINT);
-};
+}
 alias IExtractIconA LPEXTRACTICONA;
 
 interface IExtractIconW : IUnknown {
@@ -857,16 +858,6 @@ interface IEnumExtraSearch: IUnknown {
 alias IEnumExtraSearch LPENUMEXTRASEARCH;
 
 interface IShellFolder2 : IShellFolder {
-    HRESULT ParseDisplayName(HWND, LPBC, LPOLESTR, PULONG, LPITEMIDLIST*, PULONG);
-    HRESULT EnumObjects(HWND, DWORD, LPENUMIDLIST*);
-    HRESULT BindToObject(LPCITEMIDLIST, LPBC, REFIID, PVOID*);
-    HRESULT BindToStorage(LPCITEMIDLIST, LPBC, REFIID, PVOID*);
-    HRESULT CompareIDs(LPARAM, LPCITEMIDLIST, LPCITEMIDLIST);
-    HRESULT CreateViewObject(HWND, REFIID, PVOID*);
-    HRESULT GetAttributesOf(UINT, LPCITEMIDLIST*, PULONG);
-    HRESULT GetUIObjectOf(HWND, UINT, LPCITEMIDLIST*, REFIID, PUINT, PVOID*);
-    HRESULT GetDisplayNameOf(LPCITEMIDLIST, DWORD, LPSTRRET);
-    HRESULT SetNameOf(HWND, LPCITEMIDLIST, LPCOLESTR, DWORD, LPITEMIDLIST*);
     HRESULT GetDefaultSearchGUID(GUID*);
     HRESULT EnumSearches(IEnumExtraSearch*);
     HRESULT GetDefaultColumn(DWORD, ULONG*, ULONG*);

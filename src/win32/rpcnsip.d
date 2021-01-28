@@ -10,8 +10,9 @@
 /// core.sys.windows.rpcnsip for the auto-generated win32 package.
 module win32.rpcnsip;
 //version (Windows):
+@system:
 
-private import win32.rpcdce, win32.rpcdcep, win32.rpcnsi;
+import win32.rpcdce, win32.rpcdcep, win32.rpcnsi;
 
 struct RPC_IMPORT_CONTEXT_P {
     RPC_NS_HANDLE       LookupContext;

@@ -11,6 +11,7 @@
 /// core.sys.windows.imagehlp for the auto-generated win32 package.
 module win32.imagehlp;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
@@ -20,7 +21,7 @@ version (ANSI) {} else version = Unicode;
     as well provide it here.
 */
 
-private import win32.winbase, win32.windef;
+import win32.winbase, win32.windef;
 
 // FIXME: check types of constants
 

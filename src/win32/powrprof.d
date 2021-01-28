@@ -11,10 +11,11 @@
 /// core.sys.windows.powrprof for the auto-generated win32 package.
 module win32.powrprof;
 //version (Windows):
+@system:
 version (Win32_UseLib) pragma(lib, "powrprof");
 
-private import win32.windef;
-private import win32.ntdef;
+import win32.windef;
+import win32.ntdef;
 
 // FIXME: look up Windows version support
 

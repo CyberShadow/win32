@@ -10,11 +10,12 @@
 /// core.sys.windows.richedit for the auto-generated win32 package.
 module win32.richedit;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.windef, win32.winuser;
-private import win32.wingdi; // for LF_FACESIZE
+import win32.windef, win32.winuser;
+import win32.wingdi; // for LF_FACESIZE
 
 align(4):
 

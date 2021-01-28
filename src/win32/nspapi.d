@@ -11,10 +11,11 @@
 /// core.sys.windows.nspapi for the auto-generated win32 package.
 module win32.nspapi;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.basetyps, win32.windef;
+import win32.basetyps, win32.windef;
 
 // FIXME: check types of constants
 

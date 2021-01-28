@@ -10,11 +10,12 @@
 /// core.sys.windows.lmerrlog for the auto-generated win32 package.
 module win32.lmerrlog;
 //version (Windows):
+@system:
 
 // COMMENT: This appears to be only for Win16. All functions are deprecated.
 
-private import win32.lmcons, win32.windef;
-private import win32.lmaudit; // for LPHLOG
+import win32.lmcons, win32.windef;
+import win32.lmaudit; // for LPHLOG
 
 enum ERRLOG_BASE=3100;
 enum ERRLOG2_BASE=5700;

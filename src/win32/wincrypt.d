@@ -11,11 +11,12 @@
 /// core.sys.windows.wincrypt for the auto-generated win32 package.
 module win32.wincrypt;
 //version (Windows):
+@system:
 version (Win32_UseLib) pragma(lib, "advapi32");
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.w32api, win32.winbase, win32.windef;
+import win32.w32api, win32.winbase, win32.windef;
 
 /* FIXME:
  *  Types of some constants

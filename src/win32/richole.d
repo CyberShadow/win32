@@ -10,10 +10,11 @@
 /// core.sys.windows.richole for the auto-generated win32 package.
 module win32.richole;
 //version (Windows):
+@system:
 
-private import win32.objfwd, win32.objidl, win32.ole2, win32.unknwn,
+import win32.objfwd, win32.objidl, win32.ole2, win32.unknwn,
   win32.windef;
-private import win32.richedit; // for CHARRANGE
+import win32.richedit; // for CHARRANGE
 
 //align(4):
 
@@ -85,7 +86,7 @@ interface IRichEditOle : IUnknown {
     HRESULT ContextSensitiveHelp(BOOL);
     HRESULT GetClipboardData(CHARRANGE*, DWORD, LPDATAOBJECT*);
     HRESULT ImportDataObject(LPDATAOBJECT, CLIPFORMAT, HGLOBAL);
-};
+}
 alias IRichEditOle LPRICHEDITOLE;
 
 interface IRichEditOleCallback : IUnknown {
@@ -99,5 +100,5 @@ interface IRichEditOleCallback : IUnknown {
     HRESULT GetClipboardData(CHARRANGE*, DWORD, LPDATAOBJECT*);
     HRESULT GetDragDropEffect(BOOL, DWORD, PDWORD);
     HRESULT GetContextMenu(WORD, LPOLEOBJECT, CHARRANGE*, HMENU*);
-};
+}
 alias IRichEditOleCallback LPRICHEDITOLECALLBACK;

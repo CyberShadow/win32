@@ -10,10 +10,11 @@
 /// core.sys.windows.sqlucode for the auto-generated win32 package.
 module win32.sqlucode;
 //version (Windows):
+@system:
 
 version (ANSI) {} else version = Unicode;
 
-private import win32.sqlext;
+import win32.sqlext;
 
 enum SQL_WCHAR        = -8;
 enum SQL_WVARCHAR     = -9;
