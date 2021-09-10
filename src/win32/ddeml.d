@@ -18,6 +18,11 @@ version (Win32_UseLib) pragma(lib, "user32");
 
 import win32.basetsd, win32.windef, win32.winnt;
 
+mixin DECLARE_HANDLE!("HCONVLIST");
+mixin DECLARE_HANDLE!("HCONV");
+mixin DECLARE_HANDLE!("HSZ");
+mixin DECLARE_HANDLE!("HDDEDATA");
+
 enum : int {
     CP_WINANSI    = 1004,
     CP_WINUNICODE = 1200
@@ -78,10 +83,13 @@ enum : UINT {
     XTYP_SHIFT           = 4
 }
 
-/+
-#define TIMEOUT_ASYNC  0xFFFFFFFF
-#define QID_SYNC       0xFFFFFFFF
-+/
+enum : UINT {
+    TIMEOUT_ASYNC = 0xFFFFFFFF
+}
+
+enum : UINT {
+    QID_SYNC      = 0xFFFFFFFF
+}
 
 enum : UINT {
     ST_CONNECTED  =   1,
@@ -95,9 +103,9 @@ enum : UINT {
     ST_ISSELF     = 256
 }
 
-/+
-#define CADV_LATEACK 0xFFFF
-+/
+enum : UINT {
+    CADV_LATEACK  = 0xFFFF
+}
 
 enum : UINT {
     DMLERR_NO_ERROR      = 0,
@@ -123,22 +131,26 @@ enum : UINT {
     DMLERR_LAST          = DMLERR_UNFOUND_QUEUE_ID
 }
 
-/+
-#define DDE_FACK    0x8000
-#define DDE_FBUSY   0x4000
-#define DDE_FDEFERUPD   0x4000
-#define DDE_FACKREQ 0x8000
-#define DDE_FRELEASE    0x2000
-#define DDE_FREQUESTED  0x1000
-#define DDE_FAPPSTATUS  0x00ff
-#define DDE_FNOTPROCESSED   0
-#define DDE_FACKRESERVED    (~(DDE_FACK|DDE_FBUSY|DDE_FAPPSTATUS))
-#define DDE_FADVRESERVED    (~(DDE_FACKREQ|DDE_FDEFERUPD))
-#define DDE_FDATRESERVED    (~(DDE_FACKREQ|DDE_FRELEASE|DDE_FREQUESTED))
-#define DDE_FPOKRESERVED    (~DDE_FRELEASE)
-#define MSGF_DDEMGR 0x8001
-#define CBR_BLOCK   ((HDDEDATA)0xffffffff)
-+/
+enum : UINT {
+    DDE_FACK            = 0x8000,
+    DDE_FBUSY           = 0x4000,
+    DDE_FDEFERUPD       = 0x4000,
+    DDE_FACKREQ         = 0x8000,
+    DDE_FRELEASE        = 0x2000,
+    DDE_FREQUESTED      = 0x1000,
+    DDE_FAPPSTATUS      = 0x00ff,
+    DDE_FNOTPROCESSED   = 0,
+    DDE_FACKRESERVED    = (~(DDE_FACK|DDE_FBUSY|DDE_FAPPSTATUS)),
+    DDE_FADVRESERVED    = (~(DDE_FACKREQ|DDE_FDEFERUPD)),
+    DDE_FDATRESERVED    = (~(DDE_FACKREQ|DDE_FRELEASE|DDE_FREQUESTED)),
+    DDE_FPOKRESERVED    = (~DDE_FRELEASE)
+}
+
+enum : UINT {
+    MSGF_DDEMGR         = 0x8001
+}
+
+enum CBR_BLOCK = cast(HDDEDATA)-1;
 
 enum DWORD
     APPCLASS_STANDARD         = 0,
@@ -182,10 +194,13 @@ enum : UINT {
     DNS_FILTEROFF  = 8
 }
 
-/+
-#define HDATA_APPOWNED  1
-#define MAX_MONITORS    4
-+/
+enum : UINT {
+    HDATA_APPOWNED = 1
+}
+
+enum : UINT {
+    MAX_MONITORS   = 4
+}
 
 enum : int {
     MH_CREATE  = 1,
@@ -193,11 +208,6 @@ enum : int {
     MH_DELETE  = 3,
     MH_CLEANUP = 4
 }
-
-mixin DECLARE_HANDLE!("HCONVLIST");
-mixin DECLARE_HANDLE!("HCONV");
-mixin DECLARE_HANDLE!("HSZ");
-mixin DECLARE_HANDLE!("HDDEDATA");
 
 extern (Windows) alias HDDEDATA
   function(UINT, UINT, HCONV, HSZ, HSZ, HDDEDATA, ULONG_PTR, ULONG_PTR) PFNCALLBACK;
