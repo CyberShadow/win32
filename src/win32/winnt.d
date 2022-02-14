@@ -4,7 +4,7 @@
  * Translated from MinGW API for MS-Windows 3.12
  *
  * License: $(LINK2 http://www.boost.org/LICENSE_1_0.txt, Boost License 1.0)
- * Source: $(DRUNTIMESRC src/core/sys/windows/_winnt.d)
+ * Source: $(DRUNTIMESRC core/sys/windows/_winnt.d)
  */
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.winnt for the auto-generated win32 package.

@@ -4,7 +4,7 @@
  * Translated from MinGW Windows headers
  *
  * License: $(LINK2 http://www.boost.org/LICENSE_1_0.txt, Boost License 1.0)
- * Source: $(DRUNTIMESRC src/core/sys/windows/_lmshare.d)
+ * Source: $(DRUNTIMESRC core/sys/windows/_lmshare.d)
  */
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.lmshare for the auto-generated win32 package.
