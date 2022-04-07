@@ -11,6 +11,7 @@
 module win32.unknwn;
 //version (Windows):
 @system:
+nothrow:
 
 import win32.objfwd, win32.windef, win32.wtypes;
 import win32.basetyps;
