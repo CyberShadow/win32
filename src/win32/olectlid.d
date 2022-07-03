@@ -12,4 +12,3 @@ module win32.olectlid;
 //version (Windows):
 
 import win32.basetyps;
-
