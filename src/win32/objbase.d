@@ -10,7 +10,6 @@
 /// core.sys.windows.objbase for the auto-generated win32 package.
 module win32.objbase;
 //version (Windows):
-@system:
 nothrow:
 version (Win32_UseLib) pragma(lib, "ole32");
 

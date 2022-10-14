@@ -10,7 +10,6 @@
 /// core.sys.windows.lmerr for the auto-generated win32 package.
 module win32.lmerr;
 //version (Windows):
-@system:
 
 import win32.winerror;
 

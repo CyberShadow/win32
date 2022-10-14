@@ -11,7 +11,6 @@
 /// core.sys.windows.schannel for the auto-generated win32 package.
 module win32.schannel;
 //version (Windows):
-@system:
 
 import win32.wincrypt;
 import win32.windef;

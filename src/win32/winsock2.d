@@ -8,7 +8,6 @@
 /// core.sys.windows.winsock2 for the auto-generated win32 package.
 module win32.winsock2;
 //version (Windows):
-@system:
 
 version (Win32_UseLib) pragma(lib, "ws2_32");
 

@@ -11,7 +11,6 @@
 /// core.sys.windows.iphlpapi for the auto-generated win32 package.
 module win32.iphlpapi;
 //version (Windows):
-@system:
 
 import win32.ipexport, win32.iprtrmib, win32.iptypes;
 import win32.winbase, win32.windef;

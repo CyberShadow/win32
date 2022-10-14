@@ -11,7 +11,6 @@
 /// core.sys.windows.mcx for the auto-generated win32 package.
 module win32.mcx;
 //version (Windows):
-@system:
 
 import win32.windef;
 

@@ -11,7 +11,6 @@
 /// core.sys.windows.secext for the auto-generated win32 package.
 module win32.secext;
 //version (Windows):
-@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "secur32");

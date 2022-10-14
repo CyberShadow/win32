@@ -10,7 +10,6 @@
 /// core.sys.windows.lmaccess for the auto-generated win32 package.
 module win32.lmaccess;
 //version (Windows):
-@system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 /**

@@ -12,7 +12,6 @@
 /// core.sys.windows.rpcnsi for the auto-generated win32 package.
 module win32.rpcnsi;
 //version (Windows):
-@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "rpcns4");

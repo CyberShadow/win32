@@ -10,7 +10,6 @@
 /// core.sys.windows.rpcnsip for the auto-generated win32 package.
 module win32.rpcnsip;
 //version (Windows):
-@system:
 
 import win32.rpcdce, win32.rpcdcep, win32.rpcnsi;
 

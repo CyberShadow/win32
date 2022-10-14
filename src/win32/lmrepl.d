@@ -10,7 +10,6 @@
 /// core.sys.windows.lmrepl for the auto-generated win32 package.
 module win32.lmrepl;
 //version (Windows):
-@system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 import win32.lmcons, win32.windef;

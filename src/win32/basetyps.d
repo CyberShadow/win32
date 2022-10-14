@@ -10,7 +10,6 @@
 /// core.sys.windows.basetyps for the auto-generated win32 package.
 module win32.basetyps;
 //version (Windows):
-@system:
 
 import win32.windef, win32.basetsd;
 

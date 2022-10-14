@@ -10,7 +10,6 @@
 /// core.sys.windows.shldisp for the auto-generated win32 package.
 module win32.shldisp;
 //version (Windows):
-@system:
 
 import win32.unknwn, win32.windef, win32.wtypes;
 

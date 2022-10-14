@@ -10,7 +10,6 @@
 /// core.sys.windows.oaidl for the auto-generated win32 package.
 module win32.oaidl;
 //version (Windows):
-@system:
 
 import win32.basetyps, win32.unknwn, win32.windef, win32.wtypes;
 

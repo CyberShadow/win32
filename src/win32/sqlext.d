@@ -10,7 +10,6 @@
 /// core.sys.windows.sqlext for the auto-generated win32 package.
 module win32.sqlext;
 //version (Windows):
-@system:
 
 /* Conversion notes:
    The MinGW file was a horrible mess. All of the #defines were sorted alphabetically,

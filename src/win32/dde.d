@@ -11,7 +11,6 @@
 /// core.sys.windows.dde for the auto-generated win32 package.
 module win32.dde;
 //version (Windows):
-@system:
 version (Win32_UseLib) pragma(lib, "user32");
 
 import win32.windef;

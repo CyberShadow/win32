@@ -11,7 +11,6 @@
 /// core.sys.windows.winver for the auto-generated win32 package.
 module win32.winver;
 //version (Windows):
-@system:
 import win32.w32api;
 import win32.winbase;
 import win32.sdkddkver;

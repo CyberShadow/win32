@@ -11,7 +11,6 @@
 /// core.sys.windows.sspi for the auto-generated win32 package.
 module win32.sspi;
 //version (Windows):
-@system:
 
 version (ANSI) {} else version = Unicode;
 

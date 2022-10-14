@@ -10,7 +10,6 @@
 /// core.sys.windows.rpcnterr for the auto-generated win32 package.
 module win32.rpcnterr;
 //version (Windows):
-@system:
 
 import win32.winerror;
 

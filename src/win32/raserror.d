@@ -10,7 +10,6 @@
 /// core.sys.windows.raserror for the auto-generated win32 package.
 module win32.raserror;
 //version (Windows):
-@system:
 
 enum {
     SUCCESS = 0,

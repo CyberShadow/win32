@@ -15,7 +15,6 @@
 /// core.sys.windows.psapi for the auto-generated win32 package.
 module win32.psapi;
 //version (Windows):
-@system:
 
 version (ANSI) {} else version = Unicode;
 

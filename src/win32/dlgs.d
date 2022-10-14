@@ -11,7 +11,6 @@
 /// core.sys.windows.dlgs for the auto-generated win32 package.
 module win32.dlgs;
 //version (Windows):
-@system:
 
 import win32.windef;
 
