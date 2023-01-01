@@ -10,7 +10,6 @@
 /// core.sys.windows.exdisp for the auto-generated win32 package.
 module win32.exdisp;
 //version (Windows):
-@system:
 
 import win32.docobj, win32.oaidl, win32.ocidl;
 import win32.basetyps, win32.windef, win32.wtypes;

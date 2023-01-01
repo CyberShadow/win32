@@ -10,7 +10,6 @@
 /// core.sys.windows.lmsname for the auto-generated win32 package.
 module win32.lmsname;
 //version (Windows):
-@system:
 
 import win32.windef;
 

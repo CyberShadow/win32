@@ -10,7 +10,6 @@
 /// core.sys.windows.windows for the auto-generated win32 package.
 module win32.windows;
 //version (Windows):
-@system:
 
 /*
     windows.h - main header file for the Win32 API

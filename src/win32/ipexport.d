@@ -11,7 +11,6 @@
 /// core.sys.windows.ipexport for the auto-generated win32 package.
 module win32.ipexport;
 //version (Windows):
-@system:
 
 import win32.windef;
 

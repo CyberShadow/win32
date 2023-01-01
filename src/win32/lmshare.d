@@ -10,7 +10,6 @@
 /// core.sys.windows.lmshare for the auto-generated win32 package.
 module win32.lmshare;
 //version (Windows):
-@system:
 version (Win32_UseLib) pragma(lib, "netapi32");
 
 import win32.lmcons;

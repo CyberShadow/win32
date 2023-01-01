@@ -10,7 +10,6 @@
 /// core.sys.windows.oleidl for the auto-generated win32 package.
 module win32.oleidl;
 //version (Windows):
-@system:
 
 // DAC: This is defined in ocidl !!
 // what is it doing in here?

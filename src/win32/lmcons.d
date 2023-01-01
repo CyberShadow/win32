@@ -10,7 +10,6 @@
 /// core.sys.windows.lmcons for the auto-generated win32 package.
 module win32.lmcons;
 //version (Windows):
-@system:
 
 version (ANSI) {} else version = Unicode;
 

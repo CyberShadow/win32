@@ -8,7 +8,6 @@ module win32.stat;
 //version (Windows):
 
 extern (C) nothrow @nogc:
-@system:
 
 import win32.stdc.time;
 

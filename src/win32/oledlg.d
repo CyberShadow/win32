@@ -9,7 +9,6 @@
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.oledlg for the auto-generated win32 package.
 module win32.oledlg;
-@system:
 //version (Windows):
 
 version (ANSI) {} else version = Unicode;

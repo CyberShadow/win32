@@ -10,7 +10,6 @@
 /// core.sys.windows.lm for the auto-generated win32 package.
 module win32.lm;
 //version (Windows):
-@system:
 
 /* removed - now supporting only Win2k up
 version (WindowsVista) {

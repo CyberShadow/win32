@@ -10,7 +10,6 @@
 /// core.sys.windows.winnt for the auto-generated win32 package.
 module win32.winnt;
 //version (Windows):
-@system:
 
 version (ANSI) {} else version = Unicode;
 

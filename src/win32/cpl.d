@@ -11,7 +11,6 @@
 /// core.sys.windows.cpl for the auto-generated win32 package.
 module win32.cpl;
 //version (Windows):
-@system:
 
 version (ANSI) {} else version = Unicode;
 

@@ -11,7 +11,6 @@
 /// core.sys.windows.iptypes for the auto-generated win32 package.
 module win32.iptypes;
 //version (Windows):
-@system:
 
 import win32.windef;
 import core.stdc.time;

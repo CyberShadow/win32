@@ -11,7 +11,6 @@
 /// core.sys.windows.nb30 for the auto-generated win32 package.
 module win32.nb30;
 //version (Windows):
-@system:
 
 import win32.windef;
 

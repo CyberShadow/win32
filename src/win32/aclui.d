@@ -11,7 +11,6 @@
 /// core.sys.windows.aclui for the auto-generated win32 package.
 module win32.aclui;
 //version (Windows):
-@system:
 version (Win32_UseLib) pragma(lib, "aclui");
 
 import win32.w32api;

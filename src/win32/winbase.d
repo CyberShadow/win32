@@ -10,7 +10,6 @@
 /// core.sys.windows.winbase for the auto-generated win32 package.
 module win32.winbase;
 //version (Windows):
-@system:
 
 version (ANSI) {} else version = Unicode;
 version (Win32_UseLib) pragma(lib, "kernel32");
