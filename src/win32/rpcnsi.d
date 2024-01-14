@@ -20,7 +20,7 @@ import win32.basetyps, win32.rpcdcep, win32.rpcnsi, win32.rpcdce,
   win32.w32api;
 import win32.windef;  // for HANDLE
 
-mixin DECLARE_HANDLE!("RPC_NS_HANDLE");
+alias RPC_NS_HANDLE = HANDLE;
 
 enum RPC_C_NS_SYNTAX_DEFAULT=0;
 enum RPC_C_NS_SYNTAX_DCE=3;

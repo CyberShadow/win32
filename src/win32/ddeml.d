@@ -17,10 +17,10 @@ version (Win32_UseLib) pragma(lib, "user32");
 
 import win32.basetsd, win32.windef, win32.winnt;
 
-mixin DECLARE_HANDLE!("HCONVLIST");
-mixin DECLARE_HANDLE!("HCONV");
-mixin DECLARE_HANDLE!("HSZ");
-mixin DECLARE_HANDLE!("HDDEDATA");
+alias HCONVLIST = HANDLE;
+alias HCONV = HANDLE;
+alias HSZ = HANDLE;
+alias HDDEDATA = HANDLE;
 
 enum : int {
     CP_WINANSI    = 1004,
