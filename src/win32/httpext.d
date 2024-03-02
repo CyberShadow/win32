@@ -21,7 +21,7 @@ module win32.httpext;
        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
-import win32.basetsd /+: DECLARE_HANDLE, HANDLE+/;
+import win32.basetsd /+: HANDLE+/;
 import win32.windef /+: BOOL, CHAR, DWORD, LPBYTE, LPDWORD+/;
 import win32.winnt /+: LPCSTR, LPSTR, LPVOID, PVOID, VOID+/;
 
@@ -49,7 +49,7 @@ enum {
     HSE_IO_SEND_HEADERS             = 0x00000008
 }
 
-mixin DECLARE_HANDLE!("HCONN");
+alias HCONN = HANDLE;
 
 struct HSE_VERSION_INFO {
     DWORD dwExtensionVersion;

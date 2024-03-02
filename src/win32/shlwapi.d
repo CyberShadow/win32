@@ -122,7 +122,7 @@ enum URLIS
     URLIS_HASQUERY
 }
 
-mixin DECLARE_HANDLE!("HUSKEY");
+alias HUSKEY = HANDLE;
 alias HUSKEY* PHUSKEY;
 
 extern (Windows)

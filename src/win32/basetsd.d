@@ -17,9 +17,6 @@ module win32.basetsd;
 // import.
 alias HANDLE = void*;
 
-package template DECLARE_HANDLE(string name, base = HANDLE) {
-    mixin ("alias " ~ base.stringof ~ " " ~ name ~ ";");
-}
 alias HANDLE* PHANDLE, LPHANDLE;
 
 // helper for aligned structs
