@@ -285,7 +285,7 @@ struct OLESERVERDOC {
 }
 alias OLESERVERDOC* LPOLESERVERDOC;
 
-extern (Windows) {
+extern (Windows) nothrow @nogc {
     OLESTATUS OleDelete(LPOLEOBJECT);
     OLESTATUS OleRelease(LPOLEOBJECT);
     OLESTATUS OleSaveToStream(LPOLEOBJECT, LPOLESTREAM);

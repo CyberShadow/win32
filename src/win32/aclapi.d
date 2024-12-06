@@ -17,7 +17,7 @@ version (Win32_UseLib) pragma(lib, "advapi32");
 
 import win32.accctrl, win32.basetyps, win32.w32api, win32.winnt;
 
-extern (Windows) {
+extern (Windows) nothrow @nogc {
     VOID BuildExplicitAccessWithNameA(PEXPLICIT_ACCESS_A, LPSTR, DWORD,
       ACCESS_MODE, DWORD);
     VOID BuildExplicitAccessWithNameW(PEXPLICIT_ACCESS_W, LPWSTR, DWORD,
