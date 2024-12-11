@@ -15,7 +15,7 @@ module win32.iphlpapi;
 import win32.ipexport, win32.iprtrmib, win32.iptypes;
 import win32.winbase, win32.windef;
 
-extern (Windows) {
+extern (Windows) nothrow @nogc {
     DWORD AddIPAddress(IPAddr, IPMask, DWORD, PULONG, PULONG);
     DWORD CreateIpForwardEntry(PMIB_IPFORWARDROW);
     DWORD CreateIpNetEntry(PMIB_IPNETROW);

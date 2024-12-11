@@ -28,6 +28,6 @@ public import win32.winerror;
 alias MIDL_user_allocate midl_user_allocate;
 alias MIDL_user_free midl_user_free;
 
-extern (Windows) {
+extern (Windows) nothrow @nogc {
     int I_RpcMapWin32Status(RPC_STATUS);
 }

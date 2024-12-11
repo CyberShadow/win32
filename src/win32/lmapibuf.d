@@ -14,7 +14,7 @@ version (Win32_UseLib) pragma(lib, "netapi32");
 
 import win32.lmcons, win32.windef;
 
-extern (Windows) {
+extern (Windows) nothrow @nogc {
     NET_API_STATUS NetApiBufferAllocate(DWORD, PVOID*);
     NET_API_STATUS NetApiBufferFree(PVOID);
     NET_API_STATUS NetApiBufferReallocate(PVOID, DWORD, PVOID*);
