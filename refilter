@@ -1,10 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -eEuo pipefail
 
 cd "$(dirname "$0")"
 
 # Settings and variables
-work_dir=../work
+work_dir="$PWD"/../work
+dmd_dir=$work_dir/dmd.git
+dmd_remote=https://github.com/dlang/dmd.git
 druntime_dir=$work_dir/druntime.git
 druntime_remote=https://github.com/dlang/druntime.git
 tmp_dir=$work_dir/tmp
@@ -12,45 +14,90 @@ result_dir=$work_dir/win32
 result_remote=git@github.com:CyberShadow/win32.git
 filter_dir=$PWD
 
-# Set up druntime
-if [[ ! -d "$druntime_dir" ]]
-then
-	git init --bare "$druntime_dir"
-	git -C "$druntime_dir" remote add origin "$druntime_remote"
-	# Instead of --mirror, specify the refs explicitly,
-	# so that we don't fetch the GitHub refs/pull/... refs
-	# (which we can't push back to GitHub after rewriting).
-	git -C "$druntime_dir" config       remote.origin.fetch '+refs/heads/*:refs/heads/*'
-	git -C "$druntime_dir" config --add remote.origin.fetch '+refs/tags/*:refs/tags/*'
-fi
-if [[ ! -v OFFLINE ]]
-then
-	git -C "$druntime_dir" fetch origin
-fi
+# Set up sources
+function setup_source() {
+	local dir=$1
+	local remote=$2
 
-# Set up temporary and output repositories
-for dir in "$tmp_dir"/{1,2,3} "$result_dir"
-do
-	rm -rf "$dir" # Make sure there are no stale refs
-	git init --bare "$dir" # git-filter-repo wants a clean repo to write to
-done
+	if [[ ! -d "$dir" ]]
+	then
+		git init --bare "$dir"
+		git -C "$dir" remote add origin "$remote"
+		# Instead of --mirror, specify the refs explicitly,
+		# so that we don't fetch the GitHub refs/pull/... refs
+		# (which we can't push back to GitHub after rewriting).
+		git -C "$dir" config       remote.origin.fetch '+refs/heads/*:refs/heads/*'
+		git -C "$dir" config --add remote.origin.fetch '+refs/tags/*:refs/tags/*'
+	fi
+	if [[ ! -v OFFLINE ]]
+	then
+		git -C "$dir" fetch origin
+	fi
+}
+setup_source "$dmd_dir" "$dmd_remote"
+setup_source "$druntime_dir" "$druntime_remote"
 
-# Filter + move directory
+function init_repo() {
+	local target=$1
+
+	rm -rf "$target" # Make sure there are no stale refs
+	git init --bare "$target" # git-filter-repo wants a clean repo to write to
+}
+
+function filter_repo_no_init() {
+	local source=$1
+	local target=$2
+	shift 2 # rest are git-filter-repo options
+
+	local args=(
+		git-filter-repo
+		--replace-refs delete-no-add
+		--source "$source"
+		--target "$target"
+		"$@"
+	) ; "${args[@]}"
+}
+
+function filter_repo() {
+	local target=$2
+
+	init_repo "$target"
+	filter_repo_no_init "$@"
+}
+
+# Filter + move directory - dmd
 args=(
-	git-filter-repo
-	--replace-refs delete-no-add
-	--source "$druntime_dir"
-	--target "$tmp_dir"/1
+	filter_repo
+	"$dmd_dir"
+	"$tmp_dir"/10-filtered
+	--subdirectory-filter src/core/sys/windows # pre-merge
+	--subdirectory-filter druntime/src/core/sys/windows # post-merge
+	--to-subdirectory-filter src/win32
+) ; "${args[@]}"
+
+# Filter + move directory - druntime
+args=(
+	filter_repo
+	"$druntime_dir"
+	"$tmp_dir"/20-filtered-druntime
 	--subdirectory-filter src/core/sys/windows
 	--to-subdirectory-filter src/win32
 ) ; "${args[@]}"
 
+# Merge tags
+args=(
+	git
+	-C "$tmp_dir"/10-filtered
+	fetch
+	"$tmp_dir"/20-filtered-druntime
+	'+refs/tags/*:refs/tags/*'
+) ; "${args[@]}"
+
 # Delete non-API files
 args=(
-	git-filter-repo
-	--replace-refs delete-no-add
-	--source "$tmp_dir"/1
-	--target "$tmp_dir"/2
+	filter_repo
+	"$tmp_dir"/10-filtered
+	"$tmp_dir"/40-api-only
 	--invert-paths
 	--path src/win32/com.d
 	--path src/win32/dll.d
@@ -61,23 +108,22 @@ args=(
 
 # Apply replacements to source code, and rename tags
 args=(
-	git-filter-repo
-	--replace-refs delete-no-add
+	filter_repo
+	"$tmp_dir"/40-api-only
+	"$tmp_dir"/50-replaced
 	--tag-rename v2.0:v2.
-	--source "$tmp_dir"/2
-	--target "$tmp_dir"/3
 	--replace-text replacements.txt
 ) ; "${args[@]}"
 
 # Add files to root directory
+init_repo "$result_dir"
 sha1_readme=$(git -C "$result_dir" hash-object -w "$filter_dir"/injected/README.md)
 sha1_dubsdl=$(git -C "$result_dir" hash-object -w "$filter_dir"/injected/dub.sdl)
 args=(
-	git-filter-repo
+	filter_repo_no_init
+	"$tmp_dir"/50-replaced
+	"$result_dir"
 	--force
-	--replace-refs delete-no-add
-	--source "$tmp_dir"/3
-	--target "$result_dir"
 	--commit-callback "
         if not commit.parents:
             commit.file_changes.append(FileChange(b'M', b'README.md', b'$sha1_readme', b'100644'))
@@ -91,7 +137,7 @@ git -C "$result_dir" fetch -n "$result_remote" +refs/heads/win32-filter:refs/hea
 # Push
 if [[ ! -v OFFLINE ]]
 then
-	git -C "$result_dir" push --mirror "$result_remote"
+	git -C "$result_dir" push --mirror --no-verify "$result_remote"
 else
 	rm -rf "$result_dir".dir && git clone "$result_dir" "$result_dir".dir
 fi
