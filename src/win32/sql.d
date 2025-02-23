@@ -13,6 +13,8 @@ $(RED Warning:
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.sql for the auto-generated win32 package.
 module win32.sql;
+deprecated("The ODBC 3.5 modules are deprecated. Please use the ODBC4 module in the etc.c.odbc package.");
+deprecated:
 //version (Windows):
 
 public import win32.sqltypes;
