@@ -13,13 +13,14 @@ $(RED Warning:
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.sql for the auto-generated win32 package.
 module win32.sql;
+
+enum ODBCVER = 0x0400;
+
 deprecated ("The ODBC 3.5 modules are deprecated. Please use the ODBC4 modules in the `etc.c.odbc` package."):
 //version (Windows):
 
 public import win32.sqltypes;
 import win32.windef;
-
-enum ODBCVER = 0x0351;
 
 enum SQL_ACCESSIBLE_PROCEDURES=20;
 enum SQL_ACCESSIBLE_TABLES=19;
