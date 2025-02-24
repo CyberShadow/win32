@@ -10,10 +10,10 @@ $(RED Warning:
  * Source: $(DRUNTIMESRC core/sys/windows/_sql.d)
  */
 
-deprecated ("The ODBC 3.5 modules are deprecated. Please use the ODBC4 modules in the `etc.c.odbc` package.")
 /// Automatically imported and edited from the druntime module
 /// core.sys.windows.sql for the auto-generated win32 package.
 module win32.sql;
+deprecated ("The ODBC 3.5 modules are deprecated. Please use the ODBC4 modules in the `etc.c.odbc` package."):
 //version (Windows):
 
 public import win32.sqltypes;
