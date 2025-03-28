@@ -866,7 +866,7 @@ pure nothrow @nogc {
 
     DWORD MAKELCID()(/*WORD*/uint lgid, /*WORD*/uint srtid) { return (cast(DWORD) srtid << 16) | cast(DWORD) lgid; }
     // ???
-    //DWORD MAKESORTLCID(WORD lgid, WORD srtid, WORD ver) { return (MAKELCID(lgid, srtid)) | ((cast(DWORD)ver) << 20); }
+    //DWORD MAKESORTLCID()(WORD lgid, WORD srtid, WORD ver) { return (MAKELCID(lgid, srtid)) | ((cast(DWORD)ver) << 20); }
     WORD LANGIDFROMLCID()(LCID lcid) { return cast(WORD) lcid; }
     WORD SORTIDFROMLCID()(LCID lcid) { return cast(WORD) ((lcid >>> 16) & 0x0F); }
     WORD SORTVERSIONFROMLCID()(LCID lcid) { return cast(WORD) ((lcid >>> 20) & 0x0F); }
