@@ -44,9 +44,9 @@ INT LZRead(INT, LPSTR, INT);
 LONG LZSeek(INT, LONG, INT);
 
 version (Unicode) {
-    alias GetExpandedNameW GetExpandedName;
-    alias LZOpenFileW LZOpenFile;
+    alias GetExpandedName = GetExpandedNameW;
+    alias LZOpenFile = LZOpenFileW;
 } else {
-    alias GetExpandedNameA GetExpandedName;
-    alias LZOpenFileA LZOpenFile;
+    alias GetExpandedName = GetExpandedNameA;
+    alias LZOpenFile = LZOpenFileA;
 }

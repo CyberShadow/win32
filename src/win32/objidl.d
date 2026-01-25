@@ -56,7 +56,7 @@ struct INTERFACEINFO {
     IID iid;
     WORD wMethod;
 }
-alias INTERFACEINFO* LPINTERFACEINFO;
+alias LPINTERFACEINFO = INTERFACEINFO*;
 
 enum CALLTYPE {
     CALLTYPE_TOPLEVEL = 1,
@@ -77,14 +77,14 @@ enum PENDINGMSG {
     PENDINGMSG_WAITDEFPROCESS
 }
 
-alias OLECHAR** SNB;
+alias SNB = OLECHAR**;
 
 enum DATADIR {
     DATADIR_GET = 1,
     DATADIR_SET
 }
-alias WORD CLIPFORMAT;
-alias CLIPFORMAT* LPCLIPFORMAT;
+alias CLIPFORMAT = WORD;
+alias LPCLIPFORMAT = CLIPFORMAT*;
 
 struct DVTARGETDEVICE {
     DWORD tdSize;
@@ -102,7 +102,7 @@ struct FORMATETC {
     LONG lindex;
     DWORD tymed;
 }
-alias FORMATETC* LPFORMATETC;
+alias LPFORMATETC = FORMATETC*;
 
 struct RemSTGMEDIUM {
     DWORD tymed;
@@ -179,7 +179,7 @@ struct BIND_OPTS {
     DWORD grfMode;
     DWORD dwTickCountDeadline;
 }
-alias BIND_OPTS* LPBIND_OPTS;
+alias LPBIND_OPTS = BIND_OPTS*;
 
 struct BIND_OPTS2 {
     DWORD cbStruct;
@@ -191,7 +191,7 @@ struct BIND_OPTS2 {
     LCID locale;
     COSERVERINFO* pServerInfo;
 }
-alias BIND_OPTS2* LPBIND_OPTS2;
+alias LPBIND_OPTS2 = BIND_OPTS2*;
 
 enum BIND_FLAGS {
     BIND_MAYBOTHERUSER = 1,
@@ -211,7 +211,7 @@ struct STGMEDIUM {
     }
     LPUNKNOWN pUnkForRelease;
 }
-alias STGMEDIUM* LPSTGMEDIUM;
+alias LPSTGMEDIUM = STGMEDIUM*;
 
 enum LOCKTYPE {
     LOCK_WRITE     = 1,
@@ -219,7 +219,7 @@ enum LOCKTYPE {
     LOCK_ONLYONCE  = 4
 }
 
-alias uint RPCOLEDATAREP;
+alias RPCOLEDATAREP = uint;
 
 struct  RPCOLEMESSAGE {
     PVOID reserved1;
@@ -230,7 +230,7 @@ struct  RPCOLEMESSAGE {
     PVOID[5] reserved2;
     ULONG rpcFlags;
 }
-alias RPCOLEMESSAGE* PRPCOLEMESSAGE;
+alias PRPCOLEMESSAGE = RPCOLEMESSAGE*;
 
 enum MKSYS {
     MKSYS_NONE,
@@ -380,7 +380,7 @@ struct CACLSID {
     ULONG cElems;
     CLSID* pElems;
 }
-alias PROPVARIANT* LPPROPVARIANT;
+alias LPPROPVARIANT = PROPVARIANT*;
 
 struct CAPROPVARIANT {
     ULONG cElems;
@@ -793,7 +793,7 @@ interface IPSFactoryBuffer : IUnknown {
     HRESULT CreateProxy(LPUNKNOWN, REFIID, LPRPCPROXYBUFFER*, PVOID*);
     HRESULT CreateStub(REFIID, LPUNKNOWN, LPRPCSTUBBUFFER*);
 }
-alias IPSFactoryBuffer LPPSFACTORYBUFFER;
+alias LPPSFACTORYBUFFER = IPSFactoryBuffer;
 
 interface ILockBytes : IUnknown {
     HRESULT ReadAt(ULARGE_INTEGER, PVOID, ULONG, ULONG*);

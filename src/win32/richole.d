@@ -86,7 +86,7 @@ interface IRichEditOle : IUnknown {
     HRESULT GetClipboardData(CHARRANGE*, DWORD, LPDATAOBJECT*);
     HRESULT ImportDataObject(LPDATAOBJECT, CLIPFORMAT, HGLOBAL);
 }
-alias IRichEditOle LPRICHEDITOLE;
+alias LPRICHEDITOLE = IRichEditOle;
 
 interface IRichEditOleCallback : IUnknown {
     HRESULT GetNewStorage(LPSTORAGE*);
@@ -100,4 +100,4 @@ interface IRichEditOleCallback : IUnknown {
     HRESULT GetDragDropEffect(BOOL, DWORD, PDWORD);
     HRESULT GetContextMenu(WORD, LPOLEOBJECT, CHARRANGE*, HMENU*);
 }
-alias IRichEditOleCallback LPRICHEDITOLECALLBACK;
+alias LPRICHEDITOLECALLBACK = IRichEditOleCallback;

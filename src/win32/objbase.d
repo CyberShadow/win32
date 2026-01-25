@@ -89,8 +89,8 @@ extern (Windows) BOOL IsEqualGUID(
   REFGUID rguid2
 );
 
-alias IsEqualGUID IsEqualIID;
-alias IsEqualGUID IsEqualCLSID;
+alias IsEqualIID = IsEqualGUID;
+alias IsEqualCLSID = IsEqualGUID;
 
 enum COINIT {
     COINIT_APARTMENTTHREADED = 2,
@@ -105,8 +105,8 @@ enum STDMSHLFLAGS {
 }
 
 extern(Windows) {
-    alias HRESULT function(REFCLSID, REFIID, PVOID*) LPFNGETCLASSOBJECT;
-    alias HRESULT function() LPFNCANUNLOADNOW;
+    alias LPFNGETCLASSOBJECT = HRESULT function(REFCLSID, REFIID, PVOID*);
+    alias LPFNCANUNLOADNOW = HRESULT function();
 
     DWORD CoBuildVersion();
     HRESULT CoInitialize(PVOID);

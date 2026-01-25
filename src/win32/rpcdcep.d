@@ -18,7 +18,7 @@ import win32.w32api;
 import win32.windef;
 
 alias I_RPC_HANDLE = HANDLE;
-alias long RPC_STATUS;
+alias RPC_STATUS = long;
 
 enum RPC_NCA_FLAGS_DEFAULT=0;
 enum RPC_NCA_FLAGS_IDEMPOTENT=1;
@@ -41,7 +41,7 @@ struct RPC_SYNTAX_IDENTIFIER {
     GUID        SyntaxGUID;
     RPC_VERSION SyntaxVersion;
 }
-alias RPC_SYNTAX_IDENTIFIER* PRPC_SYNTAX_IDENTIFIER;
+alias PRPC_SYNTAX_IDENTIFIER = RPC_SYNTAX_IDENTIFIER*;
 
 struct RPC_MESSAGE {
     HANDLE Handle;
@@ -56,10 +56,10 @@ struct RPC_MESSAGE {
     void* ImportContext;
     uint  RpcFlags;
 }
-alias RPC_MESSAGE* PRPC_MESSAGE;
+alias PRPC_MESSAGE = RPC_MESSAGE*;
 
 extern (Windows) {
-alias void function (PRPC_MESSAGE Message) RPC_DISPATCH_FUNCTION;
+alias RPC_DISPATCH_FUNCTION = void function (PRPC_MESSAGE Message);
 }
 
 struct RPC_DISPATCH_TABLE {
@@ -67,13 +67,13 @@ struct RPC_DISPATCH_TABLE {
     RPC_DISPATCH_FUNCTION* DispatchTable;
     LONG_PTR Reserved;
 }
-alias RPC_DISPATCH_TABLE* PRPC_DISPATCH_TABLE;
+alias PRPC_DISPATCH_TABLE = RPC_DISPATCH_TABLE*;
 
 struct RPC_PROTSEQ_ENDPOINT {
     ubyte* RpcProtocolSequence;
     ubyte* Endpoint;
 }
-alias RPC_PROTSEQ_ENDPOINT* PRPC_PROTSEQ_ENDPOINT;
+alias PRPC_PROTSEQ_ENDPOINT = RPC_PROTSEQ_ENDPOINT*;
 
 struct RPC_SERVER_INTERFACE {
     uint                  Length;
@@ -85,7 +85,7 @@ struct RPC_SERVER_INTERFACE {
     void*                 DefaultManagerEpv;
 const(void)*          InterpreterInfo;
 }
-alias RPC_SERVER_INTERFACE* PRPC_SERVER_INTERFACE;
+alias PRPC_SERVER_INTERFACE = RPC_SERVER_INTERFACE*;
 
 struct RPC_CLIENT_INTERFACE {
     uint                  Length;
@@ -97,19 +97,19 @@ struct RPC_CLIENT_INTERFACE {
     ULONG_PTR             Reserved;
 const(void)*          InterpreterInfo;
 }
-alias RPC_CLIENT_INTERFACE* PRPC_CLIENT_INTERFACE;
+alias PRPC_CLIENT_INTERFACE = RPC_CLIENT_INTERFACE*;
 
-alias void* I_RPC_MUTEX;
+alias I_RPC_MUTEX = void*;
 
 struct RPC_TRANSFER_SYNTAX {
     GUID   Uuid;
     ushort VersMajor;
     ushort VersMinor;
 }
-alias RPC_STATUS function(void*, void*, void*) RPC_BLOCKING_FN;
+alias RPC_BLOCKING_FN = RPC_STATUS function(void*, void*, void*);
 
 extern (Windows) {
-    alias void function(void*) PRPC_RUNDOWN;
+    alias PRPC_RUNDOWN = void function(void*);
 
     int    I_RpcGetBuffer(RPC_MESSAGE*);
     int    I_RpcSendReceive(RPC_MESSAGE*);
@@ -149,7 +149,7 @@ extern (Windows) {
 }
 
 version (Unicode) {
-    alias I_RpcServerUnregisterEndpointW I_RpcServerUnregisterEndpoint;
+    alias I_RpcServerUnregisterEndpoint = I_RpcServerUnregisterEndpointW;
 } else {
-    alias I_RpcServerUnregisterEndpointA I_RpcServerUnregisterEndpoint;
+    alias I_RpcServerUnregisterEndpoint = I_RpcServerUnregisterEndpointA;
 }
