@@ -51,7 +51,7 @@ align(4):
     ULONG_PTR reserved;
     ULONG_PTR reserved2;
 }
-alias RASENTRYDLGA* LPRASENTRYDLGA;
+alias LPRASENTRYDLGA = RASENTRYDLGA*;
 
 struct RASENTRYDLGW {
 align(4):
@@ -65,7 +65,7 @@ align(4):
     ULONG_PTR reserved;
     ULONG_PTR reserved2;
 }
-alias RASENTRYDLGW* LPRASENTRYDLGW;
+alias LPRASENTRYDLGW = RASENTRYDLGW*;
 
 struct RASDIALDLG {
 align(4):
@@ -79,12 +79,12 @@ align(4):
     ULONG_PTR reserved;
     ULONG_PTR reserved2;
 }
-alias RASDIALDLG* LPRASDIALDLG;
+alias LPRASDIALDLG = RASDIALDLG*;
 
 // Application-defined callback functions
 extern (Windows) {
-    alias VOID function(ULONG_PTR, DWORD, LPWSTR, LPVOID) RASPBDLGFUNCW;
-    alias VOID function(ULONG_PTR, DWORD, LPSTR, LPVOID) RASPBDLGFUNCA;
+    alias RASPBDLGFUNCW = VOID function(ULONG_PTR, DWORD, LPWSTR, LPVOID);
+    alias RASPBDLGFUNCA = VOID function(ULONG_PTR, DWORD, LPSTR, LPVOID);
 }
 
 struct RASPBDLGA {
@@ -100,7 +100,7 @@ align(4):
     ULONG_PTR     reserved;
     ULONG_PTR     reserved2;
 }
-alias RASPBDLGA* LPRASPBDLGA;
+alias LPRASPBDLGA = RASPBDLGA*;
 
 struct RASPBDLGW {
 align(4):
@@ -115,7 +115,7 @@ align(4):
     ULONG_PTR     reserved;
     ULONG_PTR     reserved2;
 }
-alias RASPBDLGW* LPRASPBDLGW;
+alias LPRASPBDLGW = RASPBDLGW*;
 
 struct RASNOUSERA
 {
@@ -126,7 +126,7 @@ struct RASNOUSERA
     CHAR[PWLEN + 1] szPassword = 0;
     CHAR[DNLEN + 1] szDomain = 0;
 }
-alias RASNOUSERA* LPRASNOUSERA;
+alias LPRASNOUSERA = RASNOUSERA*;
 
 struct RASNOUSERW {
     DWORD            dwSize = RASNOUSERW.sizeof;
@@ -136,7 +136,7 @@ struct RASNOUSERW {
     WCHAR[PWLEN + 1] szPassword = 0;
     WCHAR[DNLEN + 1] szDomain = 0;
 }
-alias RASNOUSERW* LPRASNOUSERW;
+alias LPRASNOUSERW = RASNOUSERW*;
 
 extern (Windows) {
     BOOL RasDialDlgA(LPSTR, LPSTR, LPSTR, LPRASDIALDLG);
@@ -148,21 +148,21 @@ extern (Windows) {
 }
 
 version (Unicode) {
-    alias RASENTRYDLGW RASENTRYDLG;
-    alias RASPBDLGW RASPBDLG;
-    alias RASNOUSERW RASNOUSER;
-    alias RasDialDlgW RasDialDlg;
-    alias RasEntryDlgW RasEntryDlg;
-    alias RasPhonebookDlgW RasPhonebookDlg;
+    alias RASENTRYDLG = RASENTRYDLGW;
+    alias RASPBDLG = RASPBDLGW;
+    alias RASNOUSER = RASNOUSERW;
+    alias RasDialDlg = RasDialDlgW;
+    alias RasEntryDlg = RasEntryDlgW;
+    alias RasPhonebookDlg = RasPhonebookDlgW;
 } else {
-    alias RASENTRYDLGA RASENTRYDLG;
-    alias RASPBDLGA RASPBDLG;
-    alias RASNOUSERA RASNOUSER;
-    alias RasDialDlgA RasDialDlg;
-    alias RasEntryDlgA RasEntryDlg;
-    alias RasPhonebookDlgA RasPhonebookDlg;
+    alias RASENTRYDLG = RASENTRYDLGA;
+    alias RASPBDLG = RASPBDLGA;
+    alias RASNOUSER = RASNOUSERA;
+    alias RasDialDlg = RasDialDlgA;
+    alias RasEntryDlg = RasEntryDlgA;
+    alias RasPhonebookDlg = RasPhonebookDlgA;
 }
 
-alias RASENTRYDLG* LPRASENTRYDLG;
-alias RASPBDLG* LPRASPBDLG;
-alias RASNOUSER* LPRASNOUSER;
+alias LPRASENTRYDLG = RASENTRYDLG*;
+alias LPRASPBDLG = RASPBDLG*;
+alias LPRASNOUSER = RASNOUSER*;

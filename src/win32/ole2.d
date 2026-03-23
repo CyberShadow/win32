@@ -40,7 +40,7 @@ align(8):
 struct OLESTREAM {
     LPOLESTREAMVTBL lpstbl;
 }
-alias OLESTREAM* LPOLESTREAM;
+alias LPOLESTREAM = OLESTREAM*;
 
 extern (Windows) {
     struct OLESTREAMVTBL {
@@ -48,7 +48,7 @@ extern (Windows) {
         DWORD function (LPOLESTREAM, const(void)*, DWORD) Put;
     }
 }
-alias OLESTREAMVTBL* LPOLESTREAMVTBL;
+alias LPOLESTREAMVTBL = OLESTREAMVTBL*;
 
 extern (Windows) nothrow @nogc {
     HRESULT CreateDataAdviseHolder(LPDATAADVISEHOLDER*);

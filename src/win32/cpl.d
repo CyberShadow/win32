@@ -36,7 +36,7 @@ enum : uint {
     CPL_SETUP = 200
 }
 
-extern (Windows) alias LONG function(HWND, UINT, LONG, LONG) APPLET_PROC;
+extern (Windows) alias APPLET_PROC = LONG function(HWND, UINT, LONG, LONG);
 
 align(1)
 struct CPLINFO {
@@ -46,7 +46,7 @@ align(1):
     int  idInfo;
     LONG_PTR  lData;
 }
-alias CPLINFO* LPCPLINFO;
+alias LPCPLINFO = CPLINFO*;
 
 align(1)
 struct NEWCPLINFOA {
@@ -60,7 +60,7 @@ align(1):
     CHAR[64]  szInfo = 0;
     CHAR[128] szHelpFile = 0;
 }
-alias NEWCPLINFOA* LPNEWCPLINFOA;
+alias LPNEWCPLINFOA = NEWCPLINFOA*;
 
 align(1)
 struct NEWCPLINFOW {
@@ -74,14 +74,14 @@ align(1):
     WCHAR[64]  szInfo = 0;
     WCHAR[128] szHelpFile = 0;
 }
-alias NEWCPLINFOW* LPNEWCPLINFOW;
+alias LPNEWCPLINFOW = NEWCPLINFOW*;
 
 version (Unicode) {
-    alias CPL_STARTWPARMSW CPL_STARTWPARMS;
-    alias NEWCPLINFOW NEWCPLINFO;
+    alias CPL_STARTWPARMS = CPL_STARTWPARMSW;
+    alias NEWCPLINFO = NEWCPLINFOW;
 } else {
-    alias CPL_STARTWPARMSA CPL_STARTWPARMS;
-    alias NEWCPLINFOA NEWCPLINFO;
+    alias CPL_STARTWPARMS = CPL_STARTWPARMSA;
+    alias NEWCPLINFO = NEWCPLINFOA;
 }
 
-alias NEWCPLINFO* LPNEWCPLINFO;
+alias LPNEWCPLINFO = NEWCPLINFO*;

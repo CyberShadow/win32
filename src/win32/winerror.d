@@ -17,7 +17,7 @@ module win32.winerror;
 
 import win32.windef;
 
-alias int SCODE; // was in win32.wtypes.
+alias SCODE = int; // was in win32.wtypes.
 
 enum : uint {
     ERROR_SUCCESS                                         =     0,

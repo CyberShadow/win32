@@ -15,7 +15,7 @@ import win32.rpc, win32.rpcndr;
 import win32.windef;
 import win32.uuid; // for GUID_NULL
 
-alias GUID_NULL IID_NULL, CLSID_NULL;
+alias IID_NULL = GUID_NULL, CLSID_NULL = GUID_NULL;
 
 enum ROTFLAGS_REGISTRATIONKEEPSALIVE = 0x01;
 enum ROTFLAGS_ALLOWANYCLIENT         = 0x02;
@@ -25,7 +25,7 @@ struct BLOB {
     ULONG cbSize;
     BYTE* pBlobData;
 }
-alias BLOB* PBLOB, LPBLOB;
+alias PBLOB = BLOB*, LPBLOB = BLOB*;
 
 enum DVASPECT {
     DVASPECT_CONTENT   = 1,
@@ -84,19 +84,19 @@ struct FLAGGED_WORD_BLOB {
     ushort[1] asData;
 }
 
-alias WCHAR OLECHAR;
-alias LPWSTR LPOLESTR;
-alias LPCWSTR LPCOLESTR;
+alias OLECHAR = WCHAR;
+alias LPOLESTR = LPWSTR;
+alias LPCOLESTR = LPCWSTR;
 
-alias ushort VARTYPE;
-alias short VARIANT_BOOL;
-alias VARIANT_BOOL _VARIANT_BOOL;
+alias VARTYPE = ushort;
+alias VARIANT_BOOL = short;
+alias _VARIANT_BOOL = VARIANT_BOOL;
 enum VARIANT_BOOL VARIANT_TRUE = -1; // 0xffff;
 enum VARIANT_BOOL VARIANT_FALSE = 0;
 
-alias OLECHAR* BSTR;
-alias FLAGGED_WORD_BLOB* wireBSTR;
-alias BSTR* LPBSTR;
+alias BSTR = OLECHAR*;
+alias wireBSTR = FLAGGED_WORD_BLOB*;
+alias LPBSTR = BSTR*;
 //alias LONG SCODE; // also in winerror
 alias HCONTEXT = HANDLE;
 alias HMETAFILEPICT = HANDLE;
@@ -109,12 +109,12 @@ union CY {
     LONGLONG int64;
 }
 
-alias double DATE;
+alias DATE = double;
 struct  BSTRBLOB {
     ULONG cbSize;
     PBYTE pData;
 }
-alias BSTRBLOB* LPBSTRBLOB;
+alias LPBSTRBLOB = BSTRBLOB*;
 
 // Used only in the PROPVARIANT structure
 // According to the 2003 SDK, this should be in propidl.h, not here.
@@ -211,7 +211,7 @@ struct HYPER_SIZEDARR {
     hyper* pData;
 }
 
-alias double DOUBLE;
+alias DOUBLE = double;
 
 
 struct DECIMAL {

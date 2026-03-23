@@ -40,7 +40,7 @@ DWORD MKFOURCC()(char ch0, char ch1, char ch2, char ch3) {
 
 enum ICVERSION = 0x0104;
 
-alias HANDLE HIC;
+alias HIC = HANDLE;
 
 enum BI_1632 = 0x32333631;
 
@@ -658,7 +658,7 @@ struct COMPVARS {
     LPVOID      lpState;
     LONG        cbState;
 }
-alias COMPVARS* PCOMPVARS;
+alias PCOMPVARS = COMPVARS*;
 
 enum ICMF_COMPVARS_VALID = 0x00000001;
 
@@ -736,7 +736,7 @@ struct DRAWDIBTIME {
     LONG    timeBlt;
     LONG    timeSetDIBits;
 }
-alias DRAWDIBTIME* LPDRAWDIBTIME;
+alias LPDRAWDIBTIME = DRAWDIBTIME*;
 
 extern (Windows) {
     BOOL DrawDibTime(HDRAWDIB hdd, LPDRAWDIBTIME lpddtime);
@@ -757,9 +757,9 @@ extern (Windows) {
         int SrcX, int SrcY, int SrcXE, int SrcYE);
 }
 
-alias DWORD FOURCC;
+alias FOURCC = DWORD;
 
-alias WORD TWOCC;
+alias TWOCC = WORD;
 
 enum formtypeAVI           = mmioFOURCC!('A', 'V', 'I', ' ');
 enum listtypeAVIHEADER     = mmioFOURCC!('h', 'd', 'r', 'l');
@@ -894,7 +894,7 @@ struct AVISTREAMINFOW {
     DWORD   dwFormatChangeCount;
     WCHAR[64]   szName = 0;
 }
-alias AVISTREAMINFOW* LPAVISTREAMINFOW;
+alias LPAVISTREAMINFOW = AVISTREAMINFOW*;
 
 struct AVISTREAMINFOA {
     DWORD   fccType;
@@ -916,14 +916,14 @@ struct AVISTREAMINFOA {
     DWORD   dwFormatChangeCount;
     char[64]    szName = 0;
 }
-alias AVISTREAMINFOA* LPAVISTREAMINFOA;
+alias LPAVISTREAMINFOA = AVISTREAMINFOA*;
 
 version (Unicode) {
-    alias AVISTREAMINFOW    AVISTREAMINFO;
-    alias LPAVISTREAMINFOW  LPAVISTREAMINFO;
+    alias AVISTREAMINFO = AVISTREAMINFOW;
+    alias LPAVISTREAMINFO = LPAVISTREAMINFOW;
 } else { // Unicode
-    alias AVISTREAMINFOA    AVISTREAMINFO;
-    alias LPAVISTREAMINFOA  LPAVISTREAMINFO;
+    alias AVISTREAMINFO = AVISTREAMINFOA;
+    alias LPAVISTREAMINFO = LPAVISTREAMINFOA;
 }
 
 enum AVISTREAMINFO_DISABLED        = 0x00000001;
@@ -943,7 +943,7 @@ struct AVIFILEINFOW {
     DWORD   dwEditCount;
     WCHAR[64]   szFileType = 0;
 }
-alias AVIFILEINFOW* LPAVIFILEINFOW;
+alias LPAVIFILEINFOW = AVIFILEINFOW*;
 
 struct AVIFILEINFOA {
     DWORD   dwMaxBytesPerSec;
@@ -959,14 +959,14 @@ struct AVIFILEINFOA {
     DWORD   dwEditCount;
     char[64]    szFileType = 0;
 }
-alias AVIFILEINFOA* LPAVIFILEINFOA;
+alias LPAVIFILEINFOA = AVIFILEINFOA*;
 
 version (Unicode) {
-    alias AVIFILEINFOW  AVIFILEINFO;
-    alias LPAVIFILEINFOW    LPAVIFILEINFO;
+    alias AVIFILEINFO = AVIFILEINFOW;
+    alias LPAVIFILEINFO = LPAVIFILEINFOW;
 } else { // Unicode
-    alias AVIFILEINFOA  AVIFILEINFO;
-    alias LPAVIFILEINFOA    LPAVIFILEINFO;
+    alias AVIFILEINFO = AVIFILEINFOA;
+    alias LPAVIFILEINFO = LPAVIFILEINFOA;
 }
 
 enum {
@@ -985,7 +985,7 @@ enum {
 }
 
 extern (Windows) {
-    alias BOOL function(int) AVISAVECALLBACK;
+    alias AVISAVECALLBACK = BOOL function(int);
 }
 
 struct AVICOMPRESSOPTIONS {
@@ -1001,7 +1001,7 @@ struct AVICOMPRESSOPTIONS {
     DWORD   cbParms;
     DWORD   dwInterleaveEvery;
 }
-alias AVICOMPRESSOPTIONS* LPAVICOMPRESSOPTIONS;
+alias LPAVICOMPRESSOPTIONS = AVICOMPRESSOPTIONS*;
 
 enum {
     AVICOMPRESSF_INTERLEAVE = 0x00000001,
@@ -1514,9 +1514,9 @@ extern (Windows) {
 }
 
 version (Unicode) {
-    alias MCIWndCreateW MCIWndCreate;
+    alias MCIWndCreate = MCIWndCreateW;
 } else { // Unicode
-    alias MCIWndCreateA MCIWndCreate;
+    alias MCIWndCreate = MCIWndCreateA;
 }
 
 extern(Windows) {
@@ -1544,9 +1544,9 @@ enum {
 }
 
 version (Unicode) {
-    alias MCIWNDF_NOTIFYMEDIAW  MCIWNDF_NOTIFYMEDIA;
+    alias MCIWNDF_NOTIFYMEDIA = MCIWNDF_NOTIFYMEDIAW;
 } else { // Unicode
-    alias MCIWNDF_NOTIFYMEDIAA  MCIWNDF_NOTIFYMEDIA;
+    alias MCIWNDF_NOTIFYMEDIA = MCIWNDF_NOTIFYMEDIAA;
 }
 
 enum {
@@ -1765,29 +1765,29 @@ enum {
 }
 
 version (Unicode) {
-    alias MCIWNDM_SENDSTRINGW       MCIWNDM_SENDSTRING;
-    alias MCIWNDM_GETPOSITIONW      MCIWNDM_GETPOSITION;
-    alias MCIWNDM_GETMODEW          MCIWNDM_GETMODE;
-    alias MCIWNDM_SETTIMEFORMATW    MCIWNDM_SETTIMEFORMAT;
-    alias MCIWNDM_GETTIMEFORMATW    MCIWNDM_GETTIMEFORMAT;
-    alias MCIWNDM_GETFILENAMEW      MCIWNDM_GETFILENAME;
-    alias MCIWNDM_GETDEVICEW        MCIWNDM_GETDEVICE;
-    alias MCIWNDM_GETERRORW         MCIWNDM_GETERROR;
-    alias MCIWNDM_NEWW              MCIWNDM_NEW;
-    alias MCIWNDM_RETURNSTRINGW     MCIWNDM_RETURNSTRING;
-    alias MCIWNDM_OPENW             MCIWNDM_OPEN;
+    alias MCIWNDM_SENDSTRING = MCIWNDM_SENDSTRINGW;
+    alias MCIWNDM_GETPOSITION = MCIWNDM_GETPOSITIONW;
+    alias MCIWNDM_GETMODE = MCIWNDM_GETMODEW;
+    alias MCIWNDM_SETTIMEFORMAT = MCIWNDM_SETTIMEFORMATW;
+    alias MCIWNDM_GETTIMEFORMAT = MCIWNDM_GETTIMEFORMATW;
+    alias MCIWNDM_GETFILENAME = MCIWNDM_GETFILENAMEW;
+    alias MCIWNDM_GETDEVICE = MCIWNDM_GETDEVICEW;
+    alias MCIWNDM_GETERROR = MCIWNDM_GETERRORW;
+    alias MCIWNDM_NEW = MCIWNDM_NEWW;
+    alias MCIWNDM_RETURNSTRING = MCIWNDM_RETURNSTRINGW;
+    alias MCIWNDM_OPEN = MCIWNDM_OPENW;
 } else { // Unicode
-    alias MCIWNDM_SENDSTRINGA       MCIWNDM_SENDSTRING;
-    alias MCIWNDM_GETPOSITIONA      MCIWNDM_GETPOSITION;
-    alias MCIWNDM_GETMODEA          MCIWNDM_GETMODE;
-    alias MCIWNDM_SETTIMEFORMATA    MCIWNDM_SETTIMEFORMAT;
-    alias MCIWNDM_GETTIMEFORMATA    MCIWNDM_GETTIMEFORMAT;
-    alias MCIWNDM_GETFILENAMEA      MCIWNDM_GETFILENAME;
-    alias MCIWNDM_GETDEVICEA        MCIWNDM_GETDEVICE;
-    alias MCIWNDM_GETERRORA         MCIWNDM_GETERROR;
-    alias MCIWNDM_NEWA              MCIWNDM_NEW;
-    alias MCIWNDM_RETURNSTRINGA     MCIWNDM_RETURNSTRING;
-    alias MCIWNDM_OPENA             MCIWNDM_OPEN;
+    alias MCIWNDM_SENDSTRING = MCIWNDM_SENDSTRINGA;
+    alias MCIWNDM_GETPOSITION = MCIWNDM_GETPOSITIONA;
+    alias MCIWNDM_GETMODE = MCIWNDM_GETMODEA;
+    alias MCIWNDM_SETTIMEFORMAT = MCIWNDM_SETTIMEFORMATA;
+    alias MCIWNDM_GETTIMEFORMAT = MCIWNDM_GETTIMEFORMATA;
+    alias MCIWNDM_GETFILENAME = MCIWNDM_GETFILENAMEA;
+    alias MCIWNDM_GETDEVICE = MCIWNDM_GETDEVICEA;
+    alias MCIWNDM_GETERROR = MCIWNDM_GETERRORA;
+    alias MCIWNDM_NEW = MCIWNDM_NEWA;
+    alias MCIWNDM_RETURNSTRING = MCIWNDM_RETURNSTRINGA;
+    alias MCIWNDM_OPEN = MCIWNDM_OPENA;
 }
 
 enum {
@@ -1827,8 +1827,8 @@ enum {
     MCI_MODE_OPEN,
 }
 
-alias HANDLE HVIDEO;
-alias HVIDEO* LPHVIDEO;
+alias HVIDEO = HANDLE;
+alias LPHVIDEO = HVIDEO*;
 
 // Error Return Values
 
@@ -1896,7 +1896,7 @@ struct VIDEOHDR {
     DWORD       dwFlags;
     DWORD_PTR[4]dwReserved;
 }
-alias VIDEOHDR* PVIDEOHDR, LPVIDEOHDR;
+alias PVIDEOHDR = VIDEOHDR*, LPVIDEOHDR = VIDEOHDR*;
 
 enum {
     VHDR_DONE       = 0x00000001,
@@ -1917,7 +1917,7 @@ struct CHANNEL_CAPS {
     DWORD   dwDstRectWidthMod;
     DWORD   dwDstRectHeightMod;
 }
-alias CHANNEL_CAPS* PCHANNEL_CAPS, LPCHANNEL_CAPS;
+alias PCHANNEL_CAPS = CHANNEL_CAPS*, LPCHANNEL_CAPS = CHANNEL_CAPS*;
 
 enum {
     VCAPS_OVERLAY       = 0x00000001,
@@ -1988,11 +1988,11 @@ enum {
 }
 
 version (Unicode) {
-    alias WM_CAP_SET_CALLBACK_ERRORW    WM_CAP_SET_CALLBACK_ERROR;
-    alias WM_CAP_SET_CALLBACK_STATUSW   WM_CAP_SET_CALLBACK_STATUS;
+    alias WM_CAP_SET_CALLBACK_ERROR = WM_CAP_SET_CALLBACK_ERRORW;
+    alias WM_CAP_SET_CALLBACK_STATUS = WM_CAP_SET_CALLBACK_STATUSW;
 } else { // Unicode
-    alias WM_CAP_SET_CALLBACK_ERRORA    WM_CAP_SET_CALLBACK_ERROR;
-    alias WM_CAP_SET_CALLBACK_STATUSA   WM_CAP_SET_CALLBACK_STATUS;
+    alias WM_CAP_SET_CALLBACK_ERROR = WM_CAP_SET_CALLBACK_ERRORA;
+    alias WM_CAP_SET_CALLBACK_STATUS = WM_CAP_SET_CALLBACK_STATUSA;
 }
 
 enum {
@@ -2012,11 +2012,11 @@ enum {
 }
 
 version (Unicode) {
-    alias WM_CAP_DRIVER_GET_NAMEW       WM_CAP_DRIVER_GET_NAME;
-    alias WM_CAP_DRIVER_GET_VERSIONW    WM_CAP_DRIVER_GET_VERSION;
+    alias WM_CAP_DRIVER_GET_NAME = WM_CAP_DRIVER_GET_NAMEW;
+    alias WM_CAP_DRIVER_GET_VERSION = WM_CAP_DRIVER_GET_VERSIONW;
 } else { // Unicode
-    alias WM_CAP_DRIVER_GET_NAMEA       WM_CAP_DRIVER_GET_NAME;
-    alias WM_CAP_DRIVER_GET_VERSIONA    WM_CAP_DRIVER_GET_VERSION;
+    alias WM_CAP_DRIVER_GET_NAME = WM_CAP_DRIVER_GET_NAMEA;
+    alias WM_CAP_DRIVER_GET_VERSION = WM_CAP_DRIVER_GET_VERSIONA;
 }
 
 enum {
@@ -2033,15 +2033,15 @@ enum {
 }
 
 version (Unicode) {
-    alias WM_CAP_FILE_SET_CAPTURE_FILEW WM_CAP_FILE_SET_CAPTURE_FILE;
-    alias WM_CAP_FILE_GET_CAPTURE_FILEW WM_CAP_FILE_GET_CAPTURE_FILE;
-    alias WM_CAP_FILE_SAVEASW           WM_CAP_FILE_SAVEAS;
-    alias WM_CAP_FILE_SAVEDIBW          WM_CAP_FILE_SAVEDIB;
+    alias WM_CAP_FILE_SET_CAPTURE_FILE = WM_CAP_FILE_SET_CAPTURE_FILEW;
+    alias WM_CAP_FILE_GET_CAPTURE_FILE = WM_CAP_FILE_GET_CAPTURE_FILEW;
+    alias WM_CAP_FILE_SAVEAS = WM_CAP_FILE_SAVEASW;
+    alias WM_CAP_FILE_SAVEDIB = WM_CAP_FILE_SAVEDIBW;
 } else { // Unicode
-    alias WM_CAP_FILE_SET_CAPTURE_FILEA WM_CAP_FILE_SET_CAPTURE_FILE;
-    alias WM_CAP_FILE_GET_CAPTURE_FILEA WM_CAP_FILE_GET_CAPTURE_FILE;
-    alias WM_CAP_FILE_SAVEASA           WM_CAP_FILE_SAVEAS;
-    alias WM_CAP_FILE_SAVEDIBA          WM_CAP_FILE_SAVEDIB;
+    alias WM_CAP_FILE_SET_CAPTURE_FILE = WM_CAP_FILE_SET_CAPTURE_FILEA;
+    alias WM_CAP_FILE_GET_CAPTURE_FILE = WM_CAP_FILE_GET_CAPTURE_FILEA;
+    alias WM_CAP_FILE_SAVEAS = WM_CAP_FILE_SAVEASA;
+    alias WM_CAP_FILE_SAVEDIB = WM_CAP_FILE_SAVEDIBA;
 }
 
 enum {
@@ -2076,11 +2076,11 @@ enum {
 }
 
 version (Unicode) {
-    alias WM_CAP_SET_MCI_DEVICEW    WM_CAP_SET_MCI_DEVICE;
-    alias WM_CAP_GET_MCI_DEVICEW    WM_CAP_GET_MCI_DEVICE;
+    alias WM_CAP_SET_MCI_DEVICE = WM_CAP_SET_MCI_DEVICEW;
+    alias WM_CAP_GET_MCI_DEVICE = WM_CAP_GET_MCI_DEVICEW;
 } else { // Unicode
-    alias WM_CAP_SET_MCI_DEVICEA    WM_CAP_SET_MCI_DEVICE;
-    alias WM_CAP_GET_MCI_DEVICEA    WM_CAP_GET_MCI_DEVICE;
+    alias WM_CAP_SET_MCI_DEVICE = WM_CAP_SET_MCI_DEVICEA;
+    alias WM_CAP_GET_MCI_DEVICE = WM_CAP_GET_MCI_DEVICEA;
 }
 
 enum {
@@ -2097,11 +2097,11 @@ enum {
 }
 
 version (Unicode) {
-    alias WM_CAP_PAL_OPENW  WM_CAP_PAL_OPEN;
-    alias WM_CAP_PAL_SAVEW  WM_CAP_PAL_SAVE;
+    alias WM_CAP_PAL_OPEN = WM_CAP_PAL_OPENW;
+    alias WM_CAP_PAL_SAVE = WM_CAP_PAL_SAVEW;
 } else { // Unicode
-    alias WM_CAP_PAL_OPENA  WM_CAP_PAL_OPEN;
-    alias WM_CAP_PAL_SAVEA  WM_CAP_PAL_SAVE;
+    alias WM_CAP_PAL_OPEN = WM_CAP_PAL_OPENA;
+    alias WM_CAP_PAL_SAVE = WM_CAP_PAL_SAVEA;
 }
 
 enum {
@@ -2204,7 +2204,7 @@ struct CAPDRIVERCAPS {
     HANDLE  hVideoExtIn;
     HANDLE  hVideoExtOut;
 }
-alias CAPDRIVERCAPS* PCAPDRIVERCAPS, LPCAPDRIVERCAPS;
+alias PCAPDRIVERCAPS = CAPDRIVERCAPS*, LPCAPDRIVERCAPS = CAPDRIVERCAPS*;
 
 struct CAPSTATUS {
     UINT        uiImageWidth;
@@ -2226,7 +2226,7 @@ struct CAPSTATUS {
     UINT        wNumVideoAllocated;
     UINT        wNumAudioAllocated;
 }
-alias CAPSTATUS* PCAPSTATUS, LPCAPSTATUS;
+alias PCAPSTATUS = CAPSTATUS*, LPCAPSTATUS = CAPSTATUS*;
 
 struct CAPTUREPARMS {
     DWORD   dwRequestMicroSecPerFrame;
@@ -2254,7 +2254,7 @@ struct CAPTUREPARMS {
     BOOL    fDisableWriteCache;
     UINT    AVStreamMaster;
 }
-alias CAPTUREPARMS* PCAPTUREPARMS, LPCAPTUREPARMS;
+alias PCAPTUREPARMS = CAPTUREPARMS*, LPCAPTUREPARMS = CAPTUREPARMS*;
 
 enum AVSTREAMMASTER_AUDIO = 0;
 enum AVSTREAMMASTER_NONE  = 1;
@@ -2264,30 +2264,30 @@ struct CAPINFOCHUNK {
     LPVOID  lpData;
     LONG    cbData;
 }
-alias CAPINFOCHUNK* PCAPINFOCHUNK, LPCAPINFOCHUNK;
+alias PCAPINFOCHUNK = CAPINFOCHUNK*, LPCAPINFOCHUNK = CAPINFOCHUNK*;
 
 // Callback Definitions
 
 extern (Windows) {
-    alias LRESULT function(HWND hWnd) CAPYIELDCALLBACK;
-    alias LRESULT function(HWND hWnd, int nID, LPCWSTR lpsz) CAPSTATUSCALLBACKW;
-    alias LRESULT function(HWND hWnd, int nID, LPCWSTR lpsz) CAPERRORCALLBACKW;
-    alias LRESULT function(HWND hWnd, int nID, LPCSTR lpsz) CAPSTATUSCALLBACKA;
-    alias LRESULT function(HWND hWnd, int nID, LPCSTR lpsz) CAPERRORCALLBACKA;
+    alias CAPYIELDCALLBACK = LRESULT function(HWND hWnd);
+    alias CAPSTATUSCALLBACKW = LRESULT function(HWND hWnd, int nID, LPCWSTR lpsz);
+    alias CAPERRORCALLBACKW = LRESULT function(HWND hWnd, int nID, LPCWSTR lpsz);
+    alias CAPSTATUSCALLBACKA = LRESULT function(HWND hWnd, int nID, LPCSTR lpsz);
+    alias CAPERRORCALLBACKA = LRESULT function(HWND hWnd, int nID, LPCSTR lpsz);
 }
 
 version (Unicode) {
-    alias CAPSTATUSCALLBACKW    CAPSTATUSCALLBACK;
-    alias CAPERRORCALLBACKW     CAPERRORCALLBACK;
+    alias CAPSTATUSCALLBACK = CAPSTATUSCALLBACKW;
+    alias CAPERRORCALLBACK = CAPERRORCALLBACKW;
 } else { // Unicode
-    alias CAPSTATUSCALLBACKA    CAPSTATUSCALLBACK;
-    alias CAPERRORCALLBACKA     CAPERRORCALLBACK;
+    alias CAPSTATUSCALLBACK = CAPSTATUSCALLBACKA;
+    alias CAPERRORCALLBACK = CAPERRORCALLBACKA;
 }
 
 extern (Windows) {
-    alias LRESULT function(HWND hWnd, LPVIDEOHDR lpVHdr) CAPVIDEOCALLBACK;
-    alias LRESULT function(HWND hWnd, LPWAVEHDR lpWHdr) CAPWAVECALLBACK;
-    alias LRESULT function(HWND hWnd, int nState) CAPCONTROLCALLBACK;
+    alias CAPVIDEOCALLBACK = LRESULT function(HWND hWnd, LPVIDEOHDR lpVHdr);
+    alias CAPWAVECALLBACK = LRESULT function(HWND hWnd, LPWAVEHDR lpWHdr);
+    alias CAPCONTROLCALLBACK = LRESULT function(HWND hWnd, int nState);
 }
 
 //  CapControlCallback states
@@ -2302,11 +2302,11 @@ extern (Windows) {
 }
 
 version (Unicode) {
-    alias capCreateCaptureWindowW   capCreateCaptureWindow;
-    alias capGetDriverDescriptionW  capGetDriverDescription;
+    alias capCreateCaptureWindow = capCreateCaptureWindowW;
+    alias capGetDriverDescription = capGetDriverDescriptionW;
 } else { // Unicode
-    alias capCreateCaptureWindowA   capCreateCaptureWindow;
-    alias capGetDriverDescriptionA  capGetDriverDescription;
+    alias capCreateCaptureWindow = capCreateCaptureWindowA;
+    alias capGetDriverDescription = capGetDriverDescriptionA;
 }
 
 // New Information chunk IDs
@@ -2394,9 +2394,9 @@ extern (Windows) {
 }
 
 version (Unicode) {
-    alias GetOpenFileNamePreviewW   GetOpenFileNamePreview;
-    alias GetSaveFileNamePreviewW   GetSaveFileNamePreview;
+    alias GetOpenFileNamePreview = GetOpenFileNamePreviewW;
+    alias GetSaveFileNamePreview = GetSaveFileNamePreviewW;
 } else { // Unicode
-    alias GetOpenFileNamePreviewA   GetOpenFileNamePreview;
-    alias GetSaveFileNamePreviewA   GetSaveFileNamePreview;
+    alias GetOpenFileNamePreview = GetOpenFileNamePreviewA;
+    alias GetSaveFileNamePreview = GetSaveFileNamePreviewA;
 }

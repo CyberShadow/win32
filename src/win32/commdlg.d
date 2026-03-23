@@ -299,9 +299,7 @@ alias CommDlg_OpenSave_GetFolderPath
 
 // Callbacks.
 extern(Windows) {
-alias UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow
-    LPCCHOOKPROC, LPCFHOOKPROC, LPFRHOOKPROC, LPOFNHOOKPROC,
-    LPPAGEPAINTHOOK, LPPAGESETUPHOOK, LPSETUPHOOKPROC, LPPRINTHOOKPROC;
+alias LPCCHOOKPROC = UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow, LPCFHOOKPROC = UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow, LPFRHOOKPROC = UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow, LPOFNHOOKPROC = UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow, LPPAGEPAINTHOOK = UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow, LPPAGESETUPHOOK = UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow, LPSETUPHOOKPROC = UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow, LPPRINTHOOKPROC = UINT_PTR function (HWND, UINT, WPARAM, LPARAM) nothrow;
 }
 
 //align (1): // 1 in Win32, default in Win64
@@ -317,7 +315,7 @@ struct CHOOSECOLORA {
     LPCCHOOKPROC lpfnHook;
     LPCSTR       lpTemplateName;
 }
-alias CHOOSECOLORA* LPCHOOSECOLORA;
+alias LPCHOOSECOLORA = CHOOSECOLORA*;
 
 struct CHOOSECOLORW {
     DWORD        lStructSize = CHOOSECOLORW.sizeof;
@@ -330,7 +328,7 @@ struct CHOOSECOLORW {
     LPCCHOOKPROC lpfnHook;
     LPCWSTR      lpTemplateName;
 }
-alias CHOOSECOLORW* LPCHOOSECOLORW;
+alias LPCHOOSECOLORW = CHOOSECOLORW*;
 
 struct CHOOSEFONTA {
     DWORD        lStructSize = CHOOSEFONTA.sizeof;
@@ -350,7 +348,7 @@ struct CHOOSEFONTA {
     INT          nSizeMin;
     INT          nSizeMax;
 }
-alias CHOOSEFONTA* LPCHOOSEFONTA;
+alias LPCHOOSEFONTA = CHOOSEFONTA*;
 
 struct CHOOSEFONTW {
     DWORD        lStructSize = CHOOSEFONTW.sizeof;
@@ -370,7 +368,7 @@ struct CHOOSEFONTW {
     INT          nSizeMin;
     INT          nSizeMax;
 }
-alias CHOOSEFONTW* LPCHOOSEFONTW;
+alias LPCHOOSEFONTW = CHOOSEFONTW*;
 
 struct DEVNAMES {
     WORD wDriverOffset;
@@ -378,7 +376,7 @@ struct DEVNAMES {
     WORD wOutputOffset;
     WORD wDefault;
 }
-alias DEVNAMES* LPDEVNAMES;
+alias LPDEVNAMES = DEVNAMES*;
 
 struct FINDREPLACEA {
     DWORD        lStructSize = FINDREPLACEA.sizeof;
@@ -393,7 +391,7 @@ struct FINDREPLACEA {
     LPFRHOOKPROC lpfnHook;
     LPCSTR       lpTemplateName;
 }
-alias FINDREPLACEA* LPFINDREPLACEA;
+alias LPFINDREPLACEA = FINDREPLACEA*;
 
 struct FINDREPLACEW {
     DWORD        lStructSize = FINDREPLACEW.sizeof;
@@ -408,7 +406,7 @@ struct FINDREPLACEW {
     LPFRHOOKPROC lpfnHook;
     LPCWSTR      lpTemplateName;
 }
-alias FINDREPLACEW* LPFINDREPLACEW;
+alias LPFINDREPLACEW = FINDREPLACEW*;
 
 struct OPENFILENAMEA {
     DWORD         lStructSize = OPENFILENAMEA.sizeof;
@@ -438,7 +436,7 @@ struct OPENFILENAMEA {
         DWORD         FlagsEx;
     //}
 }
-alias OPENFILENAMEA* LPOPENFILENAMEA;
+alias LPOPENFILENAMEA = OPENFILENAMEA*;
 
 struct OPENFILENAMEW {
     DWORD         lStructSize = OPENFILENAMEW.sizeof;
@@ -468,7 +466,7 @@ struct OPENFILENAMEW {
         DWORD         FlagsEx;
     //}
 }
-alias OPENFILENAMEW* LPOPENFILENAMEW;
+alias LPOPENFILENAMEW = OPENFILENAMEW*;
 
 enum size_t OPENFILENAME_SIZE_VERSION_400 = 76;
 
@@ -477,14 +475,14 @@ struct OFNOTIFYA {
     LPOPENFILENAMEA lpOFN;
     LPSTR           pszFile;
 }
-alias OFNOTIFYA* LPOFNOTIFYA;
+alias LPOFNOTIFYA = OFNOTIFYA*;
 
 struct OFNOTIFYW {
     NMHDR           hdr;
     LPOPENFILENAMEW lpOFN;
     LPWSTR          pszFile;
 }
-alias OFNOTIFYW* LPOFNOTIFYW;
+alias LPOFNOTIFYW = OFNOTIFYW*;
 
 struct PAGESETUPDLGA {
     DWORD           lStructSize = PAGESETUPDLGA.sizeof;
@@ -502,7 +500,7 @@ struct PAGESETUPDLGA {
     LPCSTR          lpPageSetupTemplateName;
     HGLOBAL         hPageSetupTemplate;
 }
-alias PAGESETUPDLGA* LPPAGESETUPDLGA;
+alias LPPAGESETUPDLGA = PAGESETUPDLGA*;
 
 struct PAGESETUPDLGW {
     DWORD           lStructSize = PAGESETUPDLGW.sizeof;
@@ -520,7 +518,7 @@ struct PAGESETUPDLGW {
     LPCWSTR         lpPageSetupTemplateName;
     HGLOBAL         hPageSetupTemplate;
 }
-alias PAGESETUPDLGW* LPPAGESETUPDLGW;
+alias LPPAGESETUPDLGW = PAGESETUPDLGW*;
 
 align (1) struct PRINTDLGA {
 align(1):
@@ -548,7 +546,7 @@ align(1):
     HANDLE          hPrintTemplate;
     HANDLE          hSetupTemplate;
 }
-alias PRINTDLGA* LPPRINTDLGA;
+alias LPPRINTDLGA = PRINTDLGA*;
 
 align (1) struct PRINTDLGW {
 align(1):
@@ -576,7 +574,7 @@ align(1):
     HANDLE          hPrintTemplate;
     HANDLE          hSetupTemplate;
 }
-alias PRINTDLGW* LPPRINTDLGW;
+alias LPPRINTDLGW = PRINTDLGW*;
 
 //static if (_WIN32_WINNT >= 0x500) {
     import win32.unknwn; // for LPUNKNOWN
@@ -586,7 +584,7 @@ alias PRINTDLGW* LPPRINTDLGW;
         DWORD  nFromPage;
         DWORD  nToPage;
     }
-    alias PRINTPAGERANGE* LPPRINTPAGERANGE;
+    alias LPPRINTPAGERANGE = PRINTPAGERANGE*;
 
     struct PRINTDLGEXA {
         DWORD            lStructSize = PRINTDLGEXA.sizeof;
@@ -611,7 +609,7 @@ alias PRINTDLGW* LPPRINTDLGW;
         DWORD            nStartPage;
         DWORD            dwResultAction;
     }
-    alias PRINTDLGEXA* LPPRINTDLGEXA;
+    alias LPPRINTDLGEXA = PRINTDLGEXA*;
 
     struct PRINTDLGEXW {
         DWORD            lStructSize = PRINTDLGEXW.sizeof;
@@ -636,7 +634,7 @@ alias PRINTDLGW* LPPRINTDLGW;
         DWORD            nStartPage;
         DWORD            dwResultAction;
     }
-    alias PRINTDLGEXW* LPPRINTDLGEXW;
+    alias LPPRINTDLGEXW = PRINTDLGEXW*;
 
 //} // _WIN32_WINNT >= 0x500
 
@@ -668,63 +666,63 @@ extern (Windows) nothrow @nogc {
 }
 
 version (Unicode) {
-    alias CHOOSECOLORW CHOOSECOLOR;
-    alias CHOOSEFONTW CHOOSEFONT;
-    alias FINDREPLACEW FINDREPLACE;
-    alias OPENFILENAMEW OPENFILENAME;
-    alias OFNOTIFYW OFNOTIFY;
-    alias PAGESETUPDLGW PAGESETUPDLG;
-    alias PRINTDLGW PRINTDLG;
+    alias CHOOSECOLOR = CHOOSECOLORW;
+    alias CHOOSEFONT = CHOOSEFONTW;
+    alias FINDREPLACE = FINDREPLACEW;
+    alias OPENFILENAME = OPENFILENAMEW;
+    alias OFNOTIFY = OFNOTIFYW;
+    alias PAGESETUPDLG = PAGESETUPDLGW;
+    alias PRINTDLG = PRINTDLGW;
 
-    alias ChooseColorW ChooseColor;
-    alias ChooseFontW ChooseFont;
-    alias FindTextW FindText;
-    alias GetFileTitleW GetFileTitle;
-    alias GetOpenFileNameW GetOpenFileName;
-    alias GetSaveFileNameW GetSaveFileName;
-    alias PageSetupDlgW PageSetupDlg;
-    alias PrintDlgW PrintDlg;
-    alias ReplaceTextW ReplaceText;
+    alias ChooseColor = ChooseColorW;
+    alias ChooseFont = ChooseFontW;
+    alias FindText = FindTextW;
+    alias GetFileTitle = GetFileTitleW;
+    alias GetOpenFileName = GetOpenFileNameW;
+    alias GetSaveFileName = GetSaveFileNameW;
+    alias PageSetupDlg = PageSetupDlgW;
+    alias PrintDlg = PrintDlgW;
+    alias ReplaceText = ReplaceTextW;
 
     //static if (_WIN32_WINNT >= 0x500) {
-        alias PRINTDLGEXW PRINTDLGEX;
-        alias PrintDlgExW PrintDlgEx;
+        alias PRINTDLGEX = PRINTDLGEXW;
+        alias PrintDlgEx = PrintDlgExW;
     //}
 
 } else { // UNICODE
 
-    alias CHOOSECOLORA CHOOSECOLOR;
-    alias CHOOSEFONTA CHOOSEFONT;
-    alias FINDREPLACEA FINDREPLACE;
-    alias OPENFILENAMEA OPENFILENAME;
-    alias OFNOTIFYA OFNOTIFY;
-    alias PAGESETUPDLGA PAGESETUPDLG;
-    alias PRINTDLGA PRINTDLG;
+    alias CHOOSECOLOR = CHOOSECOLORA;
+    alias CHOOSEFONT = CHOOSEFONTA;
+    alias FINDREPLACE = FINDREPLACEA;
+    alias OPENFILENAME = OPENFILENAMEA;
+    alias OFNOTIFY = OFNOTIFYA;
+    alias PAGESETUPDLG = PAGESETUPDLGA;
+    alias PRINTDLG = PRINTDLGA;
 
-    alias ChooseColorA ChooseColor;
-    alias ChooseFontA ChooseFont;
-    alias FindTextA FindText;
-    alias GetFileTitleA GetFileTitle;
-    alias GetOpenFileNameA GetOpenFileName;
-    alias GetSaveFileNameA GetSaveFileName;
-    alias PageSetupDlgA PageSetupDlg;
-    alias PrintDlgA PrintDlg;
-    alias ReplaceTextA ReplaceText;
+    alias ChooseColor = ChooseColorA;
+    alias ChooseFont = ChooseFontA;
+    alias FindText = FindTextA;
+    alias GetFileTitle = GetFileTitleA;
+    alias GetOpenFileName = GetOpenFileNameA;
+    alias GetSaveFileName = GetSaveFileNameA;
+    alias PageSetupDlg = PageSetupDlgA;
+    alias PrintDlg = PrintDlgA;
+    alias ReplaceText = ReplaceTextA;
 
     //static if (_WIN32_WINNT >= 0x500) {
-        alias PRINTDLGEXA PRINTDLGEX;
-        alias PrintDlgExA PrintDlgEx;
+        alias PRINTDLGEX = PRINTDLGEXA;
+        alias PrintDlgEx = PrintDlgExA;
     //}
 
 } // UNICODE
 
-alias CHOOSECOLOR* LPCHOOSECOLOR;
-alias CHOOSEFONT* LPCHOOSEFONT;
-alias FINDREPLACE* LPFINDREPLACE;
-alias OPENFILENAME* LPOPENFILENAME;
-alias OFNOTIFY* LPOFNOTIFY;
-alias PAGESETUPDLG* LPPAGESETUPDLG;
-alias PRINTDLG* LPPRINTDLG;
+alias LPCHOOSECOLOR = CHOOSECOLOR*;
+alias LPCHOOSEFONT = CHOOSEFONT*;
+alias LPFINDREPLACE = FINDREPLACE*;
+alias LPOPENFILENAME = OPENFILENAME*;
+alias LPOFNOTIFY = OFNOTIFY*;
+alias LPPAGESETUPDLG = PAGESETUPDLG*;
+alias LPPRINTDLG = PRINTDLG*;
 //static if (_WIN32_WINNT >= 0x500) {
-    alias PRINTDLGEX* LPPRINTDLGEX;
+    alias LPPRINTDLGEX = PRINTDLGEX*;
 //}
