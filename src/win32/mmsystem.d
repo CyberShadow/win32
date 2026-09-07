@@ -20,8 +20,6 @@ version (Win32_UseLib) pragma(lib, "winmm");
 
 import win32.w32api, win32.windef, win32.winver;
 
-align(1):
-
 enum MAXPNAMELEN = 32;
 enum MAXERRORLENGTH = 256;
 enum MAX_JOYSTICKOEMVXDNAME = 260;
