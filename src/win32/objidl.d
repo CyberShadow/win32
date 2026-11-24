@@ -381,6 +381,7 @@ struct CACLSID {
     CLSID* pElems;
 }
 alias LPPROPVARIANT = PROPVARIANT*;
+alias REFPROPVARIANT = const(PROPVARIANT)*;
 
 struct CAPROPVARIANT {
     ULONG cElems;

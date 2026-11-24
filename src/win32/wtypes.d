@@ -12,10 +12,17 @@ module win32.wtypes;
 //version (Windows):
 
 import win32.rpc, win32.rpcndr;
+import win32.basetyps : GUID;
 import win32.windef;
 import win32.uuid; // for GUID_NULL
 
 alias IID_NULL = GUID_NULL, CLSID_NULL = GUID_NULL;
+
+struct PROPERTYKEY {
+    GUID  fmtid;
+    DWORD pid;
+}
+alias REFPROPERTYKEY = const(PROPERTYKEY)*;
 
 enum ROTFLAGS_REGISTRATIONKEEPSALIVE = 0x01;
 enum ROTFLAGS_ALLOWANYCLIENT         = 0x02;
